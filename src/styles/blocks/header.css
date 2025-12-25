@@ -1,5 +1,5 @@
 .header {
-  background-color: #ffffff;
+  background-color: var(--white);
 }
 
 .header__container {
@@ -16,7 +16,7 @@
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 0.12em;
-  color: #111111;
+  color: var(--dark);
 }
 
 /* MENU (text + burger) */
@@ -28,7 +28,7 @@
 
 .header__menu-text {
   font-size: 14px;
-  color: #6b6b6b;
+  color: var(--gray-alt);
 }
 
 /* BURGER */
@@ -49,6 +49,6 @@
   display: block;
   height: 2px;
   width: 100%;
-  background-color: #111111;
-  border-radius: 1px;
+  background-color: var(--dark);
+ border-radius: 1px;
 }

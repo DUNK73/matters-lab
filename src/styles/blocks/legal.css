@@ -1,5 +1,5 @@
 .legal {
-    background-color: #11120F;
+    background-color: var(--dark-alt);
 }
 
 .legal__container {
@@ -25,6 +25,6 @@
 
 /* LINK */
 .legal__link {
-    color: #fff;
+    color: var(--white);
     text-decoration: none;
 }

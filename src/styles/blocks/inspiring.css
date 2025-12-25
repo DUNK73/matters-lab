@@ -21,7 +21,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: var(--black-transparent-alt);
 }
 
 /* CONTENT */
@@ -47,7 +47,7 @@
   margin: 0;
   font-size: 28px;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--white);
 }
 
 /* TEXT */
@@ -55,7 +55,7 @@
   margin: 0;
   font-size: 14px;
   line-height: 1.45;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--white-transparent-text);
 }
 
 /* BUTTON */
@@ -66,8 +66,8 @@
   padding: 14px 20px;
 
   border-radius: 14px;
-  background-color: #1ba39c;
-  color: #ffffff;
+  background-color: var(--green);
+  color: var(--white);
 
   font-size: 14px;
   font-weight: 500;

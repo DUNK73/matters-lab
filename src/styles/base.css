@@ -13,5 +13,5 @@ button {
   border-radius: var(--radius);
   padding: 14px;
   background: var(--green);
-  color: #fff;
+  color: var(--white);
 }

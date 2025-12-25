@@ -1,5 +1,5 @@
 .learn {
-  background-color: #f5f7f7;
+  background-color: var(--gray-light);
 }
 
 .learn__container {
@@ -11,7 +11,7 @@
   margin: 0 0 20px;
   font-size: 22px;
   font-weight: 600;
-  color: #111111;
+  color: var(--dark);
 }
 
 /* LIST */
@@ -27,7 +27,7 @@
 .learn__item {
   font-size: 14px;
   line-height: 1.45;
-  color: #555555;
+  color: var(--gray-text);
 }
 
 /* IMAGES GRID */
@@ -51,8 +51,8 @@
   padding: 14px 20px;
   border-radius: 14px;
 
-  background-color: #1ba39c;
-  color: #ffffff;
+  background-color: var(--green);
+  color: var(--white);
 
   font-size: 14px;
   font-weight: 500;

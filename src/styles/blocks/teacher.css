@@ -1,5 +1,5 @@
 .teacher {
-  background-color: #ffffff;
+  background-color: var(--white);
 }
 
 .teacher__container {
@@ -15,14 +15,15 @@
   margin: 0 0 12px;
   font-size: 22px;
   font-weight: 600;
-  color: #111111;
+  color: var(--dark);
 }
 
 .teacher__description {
   margin: 0 0 16px;
   font-size: 14px;
   line-height: 1.45;
-  color: #555555;
+  color: var(--gray-text);
+}
 }
 
 /* LIST */
@@ -38,7 +39,7 @@
 .teacher__item {
   font-size: 14px;
   line-height: 1.45;
-  color: #555555;
+  color: var(--gray-text);
 }
 
 /* SOCIALS */
@@ -51,7 +52,7 @@
   width: 32px;
   height: 32px;
 
-  background-color: #f0f0f0;
+  background-color: var(--gray-social);
   border-radius: 50%;
 
   background-repeat: no-repeat;

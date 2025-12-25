@@ -1,5 +1,5 @@
 .contacts {
-    background-color: #11120F;
+    background-color: var(--dark-alt);
 }
 
 .contacts__container {
@@ -29,12 +29,12 @@
 
 /* LABEL */
 .contacts__label {
-    color: #ffffff;
+    color: var(--white);
     font-weight: 500;
 }
 
 /* VALUE */
 .contacts__value {
-    color: #ffffff;
+    color: var(--white);
     text-decoration: underline;
 }

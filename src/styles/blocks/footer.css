@@ -1,7 +1,7 @@
 /* Footer styles */
 .footer {
-    background-color: var(--secondary-color);
-    color: var(--bg-color);
+    background-color: var(--dark-alt);
+    color: var(--white);
 
     margin-top: auto;
 }

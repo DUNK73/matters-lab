@@ -1,5 +1,5 @@
 .steps {
-  background-color: #ffffff;
+  background-color: var(--white);
 }
 
 .steps__container {
@@ -11,7 +11,7 @@
   margin: 0 0 24px;
   font-size: 22px;
   font-weight: 600;
-  color: #111111;
+  color: var(--dark);
 }
 
 /* LIST */
@@ -30,9 +30,9 @@
   position: relative;
 
   padding: 20px 16px 20px 52px;
-  border: 1px solid #e5e5e5;
+  border: 1px solid var(--gray-medium);
   border-radius: 14px;
-  background-color: #ffffff;
+  background-color: var(--white);
 }
 
 /* NUMBER */
@@ -48,8 +48,8 @@
   align-items: center;
   justify-content: center;
 
-  background-color: #1ba39c;
-  color: #ffffff;
+  background-color: var(--green);
+  color: var(--white);
 
   font-size: 14px;
   font-weight: 600;
@@ -61,7 +61,7 @@
   margin: 0 0 8px;
   font-size: 16px;
   font-weight: 600;
-  color: #111111;
+  color: var(--dark);
 }
 
 /* TEXT */
@@ -69,5 +69,5 @@
   margin: 0;
   font-size: 14px;
   line-height: 1.45;
-  color: #555555;
+  color: var(--gray-text);
 }
