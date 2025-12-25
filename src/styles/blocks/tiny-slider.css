@@ -1,0 +1,52 @@
+div.tns-outer {
+    position: relative;
+    padding-bottom: 20px !important;
+}
+
+.tns-controls {
+    z-index: 1;
+    position: absolute;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.tns-controls button {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    gap: 6px;
+    background-color: rgba(79, 78, 78, 0.249);
+}
+
+.tns-controls button:first-child {
+    transform: translate(-10px, 0);
+}
+
+.tns-controls button:last-child {
+    transform: translate(10px, 0);
+}
+
+.tns-nav {
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 20px;
+    align-items: center;
+    gap: 6px
+}
+
+.tns-nav button {
+    padding: 3px;
+
+}

@@ -1,0 +1,24 @@
+{
+  "name": "matters-lab",
+  "version": "1.0.0",
+  "description": "English pronunciation training website",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000",
+    "dev": "live-server --port=3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "english",
+    "pronunciation",
+    "education"
+  ],
+ "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {
+    "tiny-slider": "^2.9.4"
+  }
+}

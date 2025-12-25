@@ -11,6 +11,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="src/styles/main.css" />
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 </head>
 
@@ -170,29 +171,66 @@
 
     <section class="content_section courses">
 
-      <div class="my-slider">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-      </div>
-
-      <script type="module">
-        import { tns } from './src/tiny-slider.js';
-
-        var slider = tns({
-          container: '.my-slider',
-          items: 3,
-          slideBy: 'page',
-          autoplay: true
-        });
-      </script>
-
       <h2 class="content_section__title courses__title">
         Our courses are the best fit for you if you are…
       </h2>
 
       <div class="courses__list">
-        <article class="courses__card">
+
+      <div class="my-slider">
+        <div>
+          <article class="courses__card">
+            <h3 class="courses__card-title">The British Newcomer</h3>
+
+            <p class="courses__text">
+              You have recently moved to the UK and want to sound confident and clear in everyday communication.
+            </p>
+
+            <button class="courses__button">Read more</button>
+          </article>
+        </div>
+
+        <div>
+          <article class="courses__card">
+            <h3 class="courses__card-title">Language learners (ESL / EFL)</h3>
+
+            <p class="courses__text">
+              You want to improve pronunciation, understand native speakers better and reduce your accent.
+            </p>
+
+            <button class="courses__button">Read more</button>
+          </article>
+        </div>
+
+        <div>
+          <article class="courses__card">
+            <h3 class="courses__card-title">The British Newcomer</h3>
+
+            <p class="courses__text">
+              You have recently moved to the UK and want to sound confident and clear in everyday communication.
+            </p>
+
+            <button class="courses__button">Read more</button>
+          </article>
+        </div>
+      </div>
+
+      <script type="module">
+
+        var slider = tns({
+          container: '.my-slider',
+          items: 1,
+          slideBy: 'page',
+          autoplay: true,
+          autoplayButtonOutput: false,
+          controlsText: ['<', '>'],
+        });
+      </script>
+
+
+
+
+        <!-- <article class="courses__card">
           <h3 class="courses__card-title">The British Newcomer</h3>
 
           <p class="courses__text">
@@ -210,7 +248,8 @@
           </p>
 
           <button class="courses__button">Read more</button>
-        </article>
+        </article> -->
+        
       </div>
 
     </section>
