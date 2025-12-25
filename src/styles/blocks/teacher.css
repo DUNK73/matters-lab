@@ -1,0 +1,82 @@
+.teacher {
+  background-color: #ffffff;
+}
+
+.teacher__container {
+  padding: 32px 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* TEXT */
+.teacher__title {
+  margin: 0 0 12px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #111111;
+}
+
+.teacher__description {
+  margin: 0 0 16px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #555555;
+}
+
+/* LIST */
+.teacher__list {
+  margin: 0 0 20px;
+  padding-left: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.teacher__item {
+  font-size: 14px;
+  line-height: 1.45;
+  color: #555555;
+}
+
+/* SOCIALS */
+.teacher__socials {
+  display: flex;
+  gap: 14px;
+}
+
+.teacher__social {
+  width: 32px;
+  height: 32px;
+
+  background-color: #f0f0f0;
+  border-radius: 50%;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+}
+
+/* конкретные иконки */
+.teacher__social--instagram {
+  background-image: url("../../assets/icons/instagram.svg");
+}
+
+.teacher__social--youtube {
+  background-image: url("../../assets/icons/youtube.svg");
+}
+
+.teacher__social--linkedin {
+  background-image: url("../../assets/icons/linkedin.svg");
+}
+
+/* IMAGE */
+.teacher__image {
+  width: 100%;
+  height: 320px;
+
+  object-fit: cover;
+  border-radius: 16px;
+}

@@ -1,13 +1,54 @@
-/* Header styles */
 .header {
-    background-color: var(--secondary-color);
-    color: var(--bg-color);
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  background-color: #ffffff;
 }
 
-.header h1 {
-    font-size: 1.5rem;
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 16px;
+  height: 56px;
+}
+
+/* LOGO */
+.header__logo {
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.12em;
+  color: #111111;
+}
+
+/* MENU (text + burger) */
+.header__menu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header__menu-text {
+  font-size: 14px;
+  color: #6b6b6b;
+}
+
+/* BURGER */
+.header__burger {
+  width: 24px;
+  height: 18px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.header__burger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #111111;
+  border-radius: 1px;
 }

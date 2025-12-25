@@ -3,5 +3,21 @@
 @import 'base.css';
 @import 'blocks/header.css';
 @import 'blocks/hero.css';
+@import 'blocks/steps.css';
+@import 'blocks/courses.css';
+@import 'blocks/learn.css';
+@import 'blocks/teacher.css';
+@import 'blocks/testimonials.css';
+@import 'blocks/inspiring.css';
+@import 'blocks/questions.css';
+@import 'blocks/contacts.css';
+@import 'blocks/legal.css';
+@import 'blocks/copyright.css';
+
+
+
+
+
+
 @import 'blocks/section.css';
 @import 'blocks/footer.css';

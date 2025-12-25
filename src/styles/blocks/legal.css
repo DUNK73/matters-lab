@@ -1,0 +1,30 @@
+.legal {
+    background-color: #11120F;
+}
+
+.legal__container {
+    padding: 24px 16px 32px;
+}
+
+/* LIST */
+.legal__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* ITEM */
+.legal__item {
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* LINK */
+.legal__link {
+    color: #fff;
+    text-decoration: none;
+}

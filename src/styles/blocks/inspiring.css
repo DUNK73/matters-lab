@@ -1,0 +1,74 @@
+.inspiring {
+  position: relative;
+  height: 420px;
+  overflow: hidden;
+}
+
+/* IMAGE */
+.inspiring__media {
+  position: absolute;
+  inset: 0;
+}
+
+.inspiring__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* OVERLAY */
+.inspiring__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* CONTENT */
+.inspiring__overlay {
+  position: relative;
+  z-index: 1;
+
+  height: 100%;
+  padding: 32px 16px;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.inspiring__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* TITLE */
+.inspiring__title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* TEXT */
+.inspiring__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* BUTTON */
+.inspiring__button {
+  margin-top: 8px;
+
+  width: fit-content;
+  padding: 14px 20px;
+
+  border-radius: 14px;
+  background-color: #1ba39c;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 500;
+}

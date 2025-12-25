@@ -1,13 +1,9 @@
-/* CSS Variables */
 :root {
-    --primary-color: #3498db;
-    --secondary-color: #2c3e50;
-    --accent-color: #e74c3c;
-    --text-color: #333;
-    --bg-color: #fff;
-    --border-color: #ddd;
-    --shadow: 0 2px 4px rgba(0,0,0,0.1);
-    --border-radius: 4px;
-    --font-size-base: 16px;
-    --line-height: 1.5;
+  --green: #1ba39c;
+  --dark: #111;
+  --gray: #666;
+  --light: #f5f7f7;
+
+  --radius: 14px;
+  --font: system-ui, -apple-system, sans-serif;
 }

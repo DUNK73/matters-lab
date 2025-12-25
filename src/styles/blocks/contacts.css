@@ -1,0 +1,40 @@
+.contacts {
+    background-color: #11120F;
+}
+
+.contacts__container {
+    padding: 32px 16px;
+}
+
+/* LIST */
+.contacts__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+}
+
+/* ITEM */
+.contacts__item {
+    display: flex;
+    gap: 6px;
+
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* LABEL */
+.contacts__label {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* VALUE */
+.contacts__value {
+    color: #ffffff;
+    text-decoration: underline;
+}

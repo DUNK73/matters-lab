@@ -1,12 +1,95 @@
-/* Hero section styles */
 .hero {
-    background-color: var(--primary-color);
-    color: var(--bg-color);
-    padding: 3rem 1rem;
-    text-align: center;
+  position: relative;
+  width: 100%;
+  height: 430px;
+  overflow: hidden;
 }
 
-.hero h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+/* IMAGE */
+.hero__media {
+  position: absolute;
+  inset: 0;
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* DARK OVERLAY */
+.hero__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* OVERLAY LAYOUT */
+.hero__overlay {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+
+  padding: 0 16px;
+  padding-top: 100px;
+}
+
+/* LEFT DECORATIVE BLOCK */
+.hero__side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* VERTICAL LINE */
+.hero__line {
+  width: 1px;
+  height: 72px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* TAGLINE */
+.hero__tagline {
+  max-width: 80px;
+  text-align: center;
+
+  font-size: 12px;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* MAIN CONTENT */
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* TITLE */
+.hero__title {
+  margin: 0;
+  color: #ffffff;
+
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+/* BUTTON */
+.hero__button {
+  width: fit-content;
+
+  padding: 14px 20px;
+  border-radius: 14px;
+
+  background-color: #1ba39c;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 500;
 }
