@@ -8,10 +8,7 @@
 
 /* TITLE */
 .steps__title {
-  margin: 0 0 24px;
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--dark);
+  
 }
 
 /* LIST */
@@ -74,8 +71,14 @@
   color: var(--gray-text);
 }
 
+/* Mobile max */
+@media (min-width: 425px) {
+
+}
+
 /* Tablet styles */
 @media (min-width: 768px) {
+
   /* Tablet: var(--breakpoint-tablet) */
   .steps__container {
     padding: 40px 32px;
@@ -112,6 +115,7 @@
 
 /* Desktop styles */
 @media (min-width: 1024px) {
+
   /* Desktop: var(--breakpoint-desktop) */
   .steps__container {
     padding: 48px 48px;

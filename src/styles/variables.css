@@ -8,7 +8,7 @@
   --gray-alt: #6b6b6b;
   --gray-text: #555555;
   --gray-dots: #cccccc;
-  --gray-social: #f0f0;
+  --gray-social: #f0;
   --gray-footer: #888888;
   --white: #ffffff;
   --black-transparent: rgba(0, 0, 0, 0.35);
@@ -22,7 +22,7 @@
   --white-transparent-checkbox: rgba(255, 255, 255, 0.4);
 
   --radius: 14px;
-  --font: system-ui, -apple-system, sans-serif;
+  --font: 'Montserrat', system-ui, -apple-system, sans-serif;
 
   /* Breakpoints */
   --breakpoint-tablet: 768px;
