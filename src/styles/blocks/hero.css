@@ -1,0 +1,12 @@
+/* Hero section styles */
+.hero {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
