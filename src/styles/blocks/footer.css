@@ -4,4 +4,20 @@
     color: var(--white);
 
     margin-top: auto;
-}
+  }
+  
+  /* Tablet styles */
+  @media (min-width: 768px) {
+    /* Tablet: var(--breakpoint-tablet) */
+    .footer {
+      padding: 24px 32px;
+    }
+  }
+  
+  /* Desktop styles */
+  @media (min-width: 1024px) {
+    /* Desktop: var(--breakpoint-desktop) */
+    .footer {
+      padding: 32px 48px;
+    }
+  }

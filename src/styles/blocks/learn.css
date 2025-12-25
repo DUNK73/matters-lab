@@ -57,3 +57,74 @@
   font-size: 14px;
   font-weight: 500;
 }
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  /* Tablet: var(--breakpoint-tablet) */
+  .learn__container {
+    padding: 40px 32px;
+  }
+
+  .learn__title {
+    font-size: 26px;
+  }
+
+  .learn__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .learn__item {
+    width: calc(50% - 8px);
+    font-size: 15px;
+  }
+
+  .learn__images {
+    gap: 16px;
+  }
+
+  .learn__images img {
+    height: 140px;
+  }
+
+  .learn__button {
+    padding: 16px 24px;
+    font-size: 15px;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  /* Desktop: var(--breakpoint-desktop) */
+  .learn__container {
+    padding: 48px 48px;
+  }
+
+  .learn__title {
+    font-size: 28px;
+  }
+
+  .learn__list {
+    gap: 20px;
+  }
+
+  .learn__item {
+    width: calc(25% - 15px);
+    font-size: 16px;
+  }
+
+  .learn__images {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .learn__images img {
+    height: 160px;
+  }
+
+  .learn__button {
+    padding: 18px 32px;
+    font-size: 16px;
+  }
+}

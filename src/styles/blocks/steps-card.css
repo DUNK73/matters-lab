@@ -1,0 +1,53 @@
+.steps-card {
+  display: flex;
+  gap: 14px;
+
+  padding: 20px 20px 24px;
+
+  background-color: #ffffff;
+  border-radius: 16px;
+
+  border: solid 1px #EBE9F2;
+
+}
+
+.steps-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+.steps-card:hover .steps-card__marker {
+  border-right: solid 4px #2fb6ad;
+}
+
+/* LIGHT MARKER (BACKGROUND STRIPE) */
+.steps-card__marker {
+  width: 12px;
+  height: 28px;
+  background-color: #e9eeee;
+  flex-shrink: 0;
+  border-right: solid 4px #000000;
+}
+
+
+/* CONTENT */
+.steps-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* TITLE */
+.steps-card__title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #000000;
+}
+
+/* TEXT */
+.steps-card__text {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #000000;
+}

@@ -1,3 +1,19 @@
 .copyright {
     text-align: center;
-}
+  }
+  
+  /* Tablet styles */
+  @media (min-width: 768px) {
+    /* Tablet: var(--breakpoint-tablet) */
+    .copyright {
+      padding: 16px 32px;
+    }
+  }
+  
+  /* Desktop styles */
+  @media (min-width: 1024px) {
+    /* Desktop: var(--breakpoint-desktop) */
+    .copyright {
+      padding: 20px 48px;
+    }
+  }

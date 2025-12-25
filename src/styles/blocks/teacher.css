@@ -81,3 +81,74 @@
   object-fit: cover;
   border-radius: 16px;
 }
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  /* Tablet: var(--breakpoint-tablet) */
+  .teacher__container {
+    padding: 40px 32px;
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  .teacher__description {
+    font-size: 15px;
+  }
+
+  .teacher__list {
+    padding-left: 24px;
+  }
+
+  .teacher__item {
+    font-size: 15px;
+  }
+
+  .teacher__socials {
+    gap: 18px;
+  }
+
+  .teacher__social {
+    width: 36px;
+    height: 36px;
+  }
+
+  .teacher__image {
+    width: 40%;
+    height: 360px;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  /* Desktop: var(--breakpoint-desktop) */
+  .teacher__container {
+    padding: 48px 48px;
+    gap: 48px;
+  }
+
+  .teacher__title {
+    font-size: 26px;
+  }
+
+  .teacher__description {
+    font-size: 16px;
+  }
+
+  .teacher__item {
+    font-size: 16px;
+  }
+
+  .teacher__socials {
+    gap: 20px;
+  }
+
+  .teacher__social {
+    width: 40px;
+    height: 40px;
+  }
+
+  .teacher__image {
+    width: 45%;
+    height: 400px;
+  }
+}

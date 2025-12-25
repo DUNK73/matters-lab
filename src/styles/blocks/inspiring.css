@@ -72,3 +72,61 @@
   font-size: 14px;
   font-weight: 500;
 }
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  /* Tablet: var(--breakpoint-tablet) */
+  .inspiring {
+    height: 500px;
+  }
+
+  .inspiring__overlay {
+    padding: 40px 32px;
+  }
+
+  .inspiring__content {
+    gap: 20px;
+  }
+
+  .inspiring__title {
+    font-size: 32px;
+  }
+
+  .inspiring__text {
+    font-size: 15px;
+  }
+
+  .inspiring__button {
+    padding: 16px 24px;
+    font-size: 15px;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  /* Desktop: var(--breakpoint-desktop) */
+  .inspiring {
+    height: 600px;
+  }
+
+  .inspiring__overlay {
+    padding: 48px 48px;
+  }
+
+  .inspiring__content {
+    gap: 24px;
+  }
+
+  .inspiring__title {
+    font-size: 36px;
+  }
+
+  .inspiring__text {
+    font-size: 16px;
+  }
+
+  .inspiring__button {
+    padding: 18px 32px;
+    font-size: 16px;
+  }
+}

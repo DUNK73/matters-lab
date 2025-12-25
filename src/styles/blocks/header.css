@@ -52,3 +52,36 @@
   background-color: var(--dark);
  border-radius: 1px;
 }
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  /* Tablet: var(--breakpoint-tablet) */
+ .header__container {
+   padding: 20px 32px;
+   height: 64px;
+ }
+
+ .header__logo {
+   font-size: 20px;
+ }
+
+ .header__menu-text {
+   font-size: 16px;
+ }
+
+ .header__burger {
+   display: none;
+ }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  /* Desktop: var(--breakpoint-desktop) */
+ .header__container {
+   padding: 24px 48px;
+ }
+
+ .header__logo {
+   font-size: 22px;
+ }
+}
