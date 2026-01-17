@@ -15,7 +15,11 @@
 @import 'blocks/legal.css';
 @import 'blocks/copyright.css';
 @import 'blocks/tiny-slider.css';
+@import 'blocks/impressions.css';
+@import 'blocks/quote-card.css';
 
+@import 'blocks/buttons.css';
+@import 'blocks/list.css';
 
 
 

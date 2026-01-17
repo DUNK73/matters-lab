@@ -1,0 +1,41 @@
+.impressions {
+  /* background-color: #ffffff; */
+  background-color: var(--gray-light);
+}
+
+.impressions__container {
+  padding: 40px 16px;
+}
+
+.impressions__title {
+  margin: 0 0 16px;
+
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  color: #000000;
+}
+
+.impressions__intro {
+  margin: 0 0 32px;
+
+  font-size: 16px;
+  line-height: 1.6;
+
+  color: #000000;
+}
+
+.impressions__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.impressions__item {
+}

@@ -1,0 +1,29 @@
+.quote-card {
+  padding: 20px 20px 24px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #e6e8f0;
+  border-radius: 16px;
+}
+
+/* MAIN QUOTE */
+.quote-card__quote {
+  margin: 0 0 16px;
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+
+  color: #000000;
+}
+
+/* AUTHOR / STORY */
+.quote-card__author {
+  margin: 0;
+
+  font-size: 15px;
+  line-height: 1.6;
+
+  color: #000000;
+}

@@ -16,50 +16,79 @@
 
 /* LIST */
 .learn__list {
-  margin: 0 0 24px;
-  padding-left: 20px;
 
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
 }
 
 .learn__item {
-  font-size: 14px;
-  line-height: 1.45;
-  color: var(--gray-text);
+  
+}
+
+.learn__item::marker {
 }
 
 /* IMAGES GRID */
 .learn__images {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
 
-  margin-bottom: 24px;
+  margin-bottom: 24px; */
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+
+  max-width: 1200px;
+  margin: 0 auto 20px;
 }
 
-.learn__images img {
+.learn__images-item {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.learn__images-item img {
   width: 100%;
-  height: 120px;
+  height: 100%;
   object-fit: cover;
-  border-radius: 14px;
+  display: block;
+}
+
+/* индивидуальные размеры */
+.learn__images-item-a {
+  grid-column: span 2;
+}
+
+.learn__images-item-b {
+  grid-column: span 2;
+}
+
+.learn__images-item-c {
+  grid-column: span 1;
+}
+
+.learn__images-item-d {
+  grid-column: span 3;
 }
 
 /* BUTTON */
+.learn__button-conainer {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
 .learn__button {
-  padding: 14px 20px;
-  border-radius: 14px;
+  width: 240px;
 
-  background-color: var(--green);
-  color: var(--white);
-
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 /* Tablet styles */
 @media (min-width: 768px) {
+
   /* Tablet: var(--breakpoint-tablet) */
   .learn__container {
     padding: 40px 32px;
@@ -96,6 +125,7 @@
 
 /* Desktop styles */
 @media (min-width: 1024px) {
+
   /* Desktop: var(--breakpoint-desktop) */
   .learn__container {
     padding: 48px 48px;

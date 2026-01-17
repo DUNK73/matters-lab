@@ -12,6 +12,11 @@
     color: var(--dark);
 }
 
+.content_section__title--white {
+    color: var(--white);
+
+}
+
 /* Mobile max */
 @media (min-width: 425px) {
 

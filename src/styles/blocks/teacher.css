@@ -24,54 +24,37 @@
   line-height: 1.45;
   color: var(--gray-text);
 }
-}
+
 
 /* LIST */
 .teacher__list {
   margin: 0 0 20px;
-  padding-left: 20px;
+}
 
+.teacher__item {}
+
+/* SOCIALS */
+.teacher__contacts {
   display: flex;
-  flex-direction: column;
+ align-items: center;
+  justify-content: center;
   gap: 10px;
 }
 
-.teacher__item {
-  font-size: 14px;
-  line-height: 1.45;
-  color: var(--gray-text);
-}
-
-/* SOCIALS */
-.teacher__socials {
+.teacher__contact-button {
+  width: 40px;
+  height: 40px;
   display: flex;
-  gap: 14px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  border: none;
+  background-color: #50E2DE;
+  padding: 8px;
+
+  margin-bottom: 20px;
 }
 
-.teacher__social {
-  width: 32px;
-  height: 32px;
-
-  background-color: var(--gray-social);
-  border-radius: 50%;
-
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 16px 16px;
-}
-
-/* конкретные иконки */
-.teacher__social--instagram {
-  background-image: url("../../assets/icons/instagram.svg");
-}
-
-.teacher__social--youtube {
-  background-image: url("../../assets/icons/youtube.svg");
-}
-
-.teacher__social--linkedin {
-  background-image: url("../../assets/icons/linkedin.svg");
-}
 
 /* IMAGE */
 .teacher__image {
@@ -84,6 +67,7 @@
 
 /* Tablet styles */
 @media (min-width: 768px) {
+
   /* Tablet: var(--breakpoint-tablet) */
   .teacher__container {
     padding: 40px 32px;
@@ -120,6 +104,7 @@
 
 /* Desktop styles */
 @media (min-width: 1024px) {
+
   /* Desktop: var(--breakpoint-desktop) */
   .teacher__container {
     padding: 48px 48px;

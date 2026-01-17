@@ -60,7 +60,7 @@
             <span class="hero__tagline">
               Your voice shapes your identity.
             </span>
-            <button class="hero__button">
+            <button class="button hero__button">
               Discover more
             </button>
           </div>
@@ -177,55 +177,55 @@
 
       <div class="courses__list">
 
-      <div class="my-slider">
-        <div>
-          <article class="courses__card">
-            <h3 class="courses__card-title">The British Newcomer</h3>
+        <div class="my-slider">
+          <div>
+            <article class="courses__card">
+              <h3 class="courses__card-title">The British Newcomer</h3>
 
-            <p class="courses__text">
-              You have recently moved to the UK and want to sound confident and clear in everyday communication.
-            </p>
+              <p class="courses__text">
+                You have recently moved to the UK and want to sound confident and clear in everyday communication.
+              </p>
 
-            <button class="courses__button">Read more</button>
-          </article>
+              <button class="button courses__button">Read more</button>
+            </article>
+          </div>
+
+          <div>
+            <article class="courses__card">
+              <h3 class="courses__card-title">Language learners (ESL / EFL)</h3>
+
+              <p class="courses__text">
+                You want to improve pronunciation, understand native speakers better and reduce your accent.
+              </p>
+
+              <button class="button courses__button">Read more</button>
+            </article>
+          </div>
+
+          <div>
+            <article class="courses__card">
+              <h3 class="courses__card-title">The British Newcomer</h3>
+
+              <p class="courses__text">
+                You have recently moved to the UK and want to sound confident and clear in everyday communication.
+              </p>
+
+              <button class="button courses__button">Read more</button>
+            </article>
+          </div>
         </div>
 
-        <div>
-          <article class="courses__card">
-            <h3 class="courses__card-title">Language learners (ESL / EFL)</h3>
+        <script type="module">
 
-            <p class="courses__text">
-              You want to improve pronunciation, understand native speakers better and reduce your accent.
-            </p>
-
-            <button class="courses__button">Read more</button>
-          </article>
-        </div>
-
-        <div>
-          <article class="courses__card">
-            <h3 class="courses__card-title">The British Newcomer</h3>
-
-            <p class="courses__text">
-              You have recently moved to the UK and want to sound confident and clear in everyday communication.
-            </p>
-
-            <button class="courses__button">Read more</button>
-          </article>
-        </div>
-      </div>
-
-      <script type="module">
-
-        var slider = tns({
-          container: '.my-slider',
-          items: 1,
-          slideBy: 'page',
-          autoplay: true,
-          autoplayButtonOutput: false,
-          controlsText: ['<', '>'],
-        });
-      </script>
+          var slider = tns({
+            container: '.my-slider',
+            items: 1,
+            slideBy: 'page',
+            autoplay: true,
+            autoplayButtonOutput: false,
+            controlsText: ['', ''],
+          });
+        </script>
 
 
 
@@ -249,7 +249,7 @@
 
           <button class="courses__button">Read more</button>
         </article> -->
-        
+
       </div>
 
     </section>
@@ -259,7 +259,7 @@
 
       <h2 class="content_section__title learn__title">You will learn how to:</h2>
 
-      <ul class="learn__list">
+      <ul class="list learn__list">
         <li class="learn__item">Sound more natural and native</li>
         <li class="learn__item">Understand native speakers</li>
         <li class="learn__item">Use connected speech features</li>
@@ -271,55 +271,82 @@
       </ul>
 
       <div class="learn__images">
-        <img src="src/assets/images/learn/learn-1.png" alt="">
-        <img src="src/assets/images/learn/learn-2.png" alt="">
-        <img src="src/assets/images/learn/learn-3.png" alt="">
-        <img src="src/assets/images/learn/learn-4.png" alt="">
+        <div class="learn__images-item learn__images-item-a"><img src="src/assets/images/learn/learn-3.png" alt="">
+        </div>
+        <div class="learn__images-item learn__images-item-b"><img src="src/assets/images/learn/learn-2.png" alt="">
+        </div>
+        <div class="learn__images-item learn__images-item-c"><img src="src/assets/images/learn/learn-1.png" alt="">
+        </div>
+        <div class="learn__images-item learn__images-item-d"><img src="src/assets/images/learn/learn-4.png" alt="">
+        </div>
       </div>
 
-      <button class="learn__button">I’m in</button>
+      <div class="learn__button-conainer">
+        <button class="button learn__button">I’m in</button>
+      </div>
 
     </section>
 
 
 
     <section class="content_section teacher">
-      <div class="teacher__container">
-        <div class="teacher__content">
-          <h2 class="content_section__title teacher__title">I am Yulia Saveleva</h2>
 
-          <p class="teacher__description">
-            I help people sound confident, clear and natural in English through pronunciation and speaking practice.
-          </p>
+      <div class="teacher__content">
+        <h2 class="content_section__title teacher__title">I am Yulia Saveleva</h2>
 
-          <ul class="teacher__list">
-            <li class="teacher__item">CELTA-qualified EFL & ESL teacher (by Internatonal House London)</li>
-            <li class="teacher__item">Content writer</li>
-            <li class="teacher__item">Guest speaker at educational events</li>
-            <li class="teacher__item">20+ years of experience</li>
-            <li class="teacher__item">CAE certficate holder</li>
-            <li class="teacher__item">Voice, speech and pronuncia?on coach</li>
-            <li class="teacher__item">Conference speaker</li>
-            <li class="teacher__item">Course creator</li>
-            <li class="teacher__item">Has taught 2000+ students across Europe and Russia</li>
-          </ul>
+        <p class="teacher__description">
+          I help people sound confident, clear and natural in English through pronunciation and speaking practice.
+        </p>
 
-          <div class="teacher__socials">
-            <a href="#" class="teacher__social teacher__social--instagram" aria-label="Instagram"></a>
-            <a href="#" class="teacher__social teacher__social--youtube" aria-label="YouTube"></a>
-            <a href="#" class="teacher__social teacher__social--linkedin" aria-label="LinkedIn"></a>
-          </div>
-        </div>
+        <ul class="list teacher__list">
+          <li class="teacher__item">CELTA-qualified EFL & ESL teacher (by Internatonal House London)</li>
+          <li class="teacher__item">Content writer</li>
+          <li class="teacher__item">Guest speaker at educational events</li>
+          <li class="teacher__item">20+ years of experience</li>
+          <li class="teacher__item">CAE certficate holder</li>
+          <li class="teacher__item">Voice, speech and pronuncia?on coach</li>
+          <li class="teacher__item">Conference speaker</li>
+          <li class="teacher__item">Course creator</li>
+          <li class="teacher__item">Has taught 2000+ students across Europe and Russia</li>
+        </ul>
 
-        <div class="teacher__media">
-          <img src="src/assets/images/teacher.jpg" alt="Yulia Saveleva" class="teacher__image">
+        <div class="teacher__socials">
+          <a href="#" class="teacher__social teacher__social--instagram" aria-label="Instagram"></a>
+          <a href="#" class="teacher__social teacher__social--youtube" aria-label="YouTube"></a>
+          <a href="#" class="teacher__social teacher__social--linkedin" aria-label="LinkedIn"></a>
         </div>
       </div>
+
+      <div class="teacher__contacts">
+        <button class="teacher__contact-button">
+          <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M23.4493 5.94799C23.6161 5.40154 23.4493 5 22.6553 5H20.0297C19.3621 5 19.0543 5.34687 18.8874 5.72936C18.8874 5.72936 17.5521 8.92607 15.6606 11.0025C15.0487 11.6036 14.7705 11.7949 14.4367 11.7949C14.2698 11.7949 14.0194 11.6036 14.0194 11.0572V5.94799C14.0194 5.29225 13.8345 5 13.2781 5H9.15213C8.73494 5 8.48403 5.30434 8.48403 5.59278C8.48403 6.21441 9.42974 6.35777 9.52722 8.10641V11.9042C9.52722 12.7368 9.37413 12.8878 9.04032 12.8878C8.15023 12.8878 5.98507 9.67682 4.70093 6.00261C4.44927 5.28847 4.19686 5 3.52583 5H0.900218C0.150044 5 0 5.34687 0 5.72936C0 6.41244 0.890141 9.80039 4.14464 14.2812C6.31429 17.3412 9.37118 19 12.1528 19C13.8218 19 14.0283 18.6316 14.0283 17.997V15.6842C14.0283 14.9474 14.1864 14.8003 14.7149 14.8003C15.1043 14.8003 15.7719 14.9916 17.3296 16.467C19.1099 18.2156 19.4034 19 20.4047 19H23.0304C23.7805 19 24.1556 18.6316 23.9392 17.9045C23.7024 17.1799 22.8525 16.1286 21.7247 14.8823C21.1127 14.1719 20.1947 13.4069 19.9165 13.0243C19.5271 12.5326 19.6384 12.314 19.9165 11.8769C19.9165 11.8769 23.1155 7.45067 23.4493 5.94799Z"
+              fill="#ffffff" />
+          </svg>
+        </button>
+
+        <button class="teacher__contact-button">
+
+
+          <svg fill="#fff" width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m20.665 3.717-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z" />
+          </svg>
+
+
+        </button>
+      </div>
+
+      <div class="teacher__media">
+        <img src="src/assets/images/teacher.jpg" alt="Yulia Saveleva" class="teacher__image">
+      </div>
+
     </section>
 
 
 
-    <section class="content_section testimonials">
+    <!-- <section class="content_section testimonials">
       <div class="testimonials__container">
         <h2 class="content_section__title testimonials__title">
           First impressions start with sound
@@ -388,7 +415,81 @@
           <span class="testimonials__dot"></span>
         </div>
       </div>
+    </section> -->
+
+
+    <section class="content_section impressions">
+      <div class="impressions__container">
+        <h2 class="content_section__title impressions__title">
+          First Impressions Start With Sound
+        </h2>
+
+        <p class="impressions__intro">
+          People are always surprised to learn I’m not a native speaker, and that I’ve
+          acquired my British accent without living in the UK.
+        </p>
+
+        <ul class="impressions__list">
+          <li class="impressions__item">
+            <article class="quote-card">
+              <p class="quote-card__quote">
+                "You're inspiring. By the way, when you started speaking I thought you
+                were a native speaker and that's the best compliment a non-native speaker
+                can ever get. Your level of accent acquisition is phenomenal."
+              </p>
+
+              <p class="quote-card__author">
+                — An Australian teacher at a prestigious Moscow school said.
+              </p>
+            </article>
+          </li>
+
+          <li class="impressions__item">
+            <article class="quote-card">
+              <p class="quote-card__quote">
+                “How long have you been living in England?”
+              </p>
+
+              <p class="quote-card__author">
+                — My student from Iran asked me when I was teaching a CELTA course in
+                London. The look on his face when I replied, "Actually, never" was
+                priceless. Apparently, I sounded British enough to have lived there for
+                years!
+              </p>
+            </article>
+          </li>
+
+          <li class="impressions__item">
+            <article class="quote-card">
+              <p class="quote-card__quote">
+                "I was sure you were from England, but when I looked closer, I thought…
+                hmmm…. she looks Russian… You have such beautiful British pronunciation!"
+              </p>
+
+              <p class="quote-card__author">
+                — A girl from Kazakhstan told me when I met her at a hotel in China. That
+                interaction made me realize how pronunciation shapes perceptions.
+              </p>
+            </article>
+          </li>
+
+          <li class="impressions__item">
+            <article class="quote-card">
+              <p class="quote-card__quote">
+                "Here is the English menu."
+              </p>
+
+              <p class="quote-card__author">
+                — The waiter in Turkey announced with a confident smile. He clearly
+                assumed it was the only option for me. He had no idea I’d have much
+                preferred the Russian one — which, of course, they also had!
+              </p>
+            </article>
+          </li>
+        </ul>
+      </div>
     </section>
+
 
 
     <section class="content_section inspiring">
@@ -398,7 +499,7 @@
 
       <div class="inspiring__overlay">
         <div class="inspiring__content">
-          <h2 class="content_section__title inspiring__title">Inspiring...</h2>
+          <h2 class="content_section__title content_section__title--white inspiring__title">Inspiring...</h2>
 
           <p class="inspiring__text">
             Yes, it’s possible to acquire a proper accent without living in a language environment. Want to?
@@ -417,7 +518,7 @@
 
   <footer class="footer">
 
-    <section class="questions">
+    <section class="footer_section questions">
       <div class="questions__container">
         <h2 class="questions__title">
           Still have questions?<br>
@@ -457,7 +558,7 @@
       </div>
     </section>
 
-    <section class="contacts">
+    <section class="footer_section contacts">
       <div class="contacts__container">
         <ul class="contacts__list">
           <li class="contacts__item">
@@ -484,7 +585,7 @@
       </div>
     </section>
 
-    <section class="legal">
+    <section class="footer_section legal">
       <div class="legal__container">
         <ul class="legal__list">
           <li class="legal__item">
@@ -506,7 +607,7 @@
     </section>
 
     <section class="copyright">
-      <p>© Matters - 2025</p>
+      <span>© Matters - 2025</span>
     </section>
   </footer>
 

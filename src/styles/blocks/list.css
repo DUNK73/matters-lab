@@ -1,0 +1,19 @@
+.list {
+
+    margin: 0 0 24px;
+    padding-left: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.list li {
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--gray-text);
+}
+
+.list li::marker {
+  color: var(--green);
+}

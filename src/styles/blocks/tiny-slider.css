@@ -16,22 +16,42 @@ div.tns-outer {
 }
 
 .tns-controls button {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 3px;
     gap: 6px;
-    background-color: rgba(79, 78, 78, 0.249);
+    background-color: transparent;
 }
 
 .tns-controls button:first-child {
-    transform: translate(-10px, 0);
+    transform: translate(-15px, 0);
+}
+
+.tns-controls button:first-child::after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border: 2px solid #32557f;
+    border-left: 0;
+    border-top: 0;
+    transform: rotate(135deg);
 }
 
 .tns-controls button:last-child {
-    transform: translate(10px, 0);
+    transform: translate(15px, 0);
+}
+
+.tns-controls button:last-child::after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border: 2px solid #32557f;
+    border-left: 0;
+    border-top: 0;
+    transform: rotate(320deg);
 }
 
 .tns-nav {
@@ -48,5 +68,9 @@ div.tns-outer {
 
 .tns-nav button {
     padding: 3px;
+    background-color: var(--dark);
+}
 
+.tns-nav button.tns-nav-active {
+    background-color: var(--green);
 }
