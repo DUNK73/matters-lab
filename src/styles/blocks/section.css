@@ -1,8 +1,12 @@
 /* Section styles */
 .content_section {
-    padding: 26px 20px 20px;
+    padding: 26px 20px 40px;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.content_section--gray {
+    background-color: var(--gray-light);
 }
 
 .content_section__title {

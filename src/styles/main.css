@@ -1,6 +1,12 @@
 /* Main stylesheet - imports all other stylesheets */
 @import 'variables.css';
 @import 'base.css';
+
+@import 'blocks/buttons.css';
+@import 'blocks/list.css';
+@import 'blocks/section.css';
+
+
 @import 'blocks/header.css';
 @import 'blocks/hero.css';
 @import 'blocks/steps.css';
@@ -18,10 +24,8 @@
 @import 'blocks/impressions.css';
 @import 'blocks/quote-card.css';
 
-@import 'blocks/buttons.css';
-@import 'blocks/list.css';
 
 
 
-@import 'blocks/section.css';
+
 @import 'blocks/footer.css';
