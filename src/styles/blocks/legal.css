@@ -39,10 +39,7 @@
     }
   
     .legal__list {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 24px;
+
     }
   
     .legal__item {

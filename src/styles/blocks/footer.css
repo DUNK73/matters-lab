@@ -12,9 +12,7 @@
   
   /* Tablet styles */
   @media (min-width: 768px) {
-    /* Tablet: var(--breakpoint-tablet) */
     .footer {
-      padding: 24px 0;
     }
   }
   
