@@ -71,6 +71,11 @@
   padding: 8px;
 }
 
+.teacher__contact-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
 .teacher__contact-text {
   display: none;
 }
