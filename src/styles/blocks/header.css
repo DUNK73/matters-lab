@@ -50,38 +50,132 @@
   height: 2px;
   width: 100%;
   background-color: var(--dark);
- border-radius: 1px;
+  border-radius: 1px;
+}
+
+
+/* details reset */
+.nav {
+  position: relative;
+}
+
+.nav summary {
+  list-style: none;
+}
+
+.nav summary::-webkit-details-marker {
+  display: none;
+}
+
+/* burger */
+.burger {
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.burger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #111;
+  transition: 0.3s;
+}
+
+.burger span:nth-child(1) {
+  top: 0;
+}
+
+.burger span:nth-child(2) {
+  top: 9px;
+}
+
+.burger span:nth-child(3) {
+  bottom: 0;
+}
+
+/* burger active */
+.nav[open] .burger span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 9px;
+}
+
+.nav[open] .burger span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav[open] .burger span:nth-child(3) {
+  transform: rotate(-45deg);
+  bottom: 9px;
+}
+
+/* Menu */
+.menu {
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+
+  background: #fff;
+  padding: 0 16px;
+
+  position: absolute;
+
+  top: 40px;
+  right: -16px;
+  z-index: 111;
+
+}
+
+.menu a {
+  display: block;
+  padding: 12px 0;
+  font-size: 18px;
+  color: #111;
+  text-decoration: none;
+}
+
+/* Menu open */
+.menu-toggle:checked~.menu {
+  max-height: 300px;
 }
 
 /* Tablet styles */
 @media (min-width: 768px) {
+
   /* Tablet: var(--breakpoint-tablet) */
- .header__container {
-   padding: 20px 32px;
-   height: 64px;
- }
+  .header__container {
+    padding: 20px 32px;
+    height: 64px;
+  }
 
- .header__logo {
-   font-size: 20px;
- }
+  .header__logo {
+    font-size: 20px;
+  }
 
- .header__menu-text {
-   font-size: 16px;
- }
+  .header__menu-text {
+    font-size: 16px;
+  }
 
- .header__burger {
-   display: none;
- }
+  /* .header__burger {
+    display: none;
+  } */
+
+  .menu {
+    top: 44px;
+    right: -32px;
+  }
 }
 
 /* Desktop styles */
 @media (min-width: 1024px) {
-  /* Desktop: var(--breakpoint-desktop) */
- .header__container {
-   padding: 24px 48px;
- }
 
- .header__logo {
-   font-size: 22px;
- }
+  /* Desktop: var(--breakpoint-desktop) */
+  .header__container {
+    padding: 24px 48px;
+  }
+
+  .header__logo {
+    font-size: 22px;
+  }
 }

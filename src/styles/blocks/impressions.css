@@ -34,8 +34,21 @@
 
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 24px;
 }
 
 .impressions__item {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .impressions__list {
+    flex-direction: row;
+  }
+
+  .impressions__item {
+    width: calc(50% - 22px);
+    /* height: 100%; */
+  }
 }

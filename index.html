@@ -22,13 +22,40 @@
       <div class="header__logo">MATTERS</div>
 
       <div class="header__menu">
-        <span class="header__menu-text">menu</span>
-        <button class="header__burger" aria-label="Open menu">
+        <span class="header__menu-text">en/ru</span>
+
+        <!-- <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="burger" aria-label="Open menu">
           <span></span>
           <span></span>
           <span></span>
-        </button>
+        </label>
+
+        <nav class="menu">
+          <a href="#">About</a>
+          <a href="#">Courses</a>
+          <a href="#">Pricing</a>
+          <a href="#">Contacts</a>
+        </nav> -->
+
+        <details class="nav">
+          <summary class="header__burger" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </summary>
+
+          <nav class="menu">
+            <a href="#">About</a>
+            <a href="#">Courses</a>
+            <a href="#">Pricing</a>
+            <a href="#">Contacts</a>
+          </nav>
+        </details>
+
       </div>
+
+
     </div>
   </header>
 
@@ -57,8 +84,10 @@
             Sound Matters More.
           </h1>
           <div class="hero__body">
-            <span class="hero__tagline">
+            <span class="hero__tag">
               Your voice shapes your identity.
+            </span>
+            <span class="hero__line-horizontal">
             </span>
             <button class="button hero__button">
               Discover more
@@ -222,31 +251,14 @@
             autoplay: true,
             autoplayButtonOutput: false,
             controlsText: ['', ''],
+            gutter: 10,
+            responsive: {
+              768: { // Screen width 640px and below
+                items: 3
+              },
+            }
           });
         </script>
-
-
-
-
-        <!-- <article class="courses__card">
-          <h3 class="courses__card-title">The British Newcomer</h3>
-
-          <p class="courses__text">
-            You have recently moved to the UK and want to sound confident and clear in everyday communication.
-          </p>
-
-          <button class="courses__button">Read more</button>
-        </article>
-
-        <article class="courses__card">
-          <h3 class="courses__card-title">Language learners (ESL / EFL)</h3>
-
-          <p class="courses__text">
-            You want to improve pronunciation, understand native speakers better and reduce your accent.
-          </p>
-
-          <button class="courses__button">Read more</button>
-        </article> -->
 
       </div>
 
@@ -257,25 +269,27 @@
 
       <h2 class="content_section__title learn__title">You will learn how to:</h2>
 
-      <ul class="list learn__list">
-        <li class="learn__item">Sound more natural and native</li>
-        <li class="learn__item">Understand native speakers</li>
-        <li class="learn__item">Use connected speech features</li>
-        <li class="learn__item">Reduce accent</li>
-        <li class="learn__item">Master intonation</li>
-        <li class="learn__item">Improve listening skills</li>
-        <li class="learn__item">Speak confidently</li>
-        <li class="learn__item">Be clearly understood</li>
-      </ul>
+      <div class="learn__grid">
+        <ul class="list learn__list learn__grid-item">
+          <li class="learn__item">Sound more natural and native</li>
+          <li class="learn__item">Understand native speakers</li>
+          <li class="learn__item">Use connected speech features</li>
+          <li class="learn__item">Reduce accent</li>
+          <li class="learn__item">Master intonation</li>
+          <li class="learn__item">Improve listening skills</li>
+          <li class="learn__item">Speak confidently</li>
+          <li class="learn__item">Be clearly understood</li>
+        </ul>
 
-      <div class="learn__images">
-        <div class="learn__images-item learn__images-item-a"><img src="src/assets/images/learn/learn-3.png" alt="">
-        </div>
-        <div class="learn__images-item learn__images-item-b"><img src="src/assets/images/learn/learn-2.png" alt="">
-        </div>
-        <div class="learn__images-item learn__images-item-c"><img src="src/assets/images/learn/learn-1.png" alt="">
-        </div>
-        <div class="learn__images-item learn__images-item-d"><img src="src/assets/images/learn/learn-4.png" alt="">
+        <div class="learn__images learn__grid-item">
+          <div class="learn__images-item learn__images-item-a"><img src="src/assets/images/learn/learn-3.png" alt="">
+          </div>
+          <div class="learn__images-item learn__images-item-b"><img src="src/assets/images/learn/learn-2.png" alt="">
+          </div>
+          <div class="learn__images-item learn__images-item-c"><img src="src/assets/images/learn/learn-1.png" alt="">
+          </div>
+          <div class="learn__images-item learn__images-item-d"><img src="src/assets/images/learn/learn-4.png" alt="">
+          </div>
         </div>
       </div>
 
@@ -288,127 +302,68 @@
 
     <section class="content_section teacher">
 
-      <div class="teacher__content">
-        <h2 class="content_section__title teacher__title">I am Yulia Saveleva</h2>
+      <div class="teacher__grid">
+        <div class="teacher__grid-item">
+          <div class="teacher__content">
+            <h2 class="content_section__title teacher__title">I am <span class="teacher__title-name">Yulia
+                Saveleva</span>
+            </h2>
 
-        <p class="teacher__description">
-          I help people sound confident, clear and natural in English through pronunciation and speaking practice.
-        </p>
+            <p class="teacher__description">
+              I help people sound confident, clear and natural in English through pronunciation and speaking practice.
+            </p>
 
-        <ul class="list teacher__list">
-          <li class="teacher__item">CELTA-qualified EFL & ESL teacher (by Internatonal House London)</li>
-          <li class="teacher__item">Content writer</li>
-          <li class="teacher__item">Guest speaker at educational events</li>
-          <li class="teacher__item">20+ years of experience</li>
-          <li class="teacher__item">CAE certficate holder</li>
-          <li class="teacher__item">Voice, speech and pronuncia?on coach</li>
-          <li class="teacher__item">Conference speaker</li>
-          <li class="teacher__item">Course creator</li>
-          <li class="teacher__item">Has taught 2000+ students across Europe and Russia</li>
-        </ul>
+            <ul class="list teacher__list">
+              <li class="teacher__item">CELTA-qualified EFL & ESL teacher (by Internatonal House London)</li>
+              <li class="teacher__item">Content writer</li>
+              <li class="teacher__item">Guest speaker at educational events</li>
+              <li class="teacher__item">20+ years of experience</li>
+              <li class="teacher__item">CAE certficate holder</li>
+              <li class="teacher__item">Voice, speech and pronuncia?on coach</li>
+              <li class="teacher__item">Conference speaker</li>
+              <li class="teacher__item">Course creator</li>
+              <li class="teacher__item">Has taught 2000+ students across Europe and Russia</li>
+            </ul>
 
-        <div class="teacher__socials">
-          <a href="#" class="teacher__social teacher__social--instagram" aria-label="Instagram"></a>
-          <a href="#" class="teacher__social teacher__social--youtube" aria-label="YouTube"></a>
-          <a href="#" class="teacher__social teacher__social--linkedin" aria-label="LinkedIn"></a>
+            <div class="teacher__socials">
+              <a href="#" class="teacher__social teacher__social--instagram" aria-label="Instagram"></a>
+              <a href="#" class="teacher__social teacher__social--youtube" aria-label="YouTube"></a>
+              <a href="#" class="teacher__social teacher__social--linkedin" aria-label="LinkedIn"></a>
+            </div>
+          </div>
+
+          <div class="teacher__contacts">
+            <a href="https://vk.com/yuliazakharova" class="teacher__contact-button">
+              <span class="teacher__contact-icon">
+                <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M23.4493 5.94799C23.6161 5.40154 23.4493 5 22.6553 5H20.0297C19.3621 5 19.0543 5.34687 18.8874 5.72936C18.8874 5.72936 17.5521 8.92607 15.6606 11.0025C15.0487 11.6036 14.7705 11.7949 14.4367 11.7949C14.2698 11.7949 14.0194 11.6036 14.0194 11.0572V5.94799C14.0194 5.29225 13.8345 5 13.2781 5H9.15213C8.73494 5 8.48403 5.30434 8.48403 5.59278C8.48403 6.21441 9.42974 6.35777 9.52722 8.10641V11.9042C9.52722 12.7368 9.37413 12.8878 9.04032 12.8878C8.15023 12.8878 5.98507 9.67682 4.70093 6.00261C4.44927 5.28847 4.19686 5 3.52583 5H0.900218C0.150044 5 0 5.34687 0 5.72936C0 6.41244 0.890141 9.80039 4.14464 14.2812C6.31429 17.3412 9.37118 19 12.1528 19C13.8218 19 14.0283 18.6316 14.0283 17.997V15.6842C14.0283 14.9474 14.1864 14.8003 14.7149 14.8003C15.1043 14.8003 15.7719 14.9916 17.3296 16.467C19.1099 18.2156 19.4034 19 20.4047 19H23.0304C23.7805 19 24.1556 18.6316 23.9392 17.9045C23.7024 17.1799 22.8525 16.1286 21.7247 14.8823C21.1127 14.1719 20.1947 13.4069 19.9165 13.0243C19.5271 12.5326 19.6384 12.314 19.9165 11.8769C19.9165 11.8769 23.1155 7.45067 23.4493 5.94799Z"
+                    fill="#ffffff" />
+                </svg>
+              </span>
+              <span class="teacher__contact-text">vk.com</span>
+            </a>
+
+            <a href="https://t.me/callmemissyulia" class="teacher__contact-button">
+              <span class="teacher__contact-icon">
+                <svg fill="#fff" width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="m20.665 3.717-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z" />
+                </svg>
+              </span>
+              <span class="teacher__contact-text">telegram</span>
+            </a>
+          </div>
         </div>
-      </div>
 
-      <div class="teacher__contacts">
-        <button class="teacher__contact-button">
-          <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M23.4493 5.94799C23.6161 5.40154 23.4493 5 22.6553 5H20.0297C19.3621 5 19.0543 5.34687 18.8874 5.72936C18.8874 5.72936 17.5521 8.92607 15.6606 11.0025C15.0487 11.6036 14.7705 11.7949 14.4367 11.7949C14.2698 11.7949 14.0194 11.6036 14.0194 11.0572V5.94799C14.0194 5.29225 13.8345 5 13.2781 5H9.15213C8.73494 5 8.48403 5.30434 8.48403 5.59278C8.48403 6.21441 9.42974 6.35777 9.52722 8.10641V11.9042C9.52722 12.7368 9.37413 12.8878 9.04032 12.8878C8.15023 12.8878 5.98507 9.67682 4.70093 6.00261C4.44927 5.28847 4.19686 5 3.52583 5H0.900218C0.150044 5 0 5.34687 0 5.72936C0 6.41244 0.890141 9.80039 4.14464 14.2812C6.31429 17.3412 9.37118 19 12.1528 19C13.8218 19 14.0283 18.6316 14.0283 17.997V15.6842C14.0283 14.9474 14.1864 14.8003 14.7149 14.8003C15.1043 14.8003 15.7719 14.9916 17.3296 16.467C19.1099 18.2156 19.4034 19 20.4047 19H23.0304C23.7805 19 24.1556 18.6316 23.9392 17.9045C23.7024 17.1799 22.8525 16.1286 21.7247 14.8823C21.1127 14.1719 20.1947 13.4069 19.9165 13.0243C19.5271 12.5326 19.6384 12.314 19.9165 11.8769C19.9165 11.8769 23.1155 7.45067 23.4493 5.94799Z"
-              fill="#ffffff" />
-          </svg>
-        </button>
-
-        <button class="teacher__contact-button">
-          <svg fill="#fff" width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="m20.665 3.717-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z" />
-          </svg>
-        </button>
-      </div>
-
-      <div class="teacher__media">
-        <!-- <img src="src/assets/images/teacher.jpg" alt="Yulia Saveleva" class="teacher__image"> -->
+        <div class="teacher__grid-item">
+          <div class="teacher__media">
+            <!-- <img src="src/assets/images/teacher.jpg" alt="Yulia Saveleva" class="teacher__image"> -->
+          </div>
+        </div>
       </div>
 
     </section>
-
-
-
-    <!-- <section class="content_section testimonials">
-      <div class="testimonials__container">
-        <h2 class="content_section__title testimonials__title">
-          First impressions start with sound
-        </h2>
-
-        <p class="testimonials__subtitle">
-          Hear what students say after working on their pronunciation.
-        </p>
-
-        <div class="testimonials__slider">
-          <article class="testimonial">
-            <span class="testimonial__quote">❝</span>
-
-            <p class="testimonial__text">
-              I finally feel confident speaking English. My pronunciation has improved dramatically.
-            </p>
-
-            <div class="testimonial__author">
-              <img src="assets/images/student-1.jpg" alt="Anna" class="testimonial__avatar">
-
-              <div>
-                <div class="testimonial__name">Anna</div>
-                <div class="testimonial__meta">Marketing specialist</div>
-              </div>
-            </div>
-          </article>
-
-          <article class="testimonial">
-            <span class="testimonial__quote">❝</span>
-
-            <p class="testimonial__text">
-              People understand me better now. I stopped being afraid of speaking.
-            </p>
-
-            <div class="testimonial__author">
-              <img src="assets/images/student-2.jpg" alt="David" class="testimonial__avatar">
-
-              <div>
-                <div class="testimonial__name">David</div>
-                <div class="testimonial__meta">IT consultant</div>
-              </div>
-            </div>
-          </article>
-
-          <article class="testimonial">
-            <span class="testimonial__quote">❝</span>
-
-            <p class="testimonial__text">
-              This course completely changed the way I sound in English.
-            </p>
-
-            <div class="testimonial__author">
-              <img src="assets/images/student-3.jpg" alt="Elena" class="testimonial__avatar">
-
-              <div>
-                <div class="testimonial__name">Elena</div>
-                <div class="testimonial__meta">Student</div>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="testimonials__dots">
-          <span class="testimonials__dot testimonials__dot--active"></span>
-          <span class="testimonials__dot"></span>
-          <span class="testimonials__dot"></span>
-        </div>
-      </div>
-    </section> -->
 
 
     <section class="content_section impressions">
@@ -515,91 +470,85 @@
   <footer class="footer">
 
     <section class="footer_section questions">
-      <div class="questions__container">
-        <h2 class="questions__title">
-          Still have questions?<br>
-          We will be happy to help!
-        </h2>
+      <h2 class="questions__title">
+        Still have questions?<br>
+        We will be happy to help!
+      </h2>
 
-        <form class="questions__form">
-          <div class="questions__field">
-            <label class="questions__label" for="name">Name</label>
-            <input class="questions__input" type="text" id="name" name="name" placeholder="Your name">
-          </div>
+      <form class="questions__form">
+        <div class="questions__field">
+          <label class="questions__label" for="name">Name</label>
+          <input class="questions__input" type="text" id="name" name="name" placeholder="Your name">
+        </div>
 
-          <div class="questions__field">
-            <label class="questions__label" for="email">Email</label>
-            <input class="questions__input" type="email" id="email" name="email" placeholder="Your email">
-          </div>
+        <div class="questions__field">
+          <label class="questions__label" for="email">Email</label>
+          <input class="questions__input" type="email" id="email" name="email" placeholder="Your email">
+        </div>
 
-          <div class="questions__field">
-            <label class="questions__label" for="message">Message</label>
-            <textarea class="questions__textarea" id="message" name="message" placeholder="Your message"
-              rows="4"></textarea>
-          </div>
+        <div class="questions__field">
+          <label class="questions__label" for="message">Message</label>
+          <textarea class="questions__textarea" id="message" name="message" placeholder="Your message"
+            rows="4"></textarea>
+        </div>
 
-          <!-- CHECKBOX -->
-          <label class="questions__checkbox">
-            <input type="checkbox" class="questions__checkbox-input">
-            <span class="questions__checkbox-box"></span>
-            <span class="questions__checkbox-text">
-              I agree to the processing of personal data
-            </span>
-          </label>
+        <!-- CHECKBOX -->
+        <label class="questions__checkbox">
+          <input type="checkbox" class="questions__checkbox-input">
+          <span class="questions__checkbox-box"></span>
+          <span class="questions__checkbox-text">
+            I agree to the processing of personal data
+          </span>
+        </label>
 
-          <button class="questions__button" type="submit">
-            Submit
-          </button>
-        </form>
-      </div>
+        <button class="button questions__button" type="submit">
+          Submit
+        </button>
+      </form>
     </section>
 
     <section class="footer_section contacts">
-      <div class="contacts__container">
-        <ul class="contacts__list">
-          <li class="contacts__item">
-            <span class="contacts__label">Telegram:</span>
-            <a class="contacts__value" href="https://t.me/yulia_saav" target="_blank">
-              t.me/yulia_saav
-            </a>
-          </li>
+      <ul class="contacts__list">
+        <li class="contacts__item">
+          <span class="contacts__label">Telegram:</span>
+          <a class="contacts__value" href="https://t.me/yulia_saav" target="_blank">
+            t.me/yulia_saav
+          </a>
+        </li>
 
-          <li class="contacts__item">
-            <span class="contacts__label">VK:</span>
-            <a class="contacts__value" href="https://vk.com/yuliazakharova" target="_blank">
-              vk.com/yuliazakharova
-            </a>
-          </li>
+        <li class="contacts__item">
+          <span class="contacts__label">VK:</span>
+          <a class="contacts__value" href="https://vk.com/yuliazakharova" target="_blank">
+            vk.com/yuliazakharova
+          </a>
+        </li>
 
-          <li class="contacts__item">
-            <span class="contacts__label">Phone:</span>
-            <a class="contacts__value" href="tel:+79208801277">
-              +7 920 880-12-77
-            </a>
-          </li>
-        </ul>
-      </div>
+        <li class="contacts__item">
+          <span class="contacts__label">Phone:</span>
+          <a class="contacts__value" href="tel:+79208801277">
+            +7 920 880-12-77
+          </a>
+        </li>
+      </ul>
     </section>
 
     <section class="footer_section legal">
-      <div class="legal__container">
-        <ul class="legal__list">
-          <li class="legal__item">
-            <a href="#" class="legal__link">Публичная оферта</a>
-          </li>
-          <li class="legal__item">
-            <a href="#" class="legal__link">Пользовательское соглашение</a>
-          </li>
-          <li class="legal__item">
-            <a href="#" class="legal__link">Политика обработки персональных данных</a>
-          </li>
-          <li class="legal__item">
-            <a href="#" class="legal__link">
-              Согласие на информационную и рекламную рассылку
-            </a>
-          </li>
-        </ul>
-      </div>
+      <ul class="legal__list">
+        <li class="legal__item">
+          <a href="#" class="legal__link">Публичная оферта</a>
+        </li>
+        <li class="legal__item">
+          <a href="#" class="legal__link">Пользовательское соглашение</a>
+        </li>
+        <li class="legal__item">
+          <a href="#" class="legal__link">Политика обработки персональных данных</a>
+        </li>
+        <li class="legal__item">
+          <a href="#" class="legal__link">
+            Согласие на информационную и рекламную рассылку
+          </a>
+        </li>
+      </ul>
     </section>
 
     <section class="copyright">

@@ -14,6 +14,8 @@
   color: var(--dark);
 }
 
+.learn__grid {}
+
 /* LIST */
 .learn__list {
 
@@ -98,14 +100,19 @@
     font-size: 26px;
   }
 
+  .learn__grid {
+    display: flex;
+  }
+
+  .learn__grid-item {
+    flex: 1;
+  }
+
   .learn__list {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 16px;
+    justify-content: space-between;
   }
 
   .learn__item {
-    width: calc(50% - 8px);
     font-size: 15px;
   }
 
@@ -113,9 +120,9 @@
     gap: 16px;
   }
 
-  .learn__images img {
+  /* .learn__images img {
     height: 140px;
-  }
+  } */
 
   .learn__button {
     padding: 16px 24px;

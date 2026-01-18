@@ -6,14 +6,15 @@
     margin-top: auto;
   }
   .footer_section {
-    border-bottom: solid 1px #fff;
+    border-bottom: solid 2px #fff;
+    padding: 60px 20px;
   }
   
   /* Tablet styles */
   @media (min-width: 768px) {
     /* Tablet: var(--breakpoint-tablet) */
     .footer {
-      padding: 24px 32px;
+      padding: 24px 0;
     }
   }
   
