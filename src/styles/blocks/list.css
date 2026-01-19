@@ -9,11 +9,28 @@
 }
 
 .list li {
-    font-size: 14px;
-    line-height: 1.45;
+    font-size: 16px;
+    line-height: 1.3;
     color: var(--gray-text);
 }
 
 .list li::marker {
-  color: var(--green);
+    color: var(--green);
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+    .list li {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+}
+
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+    .list li {
+        font-size: 22px;
+        line-height: 1.5;
+    }
 }

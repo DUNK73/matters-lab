@@ -19,7 +19,7 @@
 /* TEXT */
 .teacher__title {
   margin: 0 0 12px;
-  font-size: 22px;
+  font-size: 30px;
   font-weight: 600;
   color: var(--dark);
 }
@@ -101,16 +101,17 @@
 
   .teacher__grid {
     display: flex;
-    gap: 20px;
+    gap: 40px;
     flex-direction: row-reverse;
   }
+
 
   .teacher__grid-item {
     flex-basis: 50%;
   }
 
   .teacher__title {
-    font-size: 40px;
+    font-size: 30px;
   }
 
   .teacher__description {
@@ -132,21 +133,8 @@
     color: var(--dark);
   }
 
-  .teacher__socials {
-    gap: 18px;
-  }
-
-  .teacher__social {
-    width: 36px;
-    height: 36px;
-  }
-
   .teacher__media {
-    width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 16px;
-    background: url(../../assets/images/teacher.jpg);
     background-size: 191%;
     background-position: 47% 100%;
   }
@@ -156,35 +144,41 @@
 /* Desktop styles */
 @media (min-width: 1024px) {
 
-  /* Desktop: var(--breakpoint-desktop) */
-  .teacher__container {
-    padding: 48px 48px;
-    gap: 48px;
+  .teacher__grid {
+    display: flex;
+    gap: 120px;
+    flex-direction: row-reverse;
   }
 
+
   .teacher__title {
-    font-size: 26px;
+    font-size: 40px;
   }
 
   .teacher__description {
     font-size: 16px;
   }
 
-  .teacher__item {
+  /* .list .teacher__item {
     font-size: 16px;
-  }
+  } */
 
-  .teacher__socials {
-    gap: 20px;
-  }
 
-  .teacher__social {
-    width: 40px;
-    height: 40px;
+  .teacher__media {
+    background-size: 150%;
+    background-position: 47% 90%;
   }
+}
 
-  .teacher__image {
-    width: 45%;
-    height: 400px;
+
+/* Desktop max styles */
+@media (min-width: 1440px) {
+  .teacher__contacts {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
   }
 }

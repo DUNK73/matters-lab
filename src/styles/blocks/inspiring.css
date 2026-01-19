@@ -53,7 +53,7 @@
 /* TITLE */
 .inspiring__title {
   margin: 0;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 600;
   color: var(--white);
 }
@@ -73,13 +73,13 @@
   width: fit-content;
   padding: 16px 22px;
 
-  font-family: Montserrat;
+  /* font-family: Montserrat;
   font-weight: 700;
   font-style: Bold;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0%;
-  text-align: center;
+  text-align: center; */
 
 }
 
@@ -90,12 +90,6 @@
   .inspiring {}
 
   .inspiring__media {
-    inset: 0;
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    background: url(../../assets/images/inspiring.jpg);
     background-size: 180%;
     background-position: 55% 100%;
   }
@@ -110,7 +104,7 @@
   }
 
   .inspiring__title {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   .inspiring__text {
@@ -119,7 +113,7 @@
 
   .inspiring__button {
     padding: 16px 24px;
-    font-size: 15px;
+    /* font-size: 15px; */
     width: unset;
   }
 }
@@ -132,6 +126,11 @@
     height: 600px;
   }
 
+  .inspiring__media {
+    background-size: 130%;
+    background-position: 55% 100%;
+  }
+
   .inspiring__overlay {
     padding: 48px 48px;
   }
@@ -141,7 +140,7 @@
   }
 
   .inspiring__title {
-    font-size: 36px;
+    font-size: 40px;
   }
 
   .inspiring__text {
@@ -150,6 +149,5 @@
 
   .inspiring__button {
     padding: 18px 32px;
-    font-size: 16px;
   }
 }

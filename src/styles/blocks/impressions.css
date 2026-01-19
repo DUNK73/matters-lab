@@ -7,16 +7,6 @@
   padding: 40px 16px;
 }
 
-.impressions__title {
-  margin: 0 0 16px;
-
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 1.2;
-
-  color: #000000;
-}
-
 .impressions__intro {
   margin: 0 0 32px;
 
@@ -51,4 +41,18 @@
     width: calc(50% - 22px);
     /* height: 100%; */
   }
+}
+
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+
+  .impressions {
+    font-size: 16px;
+  }
+
+  .impressions__intro {
+    width: 60%;
+  }
+
 }

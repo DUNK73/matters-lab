@@ -8,3 +8,18 @@
     border: none;
     cursor: pointer;
 }
+
+/* Tablet styles */
+@media (min-width: 768px) {
+    .button {
+        font-size: 20px;
+    }
+}
+
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+    .button {
+        font-size: 26px;
+    }
+}
