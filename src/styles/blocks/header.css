@@ -8,7 +8,7 @@
   justify-content: space-between;
 
   padding: 16px;
-  height: 56px;
+
 }
 
 /* LOGO */
@@ -146,7 +146,6 @@
   /* Tablet: var(--breakpoint-tablet) */
   .header__container {
     padding: 20px 32px;
-    height: 64px;
   }
 
   .header__logo {
@@ -178,4 +177,20 @@
   .header__logo {
     font-size: 22px;
   }
+
+  .header__menu {
+    flex-direction: row-reverse;
+  }
+
+  .header__burger {
+    display: none;
+  }
+
+  .menu {
+    position: static;
+    display: flex;
+    gap: 30px;
+    font-size: 16px;
+  }
+
 }
