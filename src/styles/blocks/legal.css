@@ -52,7 +52,7 @@
   }
   
   /* Desktop styles */
-  @media (min-width: 1024px) {
+  @media (min-width: 1280px) {
     /* Desktop: var(--breakpoint-desktop) */
     .legal__container {
       padding: 40px 48px 48px;

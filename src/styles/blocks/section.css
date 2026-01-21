@@ -38,7 +38,7 @@
 }
 
 /* Desktop styles */
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
 .content_section {
     padding: 100px 120px;
 }

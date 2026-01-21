@@ -142,7 +142,7 @@
 }
 
 /* Desktop styles */
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
 
   .teacher__grid {
     display: flex;

@@ -13,7 +13,7 @@
   }
   
   /* Desktop styles */
-  @media (min-width: 1024px) {
+  @media (min-width: 1280px) {
     /* Desktop: var(--breakpoint-desktop) */
     .copyright {
       padding: 20px 48px;

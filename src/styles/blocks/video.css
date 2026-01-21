@@ -26,3 +26,10 @@
         height: 420px;
     }
 }
+
+/* Desktop styles */
+@media (min-width: 1280px) { 
+    .youtube {
+        height: 100%;
+    }
+}

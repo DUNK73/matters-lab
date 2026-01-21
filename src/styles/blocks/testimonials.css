@@ -148,7 +148,7 @@
 }
 
 /* Desktop styles */
-@media (min-width: 1024px) { /* Desktop: var(--breakpoint-desktop) */
+@media (min-width: 1280px) { /* Desktop: var(--breakpoint-desktop) */
   .testimonials__container {
     padding: 48px 48px;
   }

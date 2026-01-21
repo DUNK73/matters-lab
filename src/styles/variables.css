@@ -31,7 +31,7 @@
   --breakpoint-mobile: 0;
   --breakpoint-mobile-lg: 480px;
   --breakpoint-tablet: 768px;
-  --breakpoint-desktop-sm: 1024px;
+  --breakpoint-tablet-lg: 1024px;
   --breakpoint-desktop: 1280px;
   --breakpoint-desktop-lg: 1440px;
 }
