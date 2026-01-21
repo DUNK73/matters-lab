@@ -783,16 +783,66 @@
 
         <!-- CHECKBOX -->
         <label class="questions__checkbox">
-          <input type="checkbox" class="questions__checkbox-input">
+          <input id="agree" type="checkbox" class="questions__checkbox-input">
           <span class="questions__checkbox-box"></span>
-          <span class="questions__checkbox-text">
+          <span class="questions__checkbox-text" aria-required="true">
             I agree to the processing of personal data
           </span>
         </label>
 
-        <button class="button questions__button" type="submit">
+        <button id="mailSendButton" class="button questions__button" type="button" disabled>
           Submit
         </button>
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+
+        <script type="text/javascript">
+
+          const email = document.getElementById('email');
+          const name = document.getElementById('name');
+          const message = document.getElementById('message');
+          const agree = document.getElementById('agree');
+
+          const mailSendButton = document.getElementById('mailSendButton');
+
+          const enabled = () => {
+            if (email.value && name.value && message.value && agree.checked) {
+              mailSendButton.disabled = false;
+            } else {
+              mailSendButton.disabled = true;
+            }
+          };
+
+          (function () {
+            emailjs.init({
+              publicKey: "wmpPPI0KdGExknR4e",
+            });
+          })();
+
+          mailSendButton.addEventListener('click', (event) => {
+            emailjs.send("service_rg5i1no", "template_yf89nxc", {
+              email: email.value,
+              name: name.value,
+              message: message.value,
+            });
+
+            email.value = null;
+            name.value = null;
+            message.value = null;
+            agree.checked = false;
+
+            enabled();
+          });
+
+          email.addEventListener('input', (event) => { enabled(); });
+          name.addEventListener('input', (event) => { enabled(); });
+          message.addEventListener('input', (event) => { enabled(); });
+          agree.addEventListener('input', (event) => { enabled(); });
+
+
+        </script>
+
       </form>
     </section>
 

@@ -8,6 +8,10 @@
     border: none;
     cursor: pointer;
 }
+.button:disabled {
+    background-color: var(--gray-dots);
+    cursor: not-allowed
+}
 
 /* Tablet styles */
 @media (min-width: 768px) {
