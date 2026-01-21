@@ -55,6 +55,11 @@
   color: var(--white-transparent-input);
 }
 
+.touched.questions__textarea:invalid,
+.touched.questions__input:invalid {
+  border: 2px solid red;
+}
+
 .questions__input:focus,
 .questions__textarea:focus {
   outline: none;

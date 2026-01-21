@@ -767,17 +767,24 @@
       <form class="questions__form">
         <div class="questions__field">
           <label class="questions__label" for="name">Name</label>
-          <input class="questions__input" type="text" id="name" name="name" placeholder="Your name">
+          <input required class="questions__input" type="text" id="name" name="name" placeholder="Your name">
         </div>
 
         <div class="questions__field">
           <label class="questions__label" for="email">Email</label>
-          <input class="questions__input" type="email" id="email" name="email" placeholder="Your email">
+          <input required class="questions__input" type="email" id="email" name="email" placeholder="Your email"
+            pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+        </div>
+
+        <div class="questions__field">
+          <label class="questions__label" for="phone">Phone</label>
+          <input required class="questions__input" type="input" id="phone" name="phone" placeholder="Your phone"
+            pattern="[0-9]+">
         </div>
 
         <div class="questions__field">
           <label class="questions__label" for="message">Message</label>
-          <textarea class="questions__textarea" id="message" name="message" placeholder="Your message"
+          <textarea required class="questions__textarea" id="message" name="message" placeholder="Your message"
             rows="4"></textarea>
         </div>
 
@@ -799,6 +806,7 @@
 
         <script type="text/javascript">
 
+          const phone = document.getElementById('phone');
           const email = document.getElementById('email');
           const name = document.getElementById('name');
           const message = document.getElementById('message');
@@ -807,11 +815,15 @@
           const mailSendButton = document.getElementById('mailSendButton');
 
           const enabled = () => {
-            if (email.value && name.value && message.value && agree.checked) {
+            if (phone.value && email.value && name.value && message.value && agree.checked) {
               mailSendButton.disabled = false;
             } else {
               mailSendButton.disabled = true;
             }
+          };
+
+          const touched = (element) => {
+            element.classList.add('touched');
           };
 
           (function () {
@@ -835,10 +847,17 @@
             enabled();
           });
 
+          phone.addEventListener('input', (event) => { enabled(); });
           email.addEventListener('input', (event) => { enabled(); });
           name.addEventListener('input', (event) => { enabled(); });
           message.addEventListener('input', (event) => { enabled(); });
           agree.addEventListener('input', (event) => { enabled(); });
+
+          phone.addEventListener('focus', (event) => { touched(event.target); });
+          email.addEventListener('focus', (event) => { touched(event.target); });
+          name.addEventListener('focus', (event) => { touched(event.target); });
+          message.addEventListener('focus', (event) => { touched(event.target); });
+          agree.addEventListener('focus', (event) => { touched(event.target); });
 
 
         </script>
