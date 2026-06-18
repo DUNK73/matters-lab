@@ -47,6 +47,9 @@
     rel="stylesheet">
   <link rel="stylesheet" href="src/styles/main.css" />
   <link rel="stylesheet" href="src/styles/pages/courses.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 </head>
 
 <body class="page">
@@ -237,7 +240,7 @@
       <h2 class="content_section__title faq-courses__title">FAQ</h2>
 
       <div class="accordion">
-        <details class="accordion__item" open>
+        <details class="accordion__item">
           <summary class="accordion__header">
             <span class="accordion__question">Какие учебные пособия используются?</span>
             <span class="accordion__icon"></span>
@@ -559,30 +562,29 @@
         </ul>
       </div>
 
-    </section>
 
-    <script>
-      const pricingPlans = [
-        {
-          title: "Занятия 1 раз в неделю",
-          lessons: "35 занятий за учебный год",
-          priceRUB: "36 400 ₽",
-          priceEUR: "450 €"
-        },
-        {
-          title: "Занятия 2 раза в неделю",
-          lessons: "70 занятий за учебный год",
-          priceRUB: "72 800 ₽",
-          priceEUR: "900 €"
-        }
-      ];
+      <script>
+        const pricingPlans = [
+          {
+            title: "Занятия 1 раз в неделю",
+            lessons: "35 занятий за учебный год",
+            priceRUB: "36 400 ₽",
+            priceEUR: "450 €"
+          },
+          {
+            title: "Занятия 2 раза в неделю",
+            lessons: "70 занятий за учебный год",
+            priceRUB: "72 800 ₽",
+            priceEUR: "900 €"
+          }
+        ];
 
-      const pricingGrid = document.getElementById("pricing-grid");
+        const pricingGrid = document.getElementById("pricing-grid");
 
-      pricingPlans.forEach(function(plan) {
-        const card = document.createElement("article");
-        card.className = "pricing-courses__card";
-        card.innerHTML = `
+        pricingPlans.forEach(function (plan) {
+          const card = document.createElement("article");
+          card.className = "pricing-courses__card";
+          card.innerHTML = `
           <h3 class="pricing-courses__card-title">${plan.title}</h3>
           <ul class="pricing-courses__list">
             <li class="pricing-courses__item">${plan.lessons}</li>
@@ -593,9 +595,81 @@
             <span class="pricing-courses__value">${plan.priceEUR}</span>
           </div>
         `;
-        pricingGrid.appendChild(card);
-      });
-    </script>
+          pricingGrid.appendChild(card);
+        });
+      </script>
+
+    </section>
+
+
+    <section class="content_section courses review-slider">
+
+      <h2 class="content_section__title courses__title">
+        Отзовы
+      </h2>
+
+      <div class="courses__list">
+
+        <div class="my-slider">
+
+          <div>
+            <img src="./src/assets/images/reviews/8aBA0vW32ocqD0s4vmBIUqnzMBzvXAj7ymlw4PBiH87IW9GwK8Uqxf9vG6b5Fk-1QWVUj7VpdwlP251c9cCxB400.jpg" alt="Review 1">
+          </div>
+
+          <div>
+            <img src="./src/assets/images/reviews/BJIjrJdPJY5yuqHgwKg2l0NcRuu-piw7tj1-fBaBhrHCgKL6vMznM_z7g3y0lyT9L_iwdKET9Z04lAP2kq7pAYMV.jpg" alt="Review 2">
+          </div>
+
+          <div>
+            <img src="./src/assets/images/reviews/cPTJJjxHXFWzXrkITeMuKP1HHXW-H3XUkSCg3RjD60i6f0sr77KIPfwsLAGcJgmvTTArAu4ZoWlwlAgk_w2rJP8X.jpg" alt="Review 3">
+          </div>
+
+          <div>
+            <img src="./src/assets/images/reviews/LzKIYxKqSJfjRu3jxvrLe1pMUQdBT3jEqlD_TUtVpSpH5mwILQI_snY7dMS-rwv7DGCBUoqaPIBAEtOFJenoRfjX.jpg" alt="Review 4">
+          </div>
+
+          <div>
+            <img src="./src/assets/images/reviews/rQ_P3KU_7DGC54KXcz-DPLXm3ov_FjoK6FDbW4P13xnvQt8oEAjw5K86Qk4HfpQAWSEcp1Yim0r0I7tV5-5tK8x8.jpg" alt="Review 5">
+          </div>
+
+          <div>
+            <img src="./src/assets/images/reviews/t8i0iOAY5W6mql0yko6LTnZgkgTX72J49EMgucHcOCeddB_qjAugZm6X7xWD_Oloe-6y6RSEeifmWiKgM4qH2IZW.jpg" alt="Review 6">
+          </div>
+
+          <div>
+            <video class="review-video" autoplay muted loop playsinline controls preload="metadata">
+              <source src="./src/assets/images/reviews/16804605921944.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+        </div> 
+
+        <script type="module">
+
+          var slider = tns({
+            container: '.my-slider',
+            items: 1,
+            slideBy: 'page',
+            autoplay: true,
+            autoplayButtonOutput: false,
+            controlsText: ['', ''],
+            gutter: 10,
+            responsive: {
+              768: { // Screen width 640px and below
+                items: 3
+              },
+              1024: { // Screen width 640px and below
+                items: 4
+              },
+            }
+          });
+        </script>
+
+      </div>
+
+    </section>
+
 
     <footer class="footer">
       <section class="footer_section questions">

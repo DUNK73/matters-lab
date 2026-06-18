@@ -1,3 +1,23 @@
+/* Reviews Slider */
+.review-slider {
+  width: 100%;
+}
+
+.review-slider .my-slider img,
+.review-slider .my-slider video {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  object-fit: cover;
+}
+
+.review-video {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  background-color: var(--dark);
+}
+
 /* Kids Courses Section */
 .kids-courses {}
 
