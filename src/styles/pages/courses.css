@@ -1,0 +1,235 @@
+/* Kids Courses Section */
+.kids-courses {}
+
+.kids-courses__title {
+  margin-bottom: 30px;
+}
+
+.kids-courses__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.kids-courses__card {
+  padding: 20px 16px;
+  border-radius: var(--radius);
+  background-color: var(--gray-light);
+}
+
+.kids-courses__card-header {
+  margin-bottom: 12px;
+}
+
+.kids-courses__age {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background-color: var(--green);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.kids-courses__card-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.kids-courses__text {
+  margin: 0 0 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--gray-text);
+}
+
+.kids-courses__features {
+  margin: 0 0 20px;
+  padding-left: 20px;
+}
+
+.kids-courses__features li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--gray-text);
+}
+
+.kids-courses__button {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Teens Courses Section */
+.teens-courses {
+  background-color: var(--gray-light);
+}
+
+.teens-courses__title {
+  margin-bottom: 30px;
+}
+
+.teens-courses__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.teens-courses__card {
+  padding: 20px 16px;
+  border-radius: var(--radius);
+  background-color: var(--white);
+}
+
+.teens-courses__card-header {
+  margin-bottom: 12px;
+}
+
+.teens-courses__age {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background-color: var(--dark);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.teens-courses__card-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.teens-courses__text {
+  margin: 0 0 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--gray-text);
+}
+
+.teens-courses__features {
+  margin: 0 0 20px;
+  padding-left: 20px;
+}
+
+.teens-courses__features li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--gray-text);
+}
+
+.teens-courses__button {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+
+  .kids-courses__card,
+  .teens-courses__card {
+    padding: 24px 20px;
+  }
+
+  .kids-courses__card-title,
+  .teens-courses__card-title {
+    font-size: 24px;
+  }
+
+  .kids-courses__text,
+  .teens-courses__text {
+    font-size: 15px;
+  }
+
+  .kids-courses__button,
+  .teens-courses__button {
+    padding: 14px 22px;
+    font-size: 15px;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1280px) {
+
+  .kids-courses__card,
+  .teens-courses__card {
+    padding: 28px 24px;
+  }
+
+  .kids-courses__card-title,
+  .teens-courses__card-title {
+    font-size: 28px;
+  }
+
+  .kids-courses__text,
+  .teens-courses__text {
+    font-size: 16px;
+  }
+
+  .kids-courses__features li,
+  .teens-courses__features li {
+    font-size: 16px;
+  }
+
+  .kids-courses__button,
+  .teens-courses__button {
+    padding: 16px 26px;
+    font-size: 16px;
+  }
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  height: 600px;
+}
+
+.left-top {
+  grid-column: 1;
+  grid-row: 1;
+  background-color: #000;
+  color: #fff;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.left-bottom {
+  grid-column: 1;
+  grid-row: 2;
+  background-color: #000;
+  color: #fff;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.right {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  background-color: #a8d5d5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.courses__link-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}

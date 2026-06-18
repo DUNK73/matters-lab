@@ -11,6 +11,9 @@
 
   height: 100%;
 }
+.steps-card--gray {
+  background-color: var(--gray-light);
+}
 
 .steps-card:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
@@ -44,6 +47,7 @@
   line-height: 1.2;
   color: #000000;
 }
+
 
 /* TEXT */
 .steps-card__text {
