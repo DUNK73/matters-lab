@@ -233,3 +233,212 @@
   justify-content: center;
 
 }
+
+/* Pricing Section */
+
+.pricing-courses__title {
+  margin-bottom: 30px;
+}
+
+.pricing-courses__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pricing-courses__card {
+  padding: 20px 16px;
+  border-radius: var(--radius);
+  background-color: var(--white);
+}
+
+.pricing-courses__card-title {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.pricing-courses__list {
+  margin: 0 0 16px;
+  padding-left: 20px;
+}
+
+.pricing-courses__item {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--gray-text);
+}
+
+.pricing-courses__price {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.pricing-courses__value {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.pricing-courses__separator {
+  font-size: 18px;
+  color: var(--gray);
+}
+
+.pricing-courses__note {
+  margin: 20px 0 0;
+  font-size: 14px;
+  color: var(--gray-text);
+  font-style: italic;
+}
+
+.pricing-courses__payment {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--gray-medium);
+}
+
+.pricing-courses__payment-title {
+  margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+@media (min-width: 768px) {
+  .pricing-courses__grid {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .pricing-courses__card {
+    flex: 1;
+    padding: 24px 20px;
+  }
+
+  .pricing-courses__card-title {
+    font-size: 20px;
+  }
+
+  .pricing-courses__value {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .pricing-courses__card {
+    padding: 28px 24px;
+  }
+
+  .pricing-courses__card-title {
+    font-size: 22px;
+  }
+
+  .pricing-courses__value {
+    font-size: 28px;
+  }
+}
+
+/* FAQ Section */
+.faq-courses {
+  background-color: var(--white);
+}
+
+.faq-courses__title {
+  margin-bottom: 30px;
+}
+
+.faq-courses__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.faq-courses__button {
+  width: 100%;
+}
+
+.faq-courses__button--outline {
+  background-color: transparent;
+  border: 2px solid var(--green);
+  color: var(--green);
+}
+
+.faq-courses__button--outline:hover {
+  background-color: var(--green);
+  color: var(--white);
+}
+
+@media (min-width: 768px) {
+  .faq-courses__buttons {
+    flex-direction: row;
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .faq-courses__button {
+    width: auto;
+  }
+}
+
+/* FAQ Table */
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 12px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.faq-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--dark);
+}
+
+.faq-table th,
+.faq-table td {
+  padding: 10px 8px;
+  border: 1px solid var(--gray-medium);
+  text-align: left;
+  vertical-align: top;
+}
+
+.faq-table th {
+  background-color: var(--gray-light);
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.faq-table td:first-child {
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .faq-table {
+    font-size: 13px;
+  }
+
+  .faq-table th,
+  .faq-table td {
+    padding: 12px 10px;
+  }
+
+  .faq-table th {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .faq-table {
+    font-size: 14px;
+  }
+
+  .faq-table th,
+  .faq-table td {
+    padding: 14px 12px;
+  }
+}
