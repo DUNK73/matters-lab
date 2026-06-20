@@ -51,6 +51,9 @@
 .courses__button {
   font-size: 14px;
   font-weight: 500;
+  margin-left: auto;
+  margin-top: auto;
+  align-self: flex-end;
 }
 
 /* Tablet styles */

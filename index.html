@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Online English Pronunciation & Rhetoric Courses | Matters</title>
-  <meta name="description" content="Online English pronunciation and rhetoric courses. Improve your accent, speech clarity, and confidence with expert-led training at Matters Lab.">
+  <meta name="description"
+    content="Online English pronunciation and rhetoric courses. Improve your accent, speech clarity, and confidence with expert-led training at Matters Lab.">
   <!-- Favicon and app icons -->
   <link rel="icon" type="image/x-icon" href="./src/assets/favicon/matters-favicon/favicon.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="./src/assets/favicon/matters-favicon/favicon-16x16.png">
@@ -113,15 +114,22 @@
           let mql = window.matchMedia("(min-width: 1440px)");
           let mainMenu = document.getElementById("main-menu");
 
-          mql.onchange = (event) => {
-            if (event.matches) {
+          let toggleOpem = (mql) => {
+            if (mql.matches) {
               document.getElementById("main-menu").open = true;
               mainMenu.open = true;
             } else {
               mainMenu.open = false;
             }
+          }
 
+          mql.onchange = (event) => {
+            toggleOpem(mql);
           };
+
+
+          toggleOpem(mql);
+
 
         </script>
 

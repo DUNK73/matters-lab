@@ -109,6 +109,16 @@
   font-weight: 500;
 }
 
+.questions__button--close {
+  margin-top: 12px;
+
+  font-size: 14px;
+  font-weight: 500;
+   background-color: transparent;
+  border: 1px solid white;
+}
+
+
 /* Tablet styles */
 @media (min-width: 768px) {
 
