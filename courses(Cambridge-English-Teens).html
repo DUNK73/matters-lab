@@ -47,6 +47,8 @@
     rel="stylesheet">
   <link rel="stylesheet" href="src/styles/main.css" />
   <link rel="stylesheet" href="src/styles/pages/courses.css" />
+  <link rel="stylesheet" href="src/styles/pages/courses-2.css" />
+
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
@@ -70,11 +72,11 @@
           </summary>
 
           <nav class="menu">
-            <nav class="menu">
-              <a href="/courses(Cambridge-English-Young).html">Cambridge English: Young Learners</a>
-              <a href="/courses(Cambridge-English-Teens).html">Cambridge English: Teens and Adults</a>
-              <a href="#">Contacts</a>
-            </nav>
+              <a href="/courses(Cambridge-English-Young).html">Дети</a>
+              <a href="/courses(Cambridge-English-Teens).html">Подростки и взрослые</a>
+              <a href="/courses(Cambridge-English-Teens).html">Стоимость</a>
+              <a href="/courses(Cambridge-English-Teens).html">FAQ</a>
+              <a href="#">Контакты</a>
           </nav>
         </details>
 
@@ -107,21 +109,25 @@
 
   <main>
 
-    <section class="hero">
-      <div class="hero__media"></div>
+    <section class="courses-header">
+      <div class="courses-header__media"></div>
 
-      <div class="hero__overlay">
-        <span class="hero__line"></span>
+      <div class="courses-header__overlay">
+        <span class="courses-header__line"></span>
 
-        <div class="hero__content">
-          <h1 class="hero__title">
-            Кембриджские экзамены <br> по английскому языку
+        <div class="courses-header__content">
+          <h1 class="courses-header__title">
+            Кембриджские экзамены
+            <p class="courses-header__title--mini">для подростков и взрослых</p>
           </h1>
-          <div class="hero__body">
-            <span class="hero__tag">
+          <div class="courses-header__body">
+            <span class="courses-header__tag">
               Start their English journey today.
             </span>
-            <span class="hero__line-horizontal"></span>
+            <span class="courses-header__line-horizontal"></span>
+            <button class="button hero__button">
+              Записаться на курс
+            </button>
           </div>
         </div>
       </div>
@@ -129,6 +135,19 @@
 
     <section class="content_section content_section--gray about-courses">
       <h2 class="content_section__title about-courses__title">Cambridge English: Teens and Adults</h2>
+
+      <p>
+        Экзамены Cambridge English для подростков и взрослых охватывают уровни от A2 до C2 по общеевропейской шкале CEFR и позволяют последовательно подтверждать свой прогресс в изучении английского языка. 
+      </p>
+      <p>
+        Каждый экзамен соответствует определенному уровню владения языком и оценивает способность использовать английский в учебных, профессиональных и повседневных ситуациях общения.
+      </p>
+      <p>
+        Линейка включает экзамены от базового уверенного общения до уровня свободного владения языком, близкого к уровню образованного носителя.
+      </p>
+      <p>
+        Подготовка к экзаменам помогает систематизировать знания, расширить словарный запас, улучшить грамматику и развить навыки общения на английском языке. Благодаря четким критериям оценки ученики понимают свои сильные стороны и видят направления для дальнейшего роста.
+      </p>
 
     </section>
 
@@ -287,14 +306,18 @@
       </ul>
     </section>
 
-    <section class="content_section content_section--gray teens-courses">
+    <section class="content_section content_section--gray testing-courses">
 
-      <p>
-        Не знаете, с какого уровня начать? Запишитесь на тестирование и получите рекомендации по
-        обучению и подготовке к экзаменам Cambridge English.
-      </p>
+      <div class="testing-courses__content">
+        <div class="testing-courses__content-info">
+          <p>Не знаете, с какого уровня начать?</pp>
+          <p>Запишитесь на пробное тестирование и получите рекомендации по
+            обучению и подготовке к экзаменам Cambridge English.
+          </p>
+        </div>
 
-      <button class="button courses__button">Записаться на тестирование</button>
+        <button class="button courses__button">Записаться на тестирование</button>
+      </div>
 
     </section>
 
@@ -341,10 +364,6 @@
             Записаться
           </button>
 
-          <button id="modalSendButtonLater" class="button questions__button button questions__button--close"
-            type="button">
-            Запишусь позже
-          </button>
         </form>
       </div>
     </div>

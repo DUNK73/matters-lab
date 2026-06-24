@@ -47,6 +47,8 @@
     rel="stylesheet">
   <link rel="stylesheet" href="src/styles/main.css" />
   <link rel="stylesheet" href="src/styles/pages/courses.css" />
+  <link rel="stylesheet" href="src/styles/pages/courses-2.css" />
+
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
@@ -70,10 +72,11 @@
           </summary>
 
           <nav class="menu">
-            <nav class="menu">
-              <a href="/courses(Cambridge-English-Young).html">Cambridge English: Young Learners</a>
-              <a href="/courses(Cambridge-English-Teens).html">Cambridge English: Teens and Adults</a>
-              <a href="#">Contacts</a>
+              <a href="/courses(Cambridge-English-Young).html">Дети</a>
+              <a href="/courses(Cambridge-English-Teens).html">Подростки и взрослые</a>
+              <a href="/courses(Cambridge-English-Teens).html">Стоимость</a>
+              <a href="/courses(Cambridge-English-Teens).html">FAQ</a>
+              <a href="#">Контакты</a>
             </nav>
           </nav>
         </details>
@@ -107,21 +110,25 @@
 
   <main>
 
-    <section class="hero">
-      <div class="hero__media"></div>
+    <section class="courses-header">
+      <div class="courses-header__media"></div>
 
-      <div class="hero__overlay">
-        <span class="hero__line"></span>
+      <div class="courses-header__overlay">
+        <span class="courses-header__line"></span>
 
-        <div class="hero__content">
-          <h1 class="hero__title">
-            Кембриджские экзамены <br> по английскому языку
+        <div class="courses-header__content">
+          <h1 class="courses-header__title">
+            Кембриджские экзамены
+            <p class="courses-header__title--mini">для детей</p>
           </h1>
-          <div class="hero__body">
-            <span class="hero__tag">
+          <div class="courses-header__body">
+            <span class="courses-header__tag">
               Start their English journey today.
             </span>
-            <span class="hero__line-horizontal"></span>
+            <span class="courses-header__line-horizontal"></span>
+            <button class="button hero__button">
+              Записаться на курс
+            </button>
           </div>
         </div>
       </div>
@@ -255,14 +262,18 @@
       </ul>
     </section>
 
-    <section class="content_section content_section--gray teens-courses">
+    <section class="content_section content_section--gray testing-courses">
 
-      <p>
-        Не знаете, с какого уровня начать? Запишитесь на тестирование и получите рекомендации по
-        обучению и подготовке к экзаменам Cambridge English.
-      </p>
+      <div class="testing-courses__content">
+        <div class="testing-courses__content-info">
+          <p>Не знаете, с какого уровня начать?</pp>
+          <p>Запишитесь на пробное тестирование и получите рекомендации по
+            обучению и подготовке к экзаменам Cambridge English.
+          </p>
+        </div>
 
-      <button class="button courses__button">Записаться на тестирование</button>
+        <button class="button courses__button">Записаться на тестирование</button>
+      </div>
 
     </section>
 
@@ -309,10 +320,6 @@
             Записаться
           </button>
 
-          <button id="modalSendButtonLater" class="button questions__button button questions__button--close"
-            type="button">
-            Запишусь позже
-          </button>
         </form>
       </div>
     </div>
@@ -331,8 +338,8 @@
 
           <div class="questions__field">
             <label class="questions__label" for="testing-email">Email</label>
-            <input required class="questions__input" type="email" id="testing-email" name="email" placeholder="Your email"
-              pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+            <input required class="questions__input" type="email" id="testing-email" name="email"
+              placeholder="Your email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
           </div>
 
           <div class="questions__field">
@@ -343,8 +350,8 @@
 
           <div class="questions__field">
             <label class="questions__label" for="testing-message">Message</label>
-            <textarea required class="questions__textarea" id="testing-message" name="message" placeholder="Your message"
-              rows="4"></textarea>
+            <textarea required class="questions__textarea" id="testing-message" name="message"
+              placeholder="Your message" rows="4"></textarea>
           </div>
 
           <label class="questions__checkbox">

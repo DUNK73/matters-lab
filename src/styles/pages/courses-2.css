@@ -1,0 +1,11 @@
+.testing-courses {
+
+}
+
+.testing-courses__content {
+  display: flex;
+}
+
+.testing-courses__content-info {
+  width: 50%;
+}

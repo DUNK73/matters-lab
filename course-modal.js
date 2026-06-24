@@ -59,7 +59,7 @@ function initModal(config) {
 
   modalSendButton.addEventListener('click', async function () {
     try {
-      await fetch('http://127.0.0.1:3000/sendMail', {
+      await fetch('http://127.0.0.1:3002/signCourses', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -68,7 +68,8 @@ function initModal(config) {
           email: modalEmail.value,
           name: modalName.value,
           phone: modalPhone.value,
-          message: modalMessage.value + '\n' + config.messageSuffix + ': ' + modalCourse.textContent,
+          theme: config.messageSuffix + ': ' + modalCourse.textContent, 
+          message: modalMessage.value,
         }),
       });
       
