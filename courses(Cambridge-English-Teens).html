@@ -62,7 +62,7 @@
       <div class="header__menu">
         <span class="header__menu-text">en/ru</span>
 
-        <details id="main-menu" class="nav" open >
+        <details id="main-menu" class="nav" open>
           <summary class="header__burger" aria-label="Open menu">
             <span></span>
             <span></span>
@@ -70,10 +70,11 @@
           </summary>
 
           <nav class="menu">
-            <a href="#">About</a>
-            <a href="courses.html">Courses</a>
-            <a href="#">Pricing</a>
-            <a href="#">Contacts</a>
+            <nav class="menu">
+              <a href="/courses(Cambridge-English-Young).html">Cambridge English: Young Learners</a>
+              <a href="/courses(Cambridge-English-Teens).html">Cambridge English: Teens and Adults</a>
+              <a href="#">Contacts</a>
+            </nav>
           </nav>
         </details>
 
@@ -340,7 +341,58 @@
             Записаться
           </button>
 
-          <button id="modalSendButtonLater" class="button questions__button button questions__button--close" type="button">
+          <button id="modalSendButtonLater" class="button questions__button button questions__button--close"
+            type="button">
+            Запишусь позже
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="testingModal">
+      <div class="modal">
+        <button class="modal__close" id="testingClose">&times;</button>
+        <h2 class="modal__title">Записаться на тестирование</h2>
+        <p class="modal__course" id="testingCourse"></p>
+
+        <form class="modal__form">
+          <div class="questions__field">
+            <label class="questions__label" for="testing-name">Name</label>
+            <input required class="questions__input" type="text" id="testing-name" name="name" placeholder="Your name">
+          </div>
+
+          <div class="questions__field">
+            <label class="questions__label" for="testing-email">Email</label>
+            <input required class="questions__input" type="email" id="testing-email" name="email" placeholder="Your email"
+              pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+          </div>
+
+          <div class="questions__field">
+            <label class="questions__label" for="testing-phone">Phone</label>
+            <input required class="questions__input" type="tel" id="testing-phone" name="phone" placeholder="Your phone"
+              pattern="[0-9]+">
+          </div>
+
+          <div class="questions__field">
+            <label class="questions__label" for="testing-message">Message</label>
+            <textarea required class="questions__textarea" id="testing-message" name="message" placeholder="Your message"
+              rows="4"></textarea>
+          </div>
+
+          <label class="questions__checkbox">
+            <input id="testing-agree" type="checkbox" class="questions__checkbox-input">
+            <span class="questions__checkbox-box"></span>
+            <span class="questions__checkbox-text" aria-required="true">
+              I agree to the processing of personal data
+            </span>
+          </label>
+
+          <button id="testingSendButton" class="button questions__button" type="button" disabled>
+            Записаться
+          </button>
+
+          <button id="testingSendButtonLater" class="button questions__button button questions__button--close"
+            type="button">
             Запишусь позже
           </button>
         </form>
@@ -510,83 +562,8 @@
         window.scrollTo(0, 0);
       });
 
-      // Modal
-      const modal = document.getElementById('courseModal');
-      const modalClose = document.getElementById('modalClose');
-      const modalCourse = document.getElementById('modalCourse');
-      const modalName = document.getElementById('modal-name');
-      const modalEmail = document.getElementById('modal-email');
-      const modalPhone = document.getElementById('modal-phone');
-      const modalMessage = document.getElementById('modal-message');
-      const modalAgree = document.getElementById('modal-agree');
-      const modalSendButton = document.getElementById('modalSendButton');
-      const modalSendButtonLater = document.getElementById('modalSendButtonLater');
-
-      document.querySelectorAll('.courses__button').forEach(function (btn) {
-        if (btn.textContent.trim() === 'Записаться на курс') {
-          btn.addEventListener('click', function () {
-            var card = btn.closest('.steps-card__content');
-            var title = card ? card.querySelector('.steps-card__title').textContent : '';
-            modalCourse.textContent = title;
-            modal.classList.add('active');
-          });
-        }
-      });
-
-      modalClose.addEventListener('click', function () {
-        modal.classList.remove('active');
-      });
-
-      modalSendButtonLater.addEventListener('click', function () {
-        modal.classList.remove('active');
-      });
-
-      modal.addEventListener('click', function (e) {
-        if (e.target === modal) {
-          modal.classList.remove('active');
-        }
-      });
-
-      var modalEnabled = function () {
-        if (modalPhone.value && modalEmail.value && modalName.value && modalMessage.value && modalAgree.checked) {
-          modalSendButton.disabled = false;
-        } else {
-          modalSendButton.disabled = true;
-        }
-      };
-
-      var modalTouched = function (element) {
-        element.classList.add('touched');
-      };
-
-      modalPhone.addEventListener('input', modalEnabled);
-      modalEmail.addEventListener('input', modalEnabled);
-      modalName.addEventListener('input', modalEnabled);
-      modalMessage.addEventListener('input', modalEnabled);
-      modalAgree.addEventListener('input', modalEnabled);
-
-      modalPhone.addEventListener('focus', function (e) { modalTouched(e.target); });
-      modalEmail.addEventListener('focus', function (e) { modalTouched(e.target); });
-      modalName.addEventListener('focus', function (e) { modalTouched(e.target); });
-      modalMessage.addEventListener('focus', function (e) { modalTouched(e.target); });
-
-      modalSendButton.addEventListener('click', function () {
-        emailjs.send("service_rg5i1no", "template_yf89nxc", {
-          email: modalEmail.value,
-          name: modalName.value,
-          phone: modalPhone.value,
-          message: modalMessage.value + '\nКурс: ' + modalCourse.textContent,
-        });
-
-        modalEmail.value = null;
-        modalName.value = null;
-        modalPhone.value = null;
-        modalMessage.value = null;
-        modalAgree.checked = false;
-        modalEnabled();
-        modal.classList.remove('active');
-      });
     </script>
+    <script src="course-modal.js"></script>
 
 </body>
 
