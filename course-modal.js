@@ -24,9 +24,9 @@ function initModal(config) {
     modal.classList.remove('active');
   });
 
-  modalSendButtonLater.addEventListener('click', function () {
-    modal.classList.remove('active');
-  });
+  // modalSendButtonLater.addEventListener('click', function () {
+  //   modal.classList.remove('active');
+  // });
 
   modal.addEventListener('click', function (e) {
     if (e.target === modal) {
@@ -116,10 +116,10 @@ initModal({
 });
 
 var testingButtons = [];
-document.querySelectorAll('.courses__button').forEach(function (btn) {
-  if (btn.textContent.trim() === 'Записаться на тестирование') {
+document.querySelectorAll('.testing-courses__button').forEach(function (btn) {
+  // if (btn.textContent.trim() === 'Записаться на тестирование') {
     testingButtons.push(btn);
-  }
+  // }
 });
 
 initModal({

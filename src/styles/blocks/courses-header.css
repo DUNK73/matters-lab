@@ -21,6 +21,17 @@
   position: absolute;
 }
 
+.courses-header__media--child {
+  background: url(../../assets/images/child.jpg);
+  background-size: 123%;
+  background-position: 45% 37%;
+}
+
+.courses-header__media--teens {
+  background: url(../../assets/images/teens.jpg);
+  background-size: 104%;
+}
+
 
 /* OVERLAY LAYOUT */
 .courses-header__overlay {
@@ -89,7 +100,7 @@
 
 .courses-header__body {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 10px
 }
@@ -137,6 +148,17 @@
     width: 50%;
   }
 
+  .courses-header__media--child {
+    background: url(../../assets/images/child.jpg);
+    background-size: 110%;
+    /* background-position: 45% 37%; */
+  }
+
+  .courses-header__media--teens {
+    background: url(../../assets/images/teens.jpg);
+    background-size: 110%;
+  }
+
   .courses-header__overlay {
     gap: 10px;
     align-items: center;
@@ -162,7 +184,8 @@
   }
 
   .courses-header__line-horizontal {
-    display: block;
+    display: none;
+    /* display: block; */
     width: 100px;
     height: 2px;
     background-color: var(--dark);

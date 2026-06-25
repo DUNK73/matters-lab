@@ -70,9 +70,11 @@
           </summary>
 
           <nav class="menu">
-            <a href="/courses(Cambridge-English-Young).html">Cambridge English: Young Learners</a>
-            <a href="/courses(Cambridge-English-Teens).html">Cambridge English: Teens and Adults</a>
-            <a href="#">Contacts</a>
+            <a href="/courses(Cambridge-English-Young).html">Дети</a>
+              <a href="/courses(Cambridge-English-Teens).html">Подростки и взрослые</a>
+              <a href="/courses(Cambridge-English-Teens).html">Стоимость</a>
+              <a href="#faq">FAQ</a>
+              <a href="#">Контакты</a>
           </nav>
         </details>
 
@@ -244,7 +246,7 @@
     </section>
 
 
-    <section class="content_section faq-courses">
+    <section id="faq" class="content_section faq-courses">
       <h2 class="content_section__title faq-courses__title">FAQ</h2>
 
       <div class="accordion">
@@ -694,30 +696,30 @@
     <footer class="footer">
       <section class="footer_section questions">
         <h2 class="questions__title">
-          Still have questions?<br>
-          We will be happy to help!
+          Все еще остались вопросы? <br>
+          Мы будем рады помочь! 
         </h2>
 
         <form class="questions__form">
           <div class="questions__field">
-            <label class="questions__label" for="name">Name</label>
+            <label class="questions__label" for="name">Имя</label>
             <input required class="questions__input" type="text" id="name" name="name" placeholder="Your name">
           </div>
 
           <div class="questions__field">
-            <label class="questions__label" for="email">Email</label>
+            <label class="questions__label" for="email">E-mail</label>
             <input required class="questions__input" type="email" id="email" name="email" placeholder="Your email"
               pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
           </div>
 
           <div class="questions__field">
-            <label class="questions__label" for="phone">Phone</label>
+            <label class="questions__label" for="phone">Телефон</label>
             <input required class="questions__input" type="input" id="phone" name="phone" placeholder="Your phone"
               pattern="[0-9]+">
           </div>
 
           <div class="questions__field">
-            <label class="questions__label" for="message">Message</label>
+            <label class="questions__label" for="message">Ваше сообщение</label>
             <textarea required class="questions__textarea" id="message" name="message" placeholder="Your message"
               rows="4"></textarea>
           </div>
@@ -726,12 +728,20 @@
             <input id="agree" type="checkbox" class="questions__checkbox-input">
             <span class="questions__checkbox-box"></span>
             <span class="questions__checkbox-text" aria-required="true">
-              I agree to the processing of personal data
+              Я даю согласие на обработку своих персональных данных
+            </span>
+          </label>
+
+          <label class="questions__checkbox">
+            <input id="agree-promo" type="checkbox" class="questions__checkbox-input">
+            <span class="questions__checkbox-box"></span>
+            <span class="questions__checkbox-text" aria-required="true">
+              Я хочу получать от вас информационные и рекламные письма
             </span>
           </label>
 
           <button id="mailSendButton" class="button questions__button" type="button" disabled>
-            Submit
+            Отправить
           </button>
 
           <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
@@ -743,6 +753,7 @@
             const name = document.getElementById('name');
             const message = document.getElementById('message');
             const agree = document.getElementById('agree');
+            const agreePromo = document.getElementById('agree-promo');
             const mailSendButton = document.getElementById('mailSendButton');
 
             const enabled = () => {
@@ -768,12 +779,15 @@
                 email: email.value,
                 name: name.value,
                 message: message.value,
+                agree: agree.value,
+                agreePromo: agreePromo.value
               });
 
               email.value = null;
               name.value = null;
               message.value = null;
               agree.checked = false;
+              agreePromo.checked = false;
               enabled();
             });
 
@@ -801,14 +815,14 @@
           <li class="legal__item">
             <a href="#" class="legal__link">Пользовательское соглашение</a>
           </li>
-          <li class="legal__item">
+          <!-- <li class="legal__item">
             <a href="#" class="legal__link">Политика обработки персональных данных</a>
           </li>
           <li class="legal__item">
             <a href="#" class="legal__link">
               Согласие на информационную и рекламную рассылку
             </a>
-          </li>
+          </li> -->
         </ul>
       </section>
 
@@ -818,7 +832,7 @@
     </footer>
 
     <button id="scrollTopBtn" class="back-to-top">
-      <span class="back-to-top__label">Back to top</span>
+      <span class="back-to-top__label">наверх</span>
       <div class="back-to-top__icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.2263 -0.422 19.9719 31.062" width="19.9719px"
           height="31.062px">

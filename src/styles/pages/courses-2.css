@@ -3,9 +3,12 @@
 }
 
 .testing-courses__content {
-  display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .testing-courses__content-info {
   width: 50%;
 }
+
