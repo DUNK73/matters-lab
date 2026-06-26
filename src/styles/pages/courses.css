@@ -3,6 +3,12 @@
   width: 100%;
 }
 
+.review-slider__sliders {
+  display: flex;
+  flex-direction: column;
+  gap: 30px
+}
+
 .review-slider .my-slider img,
 .review-slider .my-slider video {
   width: 100%;
@@ -180,6 +186,12 @@
 /* Desktop styles */
 @media (min-width: 1280px) {
 
+  .review-slider__sliders {
+    display: flex;
+    flex-direction: column;
+    gap: 50px
+  }
+
   .kids-courses__card,
   .teens-courses__card {
     padding: 28px 24px;
@@ -260,6 +272,10 @@
 
   overflow: hidden;
   border-radius: 10px;
+
+  background: url(../../assets/images/maxresdefault.jpg);
+  background-size: 108%;
+  background-position: 22% 37%;
 }
 
 @media (min-width: 768px) {

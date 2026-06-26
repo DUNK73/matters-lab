@@ -27,7 +27,9 @@
 @import 'blocks/video.css';
 @import 'blocks/courses-header.css';
 
-
+@import 'pages/contacts.css';
+@import 'pages/pricing.css';
+@import 'pages/verify.css';
 
 
 

@@ -137,7 +137,7 @@
   transition: max-height 0.3s ease;
 
   background: #fff;
-  padding: 0 16px;
+
 
   position: absolute;
 
@@ -149,10 +149,16 @@
 
 .menu a {
   display: block;
-  padding: 12px 0;
+  padding: 12px 20px;
   color: #111;
   text-decoration: none;
+
 }
+
+.menu a:hover {
+  background-color: var(--gray-light);
+}
+
 
 /* Menu open */
 .menu-toggle:checked~.menu {

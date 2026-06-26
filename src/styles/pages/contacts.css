@@ -1,0 +1,286 @@
+/* Contacts page styles */
+.contacts-page__container {
+    padding: 40px 16px;
+    text-align: center;
+}
+
+.contacts-page__title {
+    margin-bottom: 40px;
+}
+
+.contacts-page__info {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: left;
+}
+
+.contacts-page__subtitle {
+    margin: 0 0 16px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--dark);
+}
+
+.contacts-page__inn {
+    margin: 0 0 24px;
+    font-size: 14px;
+    color: var(--gray);
+}
+
+.contacts-page__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contacts-page__item {
+    display: flex;
+    gap: 8px;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.contacts-page__label {
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.contacts-page__value {
+    color: var(--dark);
+    text-decoration: underline;
+}
+
+.contacts-page__value:hover {
+    color: var(--green);
+}
+
+.contacts-page__messengers {
+    margin-top: 8px;
+}
+
+.contacts-page__buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.contacts-page__messenger-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.contacts-page__messenger-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.contacts-page__messenger-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.contacts-page__messenger-text {
+    color: var(--white);
+}
+
+/* Contacts form styles */
+.contacts-form__container {
+    padding: 40px 16px;
+    text-align: center;
+}
+
+.contacts-form__title {
+    margin-bottom: 40px;
+    color: var(--white);
+}
+
+.contacts-form__form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    text-align: left;
+}
+
+.contacts-form__field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.contacts-form__label {
+    font-size: 12px;
+    color: var(--white-transparent-label);
+}
+
+.contacts-form__input,
+.contacts-form__textarea {
+    padding: 14px 16px;
+    font-size: 14px;
+    background-color: var(--white);
+    border: 1px solid var(--white-transparent-border);
+    border-radius: 14px;
+    font-family: inherit;
+}
+
+.contacts-form__input::placeholder,
+.contacts-form__textarea::placeholder {
+    color: var(--white-transparent-input);
+}
+
+.touched.contacts-form__textarea:invalid,
+.touched.contacts-form__input:invalid {
+    border: 2px solid red;
+}
+
+.contacts-form__input:focus,
+.contacts-form__textarea:focus {
+    outline: none;
+    border-color: var(--green);
+}
+
+.contacts-form__checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.contacts-form__checkbox-input {
+    display: none;
+}
+
+.contacts-form__checkbox-box {
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--white-transparent-checkbox);
+    border-radius: 4px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.contacts-form__checkbox-input:checked + .contacts-form__checkbox-box {
+    background-color: var(--green);
+    border-color: var(--green);
+}
+
+.contacts-form__checkbox-text {
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--white-transparent-label);
+}
+
+.contacts-form__button {
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+    .contacts-page__container {
+        padding: 48px 32px;
+    }
+
+    .contacts-page__info {
+        flex-direction: row;
+        gap: 60px;
+    }
+
+    .contacts-page__details,
+    .contacts-page__messengers {
+        flex: 1;
+    }
+
+    .contacts-page__subtitle {
+        font-size: 22px;
+    }
+
+    .contacts-form__container {
+        padding: 48px 32px;
+    }
+
+    .contacts-form__form {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .contacts-form__field {
+        gap: 10px;
+    }
+
+    .contacts-form__input,
+    .contacts-form__textarea {
+        padding: 16px;
+        font-size: 15px;
+    }
+
+    .contacts-form__checkbox {
+        gap: 12px;
+    }
+
+    .contacts-form__checkbox-text {
+        font-size: 13px;
+    }
+
+    .contacts-form__button {
+        padding: 16px 24px;
+        font-size: 15px;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 1280px) {
+    .contacts-page__container {
+        padding: 56px 48px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .contacts-page__info {
+        gap: 80px;
+    }
+
+    .contacts-page__subtitle {
+        font-size: 24px;
+    }
+
+    .contacts-page__item {
+        font-size: 18px;
+    }
+
+    .contacts-page__messenger-btn {
+        padding: 16px 32px;
+        font-size: 16px;
+    }
+
+    .contacts-form__container {
+        padding: 56px 48px;
+    }
+
+    .contacts-form__input,
+    .contacts-form__textarea {
+        padding: 18px;
+        font-size: 16px;
+    }
+
+    .contacts-form__checkbox-text {
+        font-size: 14px;
+    }
+
+    .contacts-form__button {
+        padding: 18px 32px;
+        font-size: 16px;
+    }
+}

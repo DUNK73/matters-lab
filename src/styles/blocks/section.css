@@ -9,6 +9,10 @@
     background-color: var(--gray-light);
 }
 
+.content_section--dark {
+    background-color: var(--dark);
+}
+
 .content_section__title {
     margin: 0 0 30px;
     font-size: 30px;

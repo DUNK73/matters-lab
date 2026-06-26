@@ -60,7 +60,7 @@
             class="header__logo-img"></a></div>
 
       <div class="header__menu">
-        <span class="header__menu-text">en/ru</span>
+        <!-- <span class="header__menu-text">en/ru</span> -->
 
         <details id="main-menu" class="nav" open>
           <summary class="header__burger" aria-label="Open menu">
@@ -70,11 +70,11 @@
           </summary>
 
           <nav class="menu">
-            <a href="/courses(Cambridge-English-Young).html">Дети</a>
-              <a href="/courses(Cambridge-English-Teens).html">Подростки и взрослые</a>
-              <a href="/courses(Cambridge-English-Teens).html">Стоимость</a>
-              <a href="#faq">FAQ</a>
-              <a href="#">Контакты</a>
+            <a href="index.html">Главная</a>
+            <a href="courses.html">Курсы</a>
+            <a href="pricing.html">Стоимость</a>
+            <a href="contacts.html">Контакты</a>
+            <a href="verify.html">Проверка сертификата</a>
           </nav>
         </details>
 
@@ -232,14 +232,14 @@
     <section class="content_section content_section--gray teens-courses">
 
       <div class="grid-container">
-        <div class="left-top courses__link-button">
-          <a href="/courses(Cambridge-English-Young).html">Cambridge English: Young Learners</a>
+        <div class="left-top courses__link-button steps-card">
+          <a href="/courses-young.html">Cambridge English: Young Learners</a>
         </div>
-        <div class="left-bottom courses__link-button">
-          <a href="/courses(Cambridge-English-Teens).html">Cambridge English: Teens and Adults</a>
+        <div class="left-bottom courses__link-button steps-card">
+          <a href="/courses-teens.html">Cambridge English: Teens and Adults</a>
         </div>
         <div class="right">
-          <img src="src/assets/images/maxresdefault.jpg" alt="">
+          
         </div>
       </div>
 
@@ -250,6 +250,27 @@
       <h2 class="content_section__title faq-courses__title">FAQ</h2>
 
       <div class="accordion">
+        <details class="accordion__item">
+          <summary class="accordion__header">
+            <span class="accordion__question">Кто преподает?</span>
+            <span class="accordion__icon"></span>
+          </summary>
+          <div class="accordion__body">
+            <div class="accordion__answer">
+              <p><strong>Савельева Юлия</strong></p>
+              <ul class="list">
+                <li class="list__item">20 лет в профессиональной практике английского</li>
+                <li class="list__item">международная квалификация CELTA</li>
+                <li class="list__item">тренер по голосу и британскому произношению</li>
+                <li class="list__item">автор программ повышения квалификации для учителей</li>
+                <li class="list__item">спикер международных конференций</li>
+                <li class="list__item">основатель Matters</li>
+              </ul>
+              <p><a href="https://vk.com/yuliazakharova" target="_blank" rel="noopener noreferrer">ВКонтакте</a></p>
+            </div>
+          </div>
+        </details>
+
         <details class="accordion__item">
           <summary class="accordion__header">
             <span class="accordion__question">Какие учебные пособия используются?</span>
@@ -564,14 +585,6 @@
 
       <p class="pricing-courses__note">Доступна оплата в рассрочку.</p>
 
-      <div class="pricing-courses__payment">
-        <h3 class="pricing-courses__payment-title">Способы оплаты</h3>
-        <ul class="list">
-          <li class="list__item">банковский перевод по реквизитам;</li>
-          <li class="list__item">оплата в рассрочку по согласованному графику.</li>
-        </ul>
-      </div>
-
 
       <script>
         const pricingPlans = [
@@ -618,76 +631,142 @@
         Отзывы
       </h2>
 
-      <div class="courses__list">
+      <div class="review-slider__sliders">
+        <div class="review-slider__slider">
 
-        <div class="my-slider">
+          <div id="slider-video" class="my-slider">
 
-          <div>
-            <img
-              src="./src/assets/images/reviews/8aBA0vW32ocqD0s4vmBIUqnzMBzvXAj7ymlw4PBiH87IW9GwK8Uqxf9vG6b5Fk-1QWVUj7VpdwlP251c9cCxB400.jpg"
-              alt="Review 1">
+            <div>
+              <video class="review-video" autoplay muted loop playsinline controls preload="metadata">
+                <source src="./src/assets/images/reviews/16804605921944.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            <div>
+              <video class="review-video" autoplay muted loop playsinline controls preload="metadata">
+                <source src="./src/assets/images/reviews/16804605921944.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            <div>
+              <video class="review-video" autoplay muted loop playsinline controls preload="metadata">
+                <source src="./src/assets/images/reviews/16804605921944.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            <div>
+              <video class="review-video" autoplay muted loop playsinline controls preload="metadata">
+                <source src="./src/assets/images/reviews/16804605921944.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            <div>
+              <video class="review-video" autoplay muted loop playsinline controls preload="metadata">
+                <source src="./src/assets/images/reviews/16804605921944.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            <div>
+              <video class="review-video" autoplay muted loop playsinline controls preload="metadata">
+                <source src="./src/assets/images/reviews/16804605921944.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
           </div>
 
-          <div>
-            <img
-              src="./src/assets/images/reviews/BJIjrJdPJY5yuqHgwKg2l0NcRuu-piw7tj1-fBaBhrHCgKL6vMznM_z7g3y0lyT9L_iwdKET9Z04lAP2kq7pAYMV.jpg"
-              alt="Review 2">
-          </div>
+          <script type="module">
 
-          <div>
-            <img
-              src="./src/assets/images/reviews/cPTJJjxHXFWzXrkITeMuKP1HHXW-H3XUkSCg3RjD60i6f0sr77KIPfwsLAGcJgmvTTArAu4ZoWlwlAgk_w2rJP8X.jpg"
-              alt="Review 3">
-          </div>
-
-          <div>
-            <img
-              src="./src/assets/images/reviews/LzKIYxKqSJfjRu3jxvrLe1pMUQdBT3jEqlD_TUtVpSpH5mwILQI_snY7dMS-rwv7DGCBUoqaPIBAEtOFJenoRfjX.jpg"
-              alt="Review 4">
-          </div>
-
-          <div>
-            <img
-              src="./src/assets/images/reviews/rQ_P3KU_7DGC54KXcz-DPLXm3ov_FjoK6FDbW4P13xnvQt8oEAjw5K86Qk4HfpQAWSEcp1Yim0r0I7tV5-5tK8x8.jpg"
-              alt="Review 5">
-          </div>
-
-          <div>
-            <img
-              src="./src/assets/images/reviews/t8i0iOAY5W6mql0yko6LTnZgkgTX72J49EMgucHcOCeddB_qjAugZm6X7xWD_Oloe-6y6RSEeifmWiKgM4qH2IZW.jpg"
-              alt="Review 6">
-          </div>
-
-          <div>
-            <video class="review-video" autoplay muted loop playsinline controls preload="metadata">
-              <source src="./src/assets/images/reviews/16804605921944.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
+            var slider = tns({
+              container: '.my-slider',
+              items: 1,
+              slideBy: 'page',
+              autoplay: true,
+              autoplayButtonOutput: false,
+              controlsText: ['', ''],
+              gutter: 10,
+              responsive: {
+                768: { // Screen width 640px and below
+                  items: 3
+                },
+                1024: { // Screen width 640px and below
+                  items: 4
+                },
+              }
+            });
+          </script>
 
         </div>
 
-        <script type="module">
+        <div class="review-slider__slider">
 
-          var slider = tns({
-            container: '.my-slider',
-            items: 1,
-            slideBy: 'page',
-            autoplay: true,
-            autoplayButtonOutput: false,
-            controlsText: ['', ''],
-            gutter: 10,
-            responsive: {
-              768: { // Screen width 640px and below
-                items: 3
-              },
-              1024: { // Screen width 640px and below
-                items: 4
-              },
-            }
-          });
-        </script>
+          <div id="slider-photo" class="my-slider">
 
+            <div>
+              <img
+                src="./src/assets/images/reviews/8aBA0vW32ocqD0s4vmBIUqnzMBzvXAj7ymlw4PBiH87IW9GwK8Uqxf9vG6b5Fk-1QWVUj7VpdwlP251c9cCxB400.jpg"
+                alt="Review 1">
+            </div>
+
+            <div>
+              <img
+                src="./src/assets/images/reviews/BJIjrJdPJY5yuqHgwKg2l0NcRuu-piw7tj1-fBaBhrHCgKL6vMznM_z7g3y0lyT9L_iwdKET9Z04lAP2kq7pAYMV.jpg"
+                alt="Review 2">
+            </div>
+
+            <div>
+              <img
+                src="./src/assets/images/reviews/cPTJJjxHXFWzXrkITeMuKP1HHXW-H3XUkSCg3RjD60i6f0sr77KIPfwsLAGcJgmvTTArAu4ZoWlwlAgk_w2rJP8X.jpg"
+                alt="Review 3">
+            </div>
+
+            <div>
+              <img
+                src="./src/assets/images/reviews/LzKIYxKqSJfjRu3jxvrLe1pMUQdBT3jEqlD_TUtVpSpH5mwILQI_snY7dMS-rwv7DGCBUoqaPIBAEtOFJenoRfjX.jpg"
+                alt="Review 4">
+            </div>
+
+            <div>
+              <img
+                src="./src/assets/images/reviews/rQ_P3KU_7DGC54KXcz-DPLXm3ov_FjoK6FDbW4P13xnvQt8oEAjw5K86Qk4HfpQAWSEcp1Yim0r0I7tV5-5tK8x8.jpg"
+                alt="Review 5">
+            </div>
+
+            <div>
+              <img
+                src="./src/assets/images/reviews/t8i0iOAY5W6mql0yko6LTnZgkgTX72J49EMgucHcOCeddB_qjAugZm6X7xWD_Oloe-6y6RSEeifmWiKgM4qH2IZW.jpg"
+                alt="Review 6">
+            </div>
+
+          </div>
+
+          <script type="module">
+
+            var slider = tns({
+              container: '#slider-photo',
+              items: 1,
+              slideBy: 'page',
+              autoplay: true,
+              autoplayButtonOutput: false,
+              controlsText: ['', ''],
+              gutter: 10,
+              responsive: {
+                768: { // Screen width 640px and below
+                  items: 2
+                },
+                1024: { // Screen width 640px and below
+                  items: 3
+                },
+              }
+            });
+          </script>
+
+        </div>
       </div>
 
     </section>
@@ -697,7 +776,7 @@
       <section class="footer_section questions">
         <h2 class="questions__title">
           Все еще остались вопросы? <br>
-          Мы будем рады помочь! 
+          Мы будем рады помочь!
         </h2>
 
         <form class="questions__form">

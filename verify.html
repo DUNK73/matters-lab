@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Verify Certificate | Matters</title>
+  <meta name="description" content="Verify the authenticity of your Matters certificate using QR code verification.">
+  <!-- Favicon and app icons -->
+  <link rel="icon" type="image/x-icon" href="./src/assets/favicon/matters-favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="./src/assets/favicon/matters-favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./src/assets/favicon/matters-favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./src/assets/favicon/matters-favicon/favicon-96x96.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="./src/assets/favicon/matters-favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="./src/assets/favicon/matters-favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="./src/assets/favicon/matters-favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./src/assets/favicon/matters-favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./src/assets/favicon/matters-favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./src/assets/favicon/matters-favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./src/assets/favicon/matters-favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./src/assets/favicon/matters-favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./src/assets/favicon/matters-favicon/apple-icon-180x180.png">
+  <link rel="apple-touch-icon" href="./src/assets/favicon/matters-favicon/apple-icon.png">
+  <link rel="apple-touch-icon" href="./src/assets/favicon/matters-favicon/apple-icon-precomposed.png">
+  <link rel="manifest" href="./src/assets/favicon/matters-favicon/manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Matters">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="./src/assets/favicon/matters-favicon/ms-icon-144x144.png">
+  <link rel="icon" type="image/png" sizes="36x36" href="./src/assets/favicon/matters-favicon/android-icon-36x36.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="./src/assets/favicon/matters-favicon/android-icon-48x48.png">
+  <link rel="icon" type="image/png" sizes="72x72" href="./src/assets/favicon/matters-favicon/android-icon-72x72.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./src/assets/favicon/matters-favicon/android-icon-96x96.png">
+  <link rel="icon" type="image/png" sizes="144x144"
+    href="./src/assets/favicon/matters-favicon/android-icon-144x144.png">
+  <link rel="icon" type="image/png" sizes="192x192"
+    href="./src/assets/favicon/matters-favicon/android-icon-192x192.png">
+  <meta name="msapplication-square70x70logo" content="./src/assets/favicon/matters-favicon/ms-icon-70x70.png">
+  <meta name="msapplication-square150x150logo" content="./src/assets/favicon/matters-favicon/ms-icon-150x150.png">
+  <meta name="msapplication-square310x310logo" content="./src/assets/favicon/matters-favicon/ms-icon-310x310.png">
+  <link rel="mask-icon" href="./src/assets/favicon/matters-favicon/favicon.ico" color="#000000">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="src/styles/main.css" />
+  <link rel="stylesheet" href="src/styles/pages/verify.css" />
+</head>
+
+<body class="page">
+
+  <header class="header">
+    <div class="header__container">
+      <div class="header__logo"><a href="index.html"><img src="src/assets/logo/matters-logo-1.png" alt="Matters Logo"
+            class="header__logo-img"></a></div>
+
+      <div class="header__menu">
+        <details id="main-menu" class="nav" open>
+          <summary class="header__burger" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </summary>
+
+          <nav class="menu">
+            <a href="index.html">Главная</a>
+            <a href="courses.html">Курсы</a>
+            <a href="pricing.html">Стоимость</a>
+            <a href="contacts.html">Контакты</a>
+            <a href="verify.html">Проверка сертификата</a>
+          </nav>
+        </details>
+
+        <script>
+          let mql = window.matchMedia("(min-width: 1440px)");
+          let mainMenu = document.getElementById("main-menu");
+
+          let toggleOpem = (mql) => {
+            if (mql.matches) {
+              document.getElementById("main-menu").open = true;
+              mainMenu.open = true;
+            } else {
+              mainMenu.open = false;
+            }
+          }
+
+          mql.onchange = (event) => {
+            toggleOpem(mql);
+          };
+
+          toggleOpem(mql);
+        </script>
+
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="content_section content_section--gray verify">
+
+      <p>
+        Рады приветствовать вас в системе верификации сертификатов Matters. В целях безопасности и защиты от
+        фальсификаций мы не используем автоматические базы данных общего доступа. Каждый выданный нами сертификат
+        проходит индивидуальную модерацию.
+      </p>
+
+      <p>
+        Чтобы подтвердить подлинность сертификата нашего выпускника, пожалуйста, заполните форму ниже. Мы сверим данные
+        с нашим внутренним реестром и направим официальное подтверждение на указанный вами e-mail в течение 24 часов.
+      </p>
+
+    </section>
+
+    <section class="content_section content_section--dark contacts-form">
+      <div class="contacts-form__container">
+
+        <h2 class="content_section__title contacts-form__title">Свяжитесь со мной</h2>
+
+        <form class="contacts-form__form">
+          <div class="contacts-form__field">
+            <label class="contacts-form__label" for="contact-name">Имя*</label>
+            <input required class="contacts-form__input" type="text" id="contact-name" name="name"
+              placeholder="Ваше имя">
+          </div>
+
+          <div class="contacts-form__field">
+            <label class="contacts-form__label" for="contact-email">Email*</label>
+            <input required class="contacts-form__input" type="email" id="contact-email" name="email"
+              placeholder="Ваш email"
+              pattern="^[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+          </div>
+
+          <div class="contacts-form__field">
+            <label class="contacts-form__label" for="contact-phone">Телефон*</label>
+            <input required class="contacts-form__input" type="tel" id="contact-phone" name="phone"
+              placeholder="Ваш телефон" pattern="[0-9]+">
+          </div>
+
+          <div class="contacts-form__field">
+            <label class="contacts-form__label" for="contact-message">Ваше сообщение</label>
+            <textarea required class="contacts-form__textarea" id="contact-message" name="message"
+              placeholder="Ваше сообщение" rows="4"></textarea>
+          </div>
+
+          <label class="contacts-form__checkbox">
+            <input id="contact-agree" type="checkbox" class="contacts-form__checkbox-input">
+            <span class="contacts-form__checkbox-box"></span>
+            <span class="contacts-form__checkbox-text" aria-required="true">
+              Я согласен на обработку персональных данных
+            </span>
+          </label>
+
+          <button id="contactSendButton" class="button contacts-form__button" type="button" disabled>
+            ОТПРАВИТЬ
+          </button>
+
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+          </script>
+
+          <script type="text/javascript">
+            const contactPhone = document.getElementById('contact-phone');
+            const contactEmail = document.getElementById('contact-email');
+            const contactName = document.getElementById('contact-name');
+            const contactMessage = document.getElementById('contact-message');
+            const contactAgree = document.getElementById('contact-agree');
+            const contactSendButton = document.getElementById('contactSendButton');
+
+            const contactEnabled = () => {
+              if (contactPhone.value && contactEmail.value && contactName.value && contactMessage.value && contactAgree.checked) {
+                contactSendButton.disabled = false;
+              } else {
+                contactSendButton.disabled = true;
+              }
+            };
+
+            const contactTouched = (element) => {
+              element.classList.add('touched');
+            };
+
+            (function () {
+              emailjs.init({
+                publicKey: "wmpPPI0KdGExknR4e",
+              });
+            })();
+
+            contactSendButton.addEventListener('click', (event) => {
+              emailjs.send("service_rg5i1no", "template_yf89nxc", {
+                email: contactEmail.value,
+                name: contactName.value,
+                message: contactMessage.value,
+              });
+
+              contactEmail.value = null;
+              contactName.value = null;
+              contactPhone.value = null;
+              contactMessage.value = null;
+              contactAgree.checked = false;
+
+              contactEnabled();
+            });
+
+            contactPhone.addEventListener('input', (event) => { contactEnabled(); });
+            contactEmail.addEventListener('input', (event) => { contactEnabled(); });
+            contactName.addEventListener('input', (event) => { contactEnabled(); });
+            contactMessage.addEventListener('input', (event) => { contactEnabled(); });
+            contactAgree.addEventListener('input', (event) => { contactEnabled(); });
+
+            contactPhone.addEventListener('focus', (event) => { contactTouched(event.target); });
+            contactEmail.addEventListener('focus', (event) => { contactTouched(event.target); });
+            contactName.addEventListener('focus', (event) => { contactTouched(event.target); });
+            contactMessage.addEventListener('focus', (event) => { contactTouched(event.target); });
+            contactAgree.addEventListener('focus', (event) => { contactTouched(event.target); });
+          </script>
+
+        </form>
+      </div>
+    </section>
+
+    <!-- <section class="content_section verify">
+      <div class="verify__container">
+
+        <h1 class="content_section__title verify__title">Проверка сертификата</h1>
+
+        <p class="verify__description">
+          Отсканируйте QR-код на сертификате или введите его номер для проверки подлинности.
+        </p>
+
+        <div class="verify__content">
+
+          <div class="verify__scanner">
+            <div class="verify__scanner-area">
+              <div class="verify__scanner-frame">
+                <svg class="verify__scanner-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 7V5C3 3.89543 3.89543 3 5 3H7" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" />
+                  <path d="M17 3H19C20.1046 3 21 3.89543 21 5V7" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" />
+                  <path d="M21 17V19C21 20.1046 20.1046 21 19 21H17" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" />
+                  <path d="M7 21H5C3.89543 21 3 20.1046 3 19V17" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" />
+                  <rect x="7" y="7" width="3" height="3" rx="0.5" fill="currentColor" />
+                  <rect x="14" y="7" width="3" height="3" rx="0.5" fill="currentColor" />
+                  <rect x="7" y="14" width="3" height="3" rx="0.5" fill="currentColor" />
+                  <rect x="14" y="14" width="3" height="3" rx="0.5" fill="currentColor" />
+                </svg>
+              </div>
+              <p class="verify__scanner-text">Наведите камеру на QR-код</p>
+            </div>
+          </div>
+
+          <div class="verify__divider">
+            <span class="verify__divider-text">или</span>
+          </div>
+
+          <form class="verify__form" id="verifyForm">
+            <div class="verify__field">
+              <label class="verify__label" for="certificateNumber">Введите номер сертификата</label>
+              <input class="verify__input" type="text" id="certificateNumber" name="certificateNumber"
+                placeholder="Например: MATTERS-2024-001" required>
+            </div>
+            <button class="button verify__button" type="submit">Проверить</button>
+          </form>
+
+        </div>
+
+        <div class="verify__result" id="verifyResult" style="display: none;">
+          <div class="verify__result-content">
+            <div class="verify__result-icon" id="resultIcon"></div>
+            <h2 class="verify__result-title" id="resultTitle"></h2>
+            <div class="verify__result-details" id="resultDetails"></div>
+          </div>
+        </div>
+
+        <div class="verify__info">
+          <h2 class="verify__info-title">Как это работает?</h2>
+          <ul class="verify__info-list">
+            <li class="verify__info-item">
+              <span class="verify__info-number">1</span>
+              <span class="verify__info-text">Найдите QR-код на вашем сертификате</span>
+            </li>
+            <li class="verify__info-item">
+              <span class="verify__info-number">2</span>
+              <span class="verify__info-text">Отсканируйте его камерой телефона или введите номер вручную</span>
+            </li>
+            <li class="verify__info-item">
+              <span class="verify__info-number">3</span>
+              <span class="verify__info-text">Получите подтверждение подлинности сертификата</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section> -->
+
+  </main>
+
+  <footer class="footer">
+    <section class="footer_section legal">
+      <ul class="legal__list">
+        <li class="legal__item">
+          <a href="#" class="legal__link">Публичная оферта</a>
+        </li>
+        <li class="legal__item">
+          <a href="#" class="legal__link">Пользовательское соглашение</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="copyright">
+      <span>© Matters - 2025</span>
+    </section>
+  </footer>
+
+  <button id="scrollTopBtn" class="back-to-top">
+    <span class="back-to-top__label">Back to top</span>
+    <div class="back-to-top__icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.2263 -0.422 19.9719 31.062" width="19.9719px"
+        height="31.062px">
+        <path fill-rule="evenodd" fill="#fff"
+          d="M 10.214 30.64 C 10.826 30.64 11.318 30.148 11.318 29.536 L 11.318 3.367 L 18.299 10.347 C 18.91 10.958 19.941 10.676 20.16 9.854 C 20.261 9.471 20.16 9.061 19.877 8.778 L 10.999 -0.101 C 10.57 -0.529 9.858 -0.529 9.43 -0.101 L 0.551 8.778 C -0.051 9.38 0.223 10.411 1.053 10.639 C 1.436 10.739 1.847 10.63 2.121 10.347 L 9.101 3.367 L 9.101 29.536 C 9.101 30.148 9.603 30.64 10.214 30.64 Z"
+          style="stroke-width: 1;" transform="matrix(1, 0, 0, 1, 0, 3.552713678800501e-15)" />
+      </svg>
+    </div>
+  </button>
+
+  <script>
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollTopBtn.style.display = "flex";
+        setTimeout(() => {
+          scrollTopBtn.style.opacity = "1";
+        }, 50);
+      } else {
+        scrollTopBtn.style.opacity = "0";
+        setTimeout(() => {
+          scrollTopBtn.style.display = "none";
+        }, 300);
+      }
+    };
+
+    scrollTopBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo(0, 0);
+    });
+
+    // Verify form handling
+    const verifyForm = document.getElementById('verifyForm');
+    const verifyResult = document.getElementById('verifyResult');
+    const resultIcon = document.getElementById('resultIcon');
+    const resultTitle = document.getElementById('resultTitle');
+    const resultDetails = document.getElementById('resultDetails');
+
+    verifyForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const certificateNumber = document.getElementById('certificateNumber').value;
+
+      // Simulate verification (replace with actual API call)
+      setTimeout(() => {
+        // Example: Show success result
+        verifyResult.style.display = 'block';
+        resultIcon.innerHTML = `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#2FC5B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>`;
+        resultTitle.textContent = 'Сертификат подлинный';
+        resultDetails.innerHTML = `
+          <p><strong>Номер:</strong> ${certificateNumber}</p>
+          <p><strong>Статус:</strong> Действителен</p>
+          <p><strong>Выдан:</strong> Matters Lab</p>
+        `;
+
+        // Scroll to result
+        verifyResult.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 500);
+    });
+  </script>
+
+</body>
+
+</html>
