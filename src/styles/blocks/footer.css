@@ -20,6 +20,6 @@
   @media (min-width: 1280px) {
     /* Desktop: var(--breakpoint-desktop) */
     .footer {
-      padding: 32px 0;
+      /* padding: 32px 0; */
     }
   }

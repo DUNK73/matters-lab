@@ -153,6 +153,7 @@
     width: 100px;
     height: 2px;
     background-color: var(--white);
+    flex-grow: 2;
   }
 
   .hero__title {

@@ -127,7 +127,7 @@
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
     // Замените URL ниже на ссылку к вашему PDF документу
-    const pdfUrl = 'YOUR_PDF_URL_HERE';
+    const pdfUrl = '../src/assets/documents/Страховой полис-1.pdf';
     const container = document.getElementById('pdf-container');
 
     pdfjsLib.getDocument(pdfUrl).promise.then(function(pdfDoc) {

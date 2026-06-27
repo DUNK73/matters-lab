@@ -101,48 +101,56 @@
 
     <section class="content_section content_section--gray verify">
 
-      <p>
-        Рады приветствовать вас в системе верификации сертификатов Matters. В целях безопасности и защиты от
-        фальсификаций мы не используем автоматические базы данных общего доступа. Каждый выданный нами сертификат
-        проходит индивидуальную модерацию.
-      </p>
+      <div class="verify__container">
+        <p>
+          Рады приветствовать вас в системе верификации сертификатов Matters. В целях безопасности и защиты от
+          фальсификаций мы не используем автоматические базы данных общего доступа. Каждый выданный нами сертификат
+          проходит индивидуальную модерацию.
+        </p>
 
-      <p>
-        Чтобы подтвердить подлинность сертификата нашего выпускника, пожалуйста, заполните форму ниже. Мы сверим данные
-        с нашим внутренним реестром и направим официальное подтверждение на указанный вами e-mail в течение 24 часов.
-      </p>
+        <p>
+          Чтобы подтвердить подлинность сертификата нашего выпускника, пожалуйста, заполните форму ниже. Мы сверим
+          данные
+          с нашим внутренним реестром и направим официальное подтверждение на указанный вами e-mail в течение 24 часов.
+        </p>
+      </div>
 
     </section>
 
     <section class="content_section content_section--dark contacts-form">
       <div class="contacts-form__container">
 
-        <h2 class="content_section__title contacts-form__title">Свяжитесь со мной</h2>
+        <h2 class="content_section__title contacts-form__title">Форма верификации</h2>
 
-        <form class="contacts-form__form">
+        <div id="verify-success" class="verify-success" style="display: none;">
+          <p><strong>Спасибо!</strong> Ваш запрос успешно отправлен.</p>
+          <p>Мы уже проверяем данные по реестру выпускников.</p>
+          <p>Официальный ответ с подтверждением подлинности будет отправлен на вашу почту в ближайшее время (обычно это занимает не более 24 часов).</p>
+        </div>
+
+        <div id="verify-error" class="verify-error" style="display: none;">
+          <p><strong>Ошибка!</strong> Произошла ошибка при отправке запроса.</p>
+          <p>Пожалуйста, попробуйте ещё раз или свяжитесь с нами напрямую.</p>
+        </div>
+
+        <form id="verify-form" class="contacts-form__form">
           <div class="contacts-form__field">
-            <label class="contacts-form__label" for="contact-name">Имя*</label>
-            <input required class="contacts-form__input" type="text" id="contact-name" name="name"
-              placeholder="Ваше имя">
+            <label class="contacts-form__label" for="contact-cert-name">Имя и фамилия на сертификате*</label>
+            <input required class="contacts-form__input" type="text" id="contact-cert-name" name="cert-name"
+              placeholder="Имя и фамилия как на сертификате">
           </div>
 
           <div class="contacts-form__field">
-            <label class="contacts-form__label" for="contact-email">Email*</label>
+            <label class="contacts-form__label" for="contact-name">Ваши фамилия и имя*</label>
+            <input required class="contacts-form__input" type="text" id="contact-name" name="name"
+              placeholder="Ваша фамилия и имя">
+          </div>
+
+          <div class="contacts-form__field">
+            <label class="contacts-form__label" for="contact-email">Ваш контактный e-mail*</label>
             <input required class="contacts-form__input" type="email" id="contact-email" name="email"
               placeholder="Ваш email"
-              pattern="^[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
-          </div>
-
-          <div class="contacts-form__field">
-            <label class="contacts-form__label" for="contact-phone">Телефон*</label>
-            <input required class="contacts-form__input" type="tel" id="contact-phone" name="phone"
-              placeholder="Ваш телефон" pattern="[0-9]+">
-          </div>
-
-          <div class="contacts-form__field">
-            <label class="contacts-form__label" for="contact-message">Ваше сообщение</label>
-            <textarea required class="contacts-form__textarea" id="contact-message" name="message"
-              placeholder="Ваше сообщение" rows="4"></textarea>
+              pattern="^[a-zA-Z0-9.!#$%&amp;'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
           </div>
 
           <label class="contacts-form__checkbox">
@@ -154,22 +162,24 @@
           </label>
 
           <button id="contactSendButton" class="button contacts-form__button" type="button" disabled>
-            ОТПРАВИТЬ
+            Отправить запрос на верификацию
           </button>
 
           <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
           </script>
 
           <script type="text/javascript">
-            const contactPhone = document.getElementById('contact-phone');
+            const contactCertName = document.getElementById('contact-cert-name');
             const contactEmail = document.getElementById('contact-email');
             const contactName = document.getElementById('contact-name');
-            const contactMessage = document.getElementById('contact-message');
             const contactAgree = document.getElementById('contact-agree');
             const contactSendButton = document.getElementById('contactSendButton');
+            const verifyForm = document.getElementById('verify-form');
+            const verifySuccess = document.getElementById('verify-success');
+            const verifyError = document.getElementById('verify-error');
 
             const contactEnabled = () => {
-              if (contactPhone.value && contactEmail.value && contactName.value && contactMessage.value && contactAgree.checked) {
+              if (contactCertName.value && contactEmail.value && contactName.value && contactAgree.checked) {
                 contactSendButton.disabled = false;
               } else {
                 contactSendButton.disabled = true;
@@ -190,29 +200,26 @@
               emailjs.send("service_rg5i1no", "template_yf89nxc", {
                 email: contactEmail.value,
                 name: contactName.value,
-                message: contactMessage.value,
+                certName: contactCertName.value,
+              }).then(() => {
+                verifyForm.style.display = 'none';
+                verifySuccess.style.display = 'block';
+              }).catch(() => {
+                verifyForm.style.display = 'none';
+                verifyError.style.display = 'block';
               });
-
-              contactEmail.value = null;
-              contactName.value = null;
-              contactPhone.value = null;
-              contactMessage.value = null;
-              contactAgree.checked = false;
-
-              contactEnabled();
             });
 
-            contactPhone.addEventListener('input', (event) => { contactEnabled(); });
+            contactCertName.addEventListener('input', (event) => { contactEnabled(); });
             contactEmail.addEventListener('input', (event) => { contactEnabled(); });
             contactName.addEventListener('input', (event) => { contactEnabled(); });
-            contactMessage.addEventListener('input', (event) => { contactEnabled(); });
             contactAgree.addEventListener('input', (event) => { contactEnabled(); });
 
-            contactPhone.addEventListener('focus', (event) => { contactTouched(event.target); });
+            contactCertName.addEventListener('focus', (event) => { contactTouched(event.target); });
             contactEmail.addEventListener('focus', (event) => { contactTouched(event.target); });
             contactName.addEventListener('focus', (event) => { contactTouched(event.target); });
-            contactMessage.addEventListener('focus', (event) => { contactTouched(event.target); });
             contactAgree.addEventListener('focus', (event) => { contactTouched(event.target); });
+
           </script>
 
         </form>
@@ -302,11 +309,21 @@
     <section class="footer_section legal">
       <ul class="legal__list">
         <li class="legal__item">
-          <a href="#" class="legal__link">Публичная оферта</a>
+          <!-- <a href="/documents/document1.html" class="legal__link">Публичная оферта</a> -->
+          <a href="/documents/document1-pdfjs.html" class="legal__link">Публичная оферта</a>
         </li>
         <li class="legal__item">
-          <a href="#" class="legal__link">Пользовательское соглашение</a>
+          <!-- <a href="documents/document2.html" class="legal__link">Пользовательское соглашение</a> -->
+          <a href="documents/document2-pdfjs.html" class="legal__link">Пользовательское соглашение</a>
         </li>
+        <!-- <li class="legal__item">
+            <a href="#" class="legal__link">Политика обработки персональных данных</a>
+          </li>
+          <li class="legal__item">
+            <a href="#" class="legal__link">
+              Согласие на информационную и рекламную рассылку
+            </a>
+          </li> -->
       </ul>
     </section>
 
