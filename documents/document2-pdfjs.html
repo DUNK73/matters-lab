@@ -99,7 +99,7 @@
 
   <main>
     <section class="document-viewer">
-      <h1 class="document-viewer__title">Document 2</h1>
+      <h1 class="document-viewer__title">Согласие на обработку персональных данных</h1>
       <div id="pdf-container" class="document-viewer__container"></div>
     </section>
   </main>
@@ -127,7 +127,7 @@
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
     // Замените URL ниже на ссылку к вашему PDF документу
-    const pdfUrl = '../src/assets/documents/Страховой полис-1.pdf';
+    const pdfUrl = '../src/assets/documents/Согласие на обработку персональных данных.pdf';
     const container = document.getElementById('pdf-container');
 
     pdfjsLib.getDocument(pdfUrl).promise.then(function(pdfDoc) {

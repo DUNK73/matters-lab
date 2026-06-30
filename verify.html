@@ -125,7 +125,8 @@
         <div id="verify-success" class="verify-success" style="display: none;">
           <p><strong>Спасибо!</strong> Ваш запрос успешно отправлен.</p>
           <p>Мы уже проверяем данные по реестру выпускников.</p>
-          <p>Официальный ответ с подтверждением подлинности будет отправлен на вашу почту в ближайшее время (обычно это занимает не более 24 часов).</p>
+          <p>Официальный ответ с подтверждением подлинности будет отправлен на вашу почту в ближайшее время (обычно это
+            занимает не более 24 часов).</p>
         </div>
 
         <div id="verify-error" class="verify-error" style="display: none;">
@@ -165,6 +166,13 @@
             Отправить запрос на верификацию
           </button>
 
+          <div id="verify-loader" class="loader loader" style="display: none;">
+            <span class="loader__dot"></span>
+            <span class="loader__dot"></span>
+            <span class="loader__dot"></span>
+            <span class="loader__dot"></span>
+          </div>
+
           <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
           </script>
 
@@ -177,6 +185,7 @@
             const verifyForm = document.getElementById('verify-form');
             const verifySuccess = document.getElementById('verify-success');
             const verifyError = document.getElementById('verify-error');
+            const verifyLoader = document.getElementById('verify-loader');
 
             const contactEnabled = () => {
               if (contactCertName.value && contactEmail.value && contactName.value && contactAgree.checked) {
@@ -197,18 +206,39 @@
             })();
 
             contactSendButton.addEventListener('click', (event) => {
-              emailjs.send("service_rg5i1no", "template_yf89nxc", {
-                email: contactEmail.value,
-                name: contactName.value,
-                certName: contactCertName.value,
-              }).then(() => {
-                verifyForm.style.display = 'none';
-                verifySuccess.style.display = 'block';
-              }).catch(() => {
-                verifyForm.style.display = 'none';
-                verifyError.style.display = 'block';
-              });
+              
+              contactSendButton.style.display = 'none';
+              verifyLoader.style.display = 'flex';
+
+              fetch('http://127.0.0.1:3002/sendMail', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                  headers: {
+                    title: 'верификация сертификата'
+                  },
+                  content: {
+                    "Имя и фамилия на сертификате": contactCertName.value,
+                    "Фамилия и имя": contactName.value,
+                    "e-mail": contactEmail.value,
+                  }
+                }),
+              })
+                .then(() => {
+                  verifyForm.style.display = 'none';
+                  verifySuccess.style.display = 'block';
+                })
+                .catch(() => {
+                  verifyForm.style.display = 'none';
+                  verifyError.style.display = 'block';
+                });
+
             });
+
+
+
 
             contactCertName.addEventListener('input', (event) => { contactEnabled(); });
             contactEmail.addEventListener('input', (event) => { contactEnabled(); });
@@ -366,36 +396,7 @@
       window.scrollTo(0, 0);
     });
 
-    // Verify form handling
-    const verifyForm = document.getElementById('verifyForm');
-    const verifyResult = document.getElementById('verifyResult');
-    const resultIcon = document.getElementById('resultIcon');
-    const resultTitle = document.getElementById('resultTitle');
-    const resultDetails = document.getElementById('resultDetails');
 
-    verifyForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      const certificateNumber = document.getElementById('certificateNumber').value;
-
-      // Simulate verification (replace with actual API call)
-      setTimeout(() => {
-        // Example: Show success result
-        verifyResult.style.display = 'block';
-        resultIcon.innerHTML = `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#2FC5B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>`;
-        resultTitle.textContent = 'Сертификат подлинный';
-        resultDetails.innerHTML = `
-          <p><strong>Номер:</strong> ${certificateNumber}</p>
-          <p><strong>Статус:</strong> Действителен</p>
-          <p><strong>Выдан:</strong> Matters Lab</p>
-        `;
-
-        // Scroll to result
-        verifyResult.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 500);
-    });
   </script>
 
 </body>

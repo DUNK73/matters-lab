@@ -99,7 +99,7 @@
 
   <main>
     <section class="document-viewer">
-      <h1 class="document-viewer__title">Document 1</h1>
+      <h1 class="document-viewer__title">Документ публичной аферты</h1>
       <div id="pdf-container" class="document-viewer__container"></div>
     </section>
   </main>
@@ -126,7 +126,7 @@
   <script>
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
-    const pdfUrl = '../src/assets/documents/выписка с печатью с листом (1).pdf';
+    const pdfUrl = '../src/assets/documents/Публичная оферта Matters.pdf';
     const container = document.getElementById('pdf-container');
 
     pdfjsLib.getDocument(pdfUrl).promise.then(function(pdfDoc) {

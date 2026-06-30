@@ -1,20 +1,39 @@
 function initModal(config) {
   var modal = document.getElementById(config.modalId);
-  var modalClose = document.getElementById(config.closeId);
-  var modalCourse = document.getElementById(config.courseId);
+
+  var modalForm = modal.getElementsByClassName('modal__form')[0];
+  var modalSuccess = modal.getElementsByClassName('modal__success')[0];
+  var modalError = modal.getElementsByClassName('modal__error')[0];
+  var modalLoader = modal.getElementsByClassName('modal__loader')[0];
+
+  var modalClose = modal.getElementsByClassName('modal__close')[0];
+
+  var modalTitle = modal.getElementsByClassName('modal__title')[0];
+  var modalSubTitle = modal.getElementsByClassName('modal__sub-title')[0];
+
+
   var modalName = document.getElementById(config.nameId);
   var modalEmail = document.getElementById(config.emailId);
   var modalPhone = document.getElementById(config.phoneId);
   var modalMessage = document.getElementById(config.messageId);
   var modalAgree = document.getElementById(config.agreeId);
-  var modalSendButton = document.getElementById(config.sendId);
-  var modalSendButtonLater = document.getElementById(config.laterId);
+
+
+  var modalSendButton = modal.getElementsByClassName('modal__send-button')[0];
+
+  let title = '';
+  let subTitle = '';
+
 
   config.openButtons.forEach(function (btn) {
     btn.addEventListener('click', function () {
-      if (config.getCourseName) {
-        var title = config.getCourseName(btn);
-        modalCourse.textContent = title;
+      if (config.getModalTitle) {
+        title = config.getModalTitle(btn);
+        modalTitle.textContent = title;
+      }
+      if (config.getModalSubTitle) {
+        subTitle = config.getModalSubTitle(btn);
+        modalSubTitle.textContent = subTitle;
       }
       modal.classList.add('active');
     });
@@ -24,9 +43,6 @@ function initModal(config) {
     modal.classList.remove('active');
   });
 
-  // modalSendButtonLater.addEventListener('click', function () {
-  //   modal.classList.remove('active');
-  // });
 
   modal.addEventListener('click', function (e) {
     if (e.target === modal) {
@@ -34,8 +50,26 @@ function initModal(config) {
     }
   });
 
+  let dataElements = Array.from(modal.getElementsByClassName('modal__form-data'));
+  let technicalElements = Array.from(modal.getElementsByClassName('modal__form-technical-data'));
+
+  let allElements = [...dataElements, ...technicalElements];
+
   var modalEnabled = function () {
-    if (modalPhone.value && modalEmail.value && modalName.value && modalMessage.value && modalAgree.checked) {
+    let testForm = allElements.every((element) => {
+      if (element.type === 'checkbox') {
+        if (element.required && !element.checked) {
+          return false;
+        }
+      }
+      else if (element.required && !element.value) {
+        return false;
+      }
+
+      return true;
+    });
+
+    if (testForm) {
       modalSendButton.disabled = false;
     } else {
       modalSendButton.disabled = true;
@@ -46,44 +80,53 @@ function initModal(config) {
     element.classList.add('touched');
   };
 
-  modalPhone.addEventListener('input', modalEnabled);
-  modalEmail.addEventListener('input', modalEnabled);
-  modalName.addEventListener('input', modalEnabled);
-  modalMessage.addEventListener('input', modalEnabled);
-  modalAgree.addEventListener('input', modalEnabled);
 
-  modalPhone.addEventListener('focus', function (e) { modalTouched(e.target); });
-  modalEmail.addEventListener('focus', function (e) { modalTouched(e.target); });
-  modalName.addEventListener('focus', function (e) { modalTouched(e.target); });
-  modalMessage.addEventListener('focus', function (e) { modalTouched(e.target); });
 
-  modalSendButton.addEventListener('click', async function () {
-    try {
-      await fetch('http://127.0.0.1:3002/signCourses', {
-        method: 'POST',
+
+  allElements.forEach((element) => {
+
+    element.addEventListener('input', modalEnabled);
+    element.addEventListener('focus', function (e) { modalTouched(e.target); });
+
+  });
+
+  modalSendButton.addEventListener('click', (event) => {
+
+    modalSendButton.style.display = 'none';
+    modalLoader.style.display = 'flex';
+
+    fetch('http://127.0.0.1:3002/sendMail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
         headers: {
-          'Content-Type': 'application/json',
+          title: title + (subTitle ? `: ${subTitle}` : ''),
         },
-        body: JSON.stringify({
-          email: modalEmail.value,
-          name: modalName.value,
-          phone: modalPhone.value,
-          theme: config.messageSuffix + ': ' + modalCourse.textContent, 
-          message: modalMessage.value,
-        }),
+        content: {
+          ...(() => {
+
+            let data = {};
+            dataElements.forEach((element) => {
+              data[element.name] = element.value;
+            });
+
+            return data;
+          })(),
+
+        }
+      }),
+    })
+      .then(() => {
+        modalForm.style.display = 'none';
+        modalSuccess.style.display = 'block';
+      })
+      .catch(() => {
+        modalForm.style.display = 'none';
+        modalError.style.display = 'block';
       });
-      
-      modalEmail.value = null;
-      modalName.value = null;
-      modalPhone.value = null;
-      modalMessage.value = null;
-      modalAgree.checked = false;
-      modalEnabled();
-      modal.classList.remove('active');
-    } catch (error) {
-      console.error('Error sending mail:', error);
-      alert('Ошибка при отправке сообщения. Пожалуйста, попробуйте позже.');
-    }
+
   });
 }
 
@@ -96,48 +139,53 @@ document.querySelectorAll('.courses__button').forEach(function (btn) {
 
 initModal({
   modalId: 'courseModal',
-  closeId: 'modalClose',
-  courseId: 'modalCourse',
-  nameId: 'modal-name',
-  emailId: 'modal-email',
-  phoneId: 'modal-phone',
-  messageId: 'modal-message',
-  agreeId: 'modal-agree',
-  sendId: 'modalSendButton',
-  laterId: 'modalSendButtonLater',
   openButtons: courseButtons,
-  serviceId: 'service_rg5i1no',
-  templateId: 'template_yf89nxc',
-  messageSuffix: 'Курс',
-  getCourseName: function (btn) {
+  getModalTitle: function (btn) {
+    var card = btn.closest('.steps-card__content');
+    return 'Записаться на курс';
+  },
+  getModalSubTitle: function (btn) {
     var card = btn.closest('.steps-card__content');
     return card ? card.querySelector('.steps-card__title').textContent : '';
   }
 });
 
 var testingButtons = [];
-document.querySelectorAll('.testing-courses__button').forEach(function (btn) {
+document.querySelectorAll('#testing-signe-button').forEach(function (btn) {
   // if (btn.textContent.trim() === 'Записаться на тестирование') {
-    testingButtons.push(btn);
+  testingButtons.push(btn);
   // }
 });
 
 initModal({
   modalId: 'testingModal',
-  closeId: 'testingClose',
-  courseId: 'testingCourse',
-  nameId: 'testing-name',
-  emailId: 'testing-email',
-  phoneId: 'testing-phone',
-  messageId: 'testing-message',
-  agreeId: 'testing-agree',
-  sendId: 'testingSendButton',
-  laterId: 'testingSendButtonLater',
   openButtons: testingButtons,
-  serviceId: 'service_rg5i1no',
-  templateId: 'template_yf89nxc',
-  messageSuffix: 'Тестирование',
-  getCourseName: function () {
-    return 'Запись на тестирование';
+  getModalTitle: function (btn) {
+    var card = btn.closest('.steps-card__content');
+    return 'Записаться на тестирование';
+  },
+  getModalSubTitle: function () {
+    return '';
+  }
+});
+
+
+
+var commonCourseModalButtons = [];
+document.querySelectorAll('#commonCourseModal-signe-button').forEach(function (btn) {
+  // if (btn.textContent.trim() === 'Записаться на тестирование') {
+  commonCourseModalButtons.push(btn);
+  // }
+});
+
+initModal({
+  modalId: 'commonCourseModal',
+  openButtons: commonCourseModalButtons,
+  getModalTitle: function (btn) {
+    var card = btn.closest('.steps-card__content');
+    return 'Записаться на курс';
+  },
+  getModalSubTitle: function () {
+    return '';
   }
 });
