@@ -117,221 +117,72 @@
 
     </section>
 
-    <section class="content_section content_section--dark contacts-form">
-      <div class="contacts-form__container">
+    <section id="verifyMessage" class="footer_section content_section--dark questions">
 
-        <h2 class="content_section__title contacts-form__title">Форма верификации</h2>
+      <h2 class="questions__title">
+        Форма верификации
+      </h2>
 
-        <div id="verify-success" class="verify-success" style="display: none;">
-          <p><strong>Спасибо!</strong> Ваш запрос успешно отправлен.</p>
-          <p>Мы уже проверяем данные по реестру выпускников.</p>
-          <p>Официальный ответ с подтверждением подлинности будет отправлен на вашу почту в ближайшее время (обычно это
-            занимает не более 24 часов).</p>
-        </div>
-
-        <div id="verify-error" class="verify-error" style="display: none;">
-          <p><strong>Ошибка!</strong> Произошла ошибка при отправке запроса.</p>
-          <p>Пожалуйста, попробуйте ещё раз или свяжитесь с нами напрямую.</p>
-        </div>
-
-        <form id="verify-form" class="contacts-form__form">
-          <div class="contacts-form__field">
-            <label class="contacts-form__label" for="contact-cert-name">Имя и фамилия на сертификате*</label>
-            <input required class="contacts-form__input" type="text" id="contact-cert-name" name="cert-name"
-              placeholder="Имя и фамилия как на сертификате">
-          </div>
-
-          <div class="contacts-form__field">
-            <label class="contacts-form__label" for="contact-name">Ваши фамилия и имя*</label>
-            <input required class="contacts-form__input" type="text" id="contact-name" name="name"
-              placeholder="Ваша фамилия и имя">
-          </div>
-
-          <div class="contacts-form__field">
-            <label class="contacts-form__label" for="contact-email">Ваш контактный e-mail*</label>
-            <input required class="contacts-form__input" type="email" id="contact-email" name="email"
-              placeholder="Ваш email"
-              pattern="^[a-zA-Z0-9.!#$%&amp;'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
-          </div>
-
-          <label class="contacts-form__checkbox">
-            <input id="contact-agree" type="checkbox" class="contacts-form__checkbox-input">
-            <span class="contacts-form__checkbox-box"></span>
-            <span class="contacts-form__checkbox-text" aria-required="true">
-              Я согласен на обработку персональных данных
-            </span>
-          </label>
-
-          <button id="contactSendButton" class="button contacts-form__button" type="button" disabled>
-            Отправить запрос на верификацию
-          </button>
-
-          <div id="verify-loader" class="loader loader" style="display: none;">
-            <span class="loader__dot"></span>
-            <span class="loader__dot"></span>
-            <span class="loader__dot"></span>
-            <span class="loader__dot"></span>
-          </div>
-
-          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-          </script>
-
-          <script type="text/javascript">
-            const contactCertName = document.getElementById('contact-cert-name');
-            const contactEmail = document.getElementById('contact-email');
-            const contactName = document.getElementById('contact-name');
-            const contactAgree = document.getElementById('contact-agree');
-            const contactSendButton = document.getElementById('contactSendButton');
-            const verifyForm = document.getElementById('verify-form');
-            const verifySuccess = document.getElementById('verify-success');
-            const verifyError = document.getElementById('verify-error');
-            const verifyLoader = document.getElementById('verify-loader');
-
-            const contactEnabled = () => {
-              if (contactCertName.value && contactEmail.value && contactName.value && contactAgree.checked) {
-                contactSendButton.disabled = false;
-              } else {
-                contactSendButton.disabled = true;
-              }
-            };
-
-            const contactTouched = (element) => {
-              element.classList.add('touched');
-            };
-
-            (function () {
-              emailjs.init({
-                publicKey: "wmpPPI0KdGExknR4e",
-              });
-            })();
-
-            contactSendButton.addEventListener('click', (event) => {
-              
-              contactSendButton.style.display = 'none';
-              verifyLoader.style.display = 'flex';
-
-              fetch('http://127.0.0.1:3002/sendMail', {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                  headers: {
-                    title: 'верификация сертификата'
-                  },
-                  content: {
-                    "Имя и фамилия на сертификате": contactCertName.value,
-                    "Фамилия и имя": contactName.value,
-                    "e-mail": contactEmail.value,
-                  }
-                }),
-              })
-                .then(() => {
-                  verifyForm.style.display = 'none';
-                  verifySuccess.style.display = 'block';
-                })
-                .catch(() => {
-                  verifyForm.style.display = 'none';
-                  verifyError.style.display = 'block';
-                });
-
-            });
-
-
-
-
-            contactCertName.addEventListener('input', (event) => { contactEnabled(); });
-            contactEmail.addEventListener('input', (event) => { contactEnabled(); });
-            contactName.addEventListener('input', (event) => { contactEnabled(); });
-            contactAgree.addEventListener('input', (event) => { contactEnabled(); });
-
-            contactCertName.addEventListener('focus', (event) => { contactTouched(event.target); });
-            contactEmail.addEventListener('focus', (event) => { contactTouched(event.target); });
-            contactName.addEventListener('focus', (event) => { contactTouched(event.target); });
-            contactAgree.addEventListener('focus', (event) => { contactTouched(event.target); });
-
-          </script>
-
-        </form>
-      </div>
-    </section>
-
-    <!-- <section class="content_section verify">
-      <div class="verify__container">
-
-        <h1 class="content_section__title verify__title">Проверка сертификата</h1>
-
-        <p class="verify__description">
-          Отсканируйте QR-код на сертификате или введите его номер для проверки подлинности.
+      <div class="modal__success message-form__success" style="display: none;">
+        <p>Мы получили вашу заявку. Вы сделали важный шаг к уверенному будущему! </p>
+        <p>Мы свяжемся с вами в течение одного рабочего дня для согласования всех деталей, ответов на вопросы и
+          назначения даты предварительного тестирования.
         </p>
-
-        <div class="verify__content">
-
-          <div class="verify__scanner">
-            <div class="verify__scanner-area">
-              <div class="verify__scanner-frame">
-                <svg class="verify__scanner-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3 7V5C3 3.89543 3.89543 3 5 3H7" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" />
-                  <path d="M17 3H19C20.1046 3 21 3.89543 21 5V7" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" />
-                  <path d="M21 17V19C21 20.1046 20.1046 21 19 21H17" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" />
-                  <path d="M7 21H5C3.89543 21 3 20.1046 3 19V17" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" />
-                  <rect x="7" y="7" width="3" height="3" rx="0.5" fill="currentColor" />
-                  <rect x="14" y="7" width="3" height="3" rx="0.5" fill="currentColor" />
-                  <rect x="7" y="14" width="3" height="3" rx="0.5" fill="currentColor" />
-                  <rect x="14" y="14" width="3" height="3" rx="0.5" fill="currentColor" />
-                </svg>
-              </div>
-              <p class="verify__scanner-text">Наведите камеру на QR-код</p>
-            </div>
-          </div>
-
-          <div class="verify__divider">
-            <span class="verify__divider-text">или</span>
-          </div>
-
-          <form class="verify__form" id="verifyForm">
-            <div class="verify__field">
-              <label class="verify__label" for="certificateNumber">Введите номер сертификата</label>
-              <input class="verify__input" type="text" id="certificateNumber" name="certificateNumber"
-                placeholder="Например: MATTERS-2024-001" required>
-            </div>
-            <button class="button verify__button" type="submit">Проверить</button>
-          </form>
-
-        </div>
-
-        <div class="verify__result" id="verifyResult" style="display: none;">
-          <div class="verify__result-content">
-            <div class="verify__result-icon" id="resultIcon"></div>
-            <h2 class="verify__result-title" id="resultTitle"></h2>
-            <div class="verify__result-details" id="resultDetails"></div>
-          </div>
-        </div>
-
-        <div class="verify__info">
-          <h2 class="verify__info-title">Как это работает?</h2>
-          <ul class="verify__info-list">
-            <li class="verify__info-item">
-              <span class="verify__info-number">1</span>
-              <span class="verify__info-text">Найдите QR-код на вашем сертификате</span>
-            </li>
-            <li class="verify__info-item">
-              <span class="verify__info-number">2</span>
-              <span class="verify__info-text">Отсканируйте его камерой телефона или введите номер вручную</span>
-            </li>
-            <li class="verify__info-item">
-              <span class="verify__info-number">3</span>
-              <span class="verify__info-text">Получите подтверждение подлинности сертификата</span>
-            </li>
-          </ul>
-        </div>
-
+        <p>С нетерпением ждем встречи!</p>
+        <button class="message-form__reset-button button questions__button">Отправить еще</button>
       </div>
-    </section> -->
+
+      <div class="modal__error message-form__error" style="display: none;">
+        <p><strong>Ошибка!</strong> Произошла ошибка при отправке запроса.</p>
+        <p>Пожалуйста, попробуйте ещё раз или свяжитесь с нами напрямую.</p>
+        <button class="message-form__reset-button button questions__button">Попробовать еще</button>
+      </div>
+
+      <form class="questions__form message-form__form">
+        <div class="questions__field">
+          <label class="questions__label" for="name">Имя и фамилия как на сертификате</label>
+          <input required class="questions__input message-form__data-field" type="text" id="name" name="cert-name"
+            placeholder="Имя и фамилия как на сертификате">
+        </div>
+
+        <div class="questions__field">
+          <label class="questions__label" for="name">Ваша фамилия и имя</label>
+          <input required class="questions__input message-form__data-field" type="text" id="name" name="name"
+            placeholder="Ваша фамилия и имя">
+        </div>
+
+        <div class="questions__field">
+          <label class="questions__label" for="email">Ваш email</label>
+          <input required class="questions__input message-form__data-field" type="email" id="email" name="email"
+            placeholder="Ваш email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+        </div>
+
+
+
+        <label class="questions__checkbox">
+          <input required id="agree" type="checkbox" class="questions__checkbox-input message-form__tech-field">
+          <span class="questions__checkbox-box"></span>
+          <span class="questions__checkbox-text" aria-required="true">
+            Я даю согласие на обработку своих персональных данных
+          </span>
+        </label>
+
+
+        </label>
+
+        <button class="message-form__send-button button questions__button" type="button" disabled>
+          Отправить запрос на верификацию
+        </button>
+
+        <div class="message-form__loader loader" style="display: none;">
+          <span class="loader__dot"></span>
+          <span class="loader__dot"></span>
+          <span class="loader__dot"></span>
+          <span class="loader__dot"></span>
+        </div>
+
+      </form>
+    </section>
 
   </main>
 
@@ -398,6 +249,10 @@
 
 
   </script>
+
+  <script src="./src/js/message-form.js"></script>
+
+  <script src="./src/js/pages/verify.js"></script>
 
 </body>
 

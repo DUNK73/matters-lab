@@ -148,109 +148,82 @@
       </div>
     </section>
 
-    <section class="content_section content_section--dark contacts-form">
-      <div class="contacts-form__container">
 
-        <h2 class="content_section__title contacts-form__title">Свяжитесь со мной</h2>
 
-        <form class="contacts-form__form">
-          <div class="contacts-form__field">
-            <label class="contacts-form__label" for="contact-name">Имя*</label>
-            <input required class="contacts-form__input" type="text" id="contact-name" name="name"
-              placeholder="Ваше имя">
-          </div>
+    <section id="contactsMessage" class="footer_section content_section--dark questions">
 
-          <div class="contacts-form__field">
-            <label class="contacts-form__label" for="contact-email">Email*</label>
-            <input required class="contacts-form__input" type="email" id="contact-email" name="email"
-              placeholder="Ваш email"
-              pattern="^[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
-          </div>
+      <h2 class="questions__title">
+        Свяжитесь со мной
+      </h2>
 
-          <div class="contacts-form__field">
-            <label class="contacts-form__label" for="contact-phone">Телефон*</label>
-            <input required class="contacts-form__input" type="tel" id="contact-phone" name="phone"
-              placeholder="Ваш телефон" pattern="[0-9]+">
-          </div>
-
-          <div class="contacts-form__field">
-            <label class="contacts-form__label" for="contact-message">Ваше сообщение</label>
-            <textarea required class="contacts-form__textarea" id="contact-message" name="message"
-              placeholder="Ваше сообщение" rows="4"></textarea>
-          </div>
-
-          <label class="contacts-form__checkbox">
-            <input id="contact-agree" type="checkbox" class="contacts-form__checkbox-input">
-            <span class="contacts-form__checkbox-box"></span>
-            <span class="contacts-form__checkbox-text" aria-required="true">
-              Я согласен на обработку персональных данных
-            </span>
-          </label>
-
-          <button id="contactSendButton" class="button contacts-form__button" type="button" disabled>
-            ОТПРАВИТЬ
-          </button>
-
-          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-          </script>
-
-          <script type="text/javascript">
-            const contactPhone = document.getElementById('contact-phone');
-            const contactEmail = document.getElementById('contact-email');
-            const contactName = document.getElementById('contact-name');
-            const contactMessage = document.getElementById('contact-message');
-            const contactAgree = document.getElementById('contact-agree');
-            const contactSendButton = document.getElementById('contactSendButton');
-
-            const contactEnabled = () => {
-              if (contactPhone.value && contactEmail.value && contactName.value && contactMessage.value && contactAgree.checked) {
-                contactSendButton.disabled = false;
-              } else {
-                contactSendButton.disabled = true;
-              }
-            };
-
-            const contactTouched = (element) => {
-              element.classList.add('touched');
-            };
-
-            (function () {
-              emailjs.init({
-                publicKey: "wmpPPI0KdGExknR4e",
-              });
-            })();
-
-            contactSendButton.addEventListener('click', (event) => {
-              emailjs.send("service_rg5i1no", "template_yf89nxc", {
-                email: contactEmail.value,
-                name: contactName.value,
-                message: contactMessage.value,
-              });
-
-              contactEmail.value = null;
-              contactName.value = null;
-              contactPhone.value = null;
-              contactMessage.value = null;
-              contactAgree.checked = false;
-
-              contactEnabled();
-            });
-
-            contactPhone.addEventListener('input', (event) => { contactEnabled(); });
-            contactEmail.addEventListener('input', (event) => { contactEnabled(); });
-            contactName.addEventListener('input', (event) => { contactEnabled(); });
-            contactMessage.addEventListener('input', (event) => { contactEnabled(); });
-            contactAgree.addEventListener('input', (event) => { contactEnabled(); });
-
-            contactPhone.addEventListener('focus', (event) => { contactTouched(event.target); });
-            contactEmail.addEventListener('focus', (event) => { contactTouched(event.target); });
-            contactName.addEventListener('focus', (event) => { contactTouched(event.target); });
-            contactMessage.addEventListener('focus', (event) => { contactTouched(event.target); });
-            contactAgree.addEventListener('focus', (event) => { contactTouched(event.target); });
-          </script>
-
-        </form>
+      <div class="modal__success message-form__success" style="display: none;">
+        <p>Мы получили вашу заявку. Вы сделали важный шаг к уверенному будущему! </p>
+        <p>Мы свяжемся с вами в течение одного рабочего дня для согласования всех деталей, ответов на вопросы и
+          назначения даты предварительного тестирования.
+        </p>
+        <p>С нетерпением ждем встречи!</p>
+        <button class="message-form__reset-button button questions__button">Отправить еще</button>
       </div>
+
+      <div class="modal__error message-form__error" style="display: none;">
+        <p><strong>Ошибка!</strong> Произошла ошибка при отправке запроса.</p>
+        <p>Пожалуйста, попробуйте ещё раз или свяжитесь с нами напрямую.</p>
+        <button class="message-form__reset-button button questions__button">Попробовать еще</button>
+      </div>
+
+      <form class="questions__form message-form__form">
+        <div class="questions__field">
+          <label class="questions__label" for="name">Имя</label>
+          <input required class="questions__input message-form__data-field" type="text" id="name" name="name"
+            placeholder="Your name">
+        </div>
+
+        <div class="questions__field">
+          <label class="questions__label" for="email">E-mail</label>
+          <input required class="questions__input message-form__data-field" type="email" id="email" name="email"
+            placeholder="Your email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+        </div>
+
+        <div class="questions__field">
+          <label class="questions__label" for="phone">Телефон</label>
+          <input required class="questions__input message-form__data-field" type="input" id="phone" name="phone"
+            placeholder="Your phone" pattern="[0-9]+">
+        </div>
+
+        <div class="questions__field">
+          <label class="questions__label" for="message">Ваше сообщение</label>
+          <textarea required class="questions__textarea message-form__data-field" id="message" name="message"
+            placeholder="Your message" rows="4"></textarea>
+        </div>
+
+        <label class="questions__checkbox">
+          <input required id="agree" type="checkbox" class="questions__checkbox-input message-form__tech-field">
+          <span class="questions__checkbox-box"></span>
+          <span class="questions__checkbox-text" aria-required="true">
+            Я даю согласие на обработку своих персональных данных
+          </span>
+        </label>
+
+        <label class="questions__checkbox">
+          <input id="agree-promo" type="checkbox" class="questions__checkbox-input">
+          <span class="questions__checkbox-box"></span>
+          <span class="questions__checkbox-text" aria-required="true">
+            Я хочу получать от вас информационные и рекламные письма
+          </span>
+        </label>
+
+        <button class="message-form__send-button button questions__button" type="button" disabled>
+          Отправить
+        </button>
+
+        <div class="message-form__loader loader" style="display: none;">
+          <span class="loader__dot"></span>
+          <span class="loader__dot"></span>
+          <span class="loader__dot"></span>
+          <span class="loader__dot"></span>
+        </div>
+
+      </form>
     </section>
 
   </main>
@@ -305,6 +278,10 @@
       window.scrollTo(0, 0);
     });
   </script>
+
+  <script src="./src/js/message-form.js"></script>
+
+  <script src="./src/js/pages/contacts.js"></script>
 
 </body>
 

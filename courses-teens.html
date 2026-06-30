@@ -129,7 +129,7 @@
               Английский - это прочный фундамент, уверенность в себе и ключ, который откроет перед вашим ребенком любые двери в мире.
             </span> -->
             <span class="courses-header__line-horizontal"></span>
-            <button class="button hero__button" id="commonCourseModal-signe-button">
+            <button class="button hero__button" id="common-сourse-modal-signe-button">
               Записаться на курс
             </button>
           </div>
@@ -324,18 +324,22 @@
           </p>
         </div>
 
-        <button class="button testing-courses__button questions__button">Записаться на тестирование</button>
+        <button id="testing-signe-button" class="button testing-courses__button questions__button">Записаться на
+          тестирование</button>
       </div>
 
     </section>
 
-    <div class="modal-overlay" id="commonCourseModal">
-      <div class="modal">
-        <button class="modal__close" id="modalClose">&times;</button>
-        <h2 class="modal__title">***</h2>
-        <p class="modal__sub-title" id="modalCourse">ххх</p>
 
-        <div id="modal-success" class="modal__success" style="display: none;">
+
+
+    <div class="modal-overlay message-form" id="courseModalCommon">
+      <div class="modal message-form">
+        <button class="modal__close message-form__close">&times;</button>
+        <h2 class="modal__title message-form__title">***</h2>
+        <p class="modal__sub-title message-form__sub-title" id="modalCourse">ххх</p>
+
+        <div class="modal__success message-form__success" style="display: none;">
           <p>Мы получили вашу заявку. Вы сделали важный шаг к уверенному будущему! </p>
           <p>Мы свяжемся с вами в течение одного рабочего дня для согласования всех деталей, ответов на вопросы и
             назначения даты предварительного тестирования.
@@ -343,19 +347,19 @@
           <p>С нетерпением ждем встречи!</p>
         </div>
 
-        <div id="modal-error" class="modal__error" style="display: none;">
+        <div class="modal__error message-form__error" style="display: none;">
           <p><strong>Ошибка!</strong> Произошла ошибка при отправке запроса.</p>
           <p>Пожалуйста, попробуйте ещё раз или свяжитесь с нами напрямую.</p>
         </div>
 
-        <form class="modal__form" id="modal-form">
+        <form class="modal__form message-form__form" id="modal-form">
 
           <div class="questions__field">
             <label class="questions__label" for="modal-name">Курс</label>
-            <select class="questions__input modal__form-data" name="cource">
+            <select class="questions__input message-form__data-field" name="cource">
               <option value="A2 Key (KET)">A2 Key (KET)</option>
               <option value="B1 Preliminary (PET)">B1 Preliminary (PET)</option>
-              <option disabled ="B2 First (FCE)">B2 First (FCE)</option>
+              <option disabled="B2 First (FCE)">B2 First (FCE)</option>
               <option disabled value="C1 Advanced (CAE)">C1 Advanced (CAE)</option>
               <option disabled value="C2 Proficiency (CPE)">C2 Proficiency (CPE)</option>
             </select>
@@ -363,31 +367,30 @@
 
           <div class="questions__field">
             <label class="questions__label" for="modal-name">Имя</label>
-            <input required class="questions__input modal__form-data" type="text" id="modal-name" name="name"
+            <input required class="questions__input message-form__data-field" type="text" id="modal-name" name="name"
               placeholder="Your name">
           </div>
 
           <div class="questions__field">
             <label class="questions__label" for="modal-email">Email</label>
-            <input required class="questions__input modal__form-data" type="email" id="modal-email" name="email"
+            <input required class="questions__input message-form__data-field" type="email" id="modal-email" name="email"
               placeholder="Your email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
           </div>
 
           <div class="questions__field">
             <label class="questions__label" for="modal-phone">Телефон</label>
-            <input required class="questions__input modal__form-data" type="tel" id="modal-phone" name="phone"
+            <input required class="questions__input message-form__data-field" type="tel" id="modal-phone" name="phone"
               placeholder="Your phone" pattern="[0-9]+">
           </div>
 
           <div class="questions__field">
             <label class="questions__label" for="modal-message">Сообщение</label>
-            <textarea required class="questions__textarea modal__form-data" id="modal-message" name="message"
+            <textarea required class="questions__textarea message-form__data-field" id="modal-message" name="message"
               placeholder="Your message" rows="4"></textarea>
           </div>
 
           <label class="questions__checkbox">
-            <input required id="modal-agree" type="checkbox"
-              class="questions__checkbox-input modal__form-technical-data">
+            <input required id="modal-agree" type="checkbox" class="questions__checkbox-input message-form__tech-field">
             <span class="questions__checkbox-box"></span>
             <span class="questions__checkbox-text" aria-required="true">
               Я принимаю условия <a href="/documents/document1-pdfjs.html">Публичной оферты</a> и даю согласие на
@@ -396,11 +399,11 @@
             </span>
           </label>
 
-          <button class="modal__send-button button questions__button" type="button" disabled>
+          <button class="message-form__send-button button questions__button" type="button" disabled>
             Записаться
           </button>
 
-          <div class="modal__loader loader" style="display: none;">
+          <div class="message-form__loader loader" style="display: none;">
             <span class="loader__dot"></span>
             <span class="loader__dot"></span>
             <span class="loader__dot"></span>
@@ -411,13 +414,15 @@
       </div>
     </div>
 
-    <div class="modal-overlay" id="courseModal">
+    <div class="modal-overlay message-form" id="courseModal">
       <div class="modal">
-        <button class="modal__close" id="modalClose">&times;</button>
-        <h2 class="modal__title">***</h2>
-        <p class="modal__sub-title" id="modalCourse">ххх</p>
+        <button class="modal__close message-form__close" id="modalClose">&times;</button>
+        <h2 class="modal__title message-form__title">***</h2>
+        <p class="modal__sub-title message-form__sub-title" id="modalCourse">ххх</p>
 
-        <div id="modal-success" class="modal__success" style="display: none;">
+
+
+        <div class="modal__success message-form__success" style="display: none;">
           <p>Мы получили вашу заявку. Вы сделали важный шаг к уверенному будущему! </p>
           <p>Мы свяжемся с вами в течение одного рабочего дня для согласования всех деталей, ответов на вопросы и
             назначения даты предварительного тестирования.
@@ -425,39 +430,41 @@
           <p>С нетерпением ждем встречи!</p>
         </div>
 
-        <div id="modal-error" class="modal__error" style="display: none;">
+        <div class="modal__error message-form__error" style="display: none;">
           <p><strong>Ошибка!</strong> Произошла ошибка при отправке запроса.</p>
           <p>Пожалуйста, попробуйте ещё раз или свяжитесь с нами напрямую.</p>
         </div>
 
-        <form class="modal__form" id="modal-form">
+        <form class="modal__form message-form__form" id="modal-form">
+
+          <input type="hidden" class="message-form__data-field" name="cource">
+
           <div class="questions__field">
             <label class="questions__label" for="modal-name">Имя</label>
-            <input required class="questions__input modal__form-data" type="text" id="modal-name" name="name"
+            <input required class="questions__input message-form__data-field" type="text" id="modal-name" name="name"
               placeholder="Your name">
           </div>
 
           <div class="questions__field">
             <label class="questions__label" for="modal-email">Email</label>
-            <input required class="questions__input modal__form-data" type="email" id="modal-email" name="email"
+            <input required class="questions__input message-form__data-field" type="email" id="modal-email" name="email"
               placeholder="Your email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
           </div>
 
           <div class="questions__field">
             <label class="questions__label" for="modal-phone">Телефон</label>
-            <input required class="questions__input modal__form-data" type="tel" id="modal-phone" name="phone"
+            <input required class="questions__input message-form__data-field" type="tel" id="modal-phone" name="phone"
               placeholder="Your phone" pattern="[0-9]+">
           </div>
 
           <div class="questions__field">
             <label class="questions__label" for="modal-message">Сообщение</label>
-            <textarea required class="questions__textarea modal__form-data" id="modal-message" name="message"
+            <textarea required class="questions__textarea message-form__data-field" id="modal-message" name="message"
               placeholder="Your message" rows="4"></textarea>
           </div>
 
           <label class="questions__checkbox">
-            <input required id="modal-agree" type="checkbox"
-              class="questions__checkbox-input modal__form-technical-data">
+            <input required id="modal-agree" type="checkbox" class="questions__checkbox-input message-form__tech-field">
             <span class="questions__checkbox-box"></span>
             <span class="questions__checkbox-text" aria-required="true">
               Я принимаю условия <a href="/documents/document1-pdfjs.html">Публичной оферты</a> и даю согласие на
@@ -466,11 +473,11 @@
             </span>
           </label>
 
-          <button class="modal__send-button button questions__button" type="button" disabled>
+          <button class="message-form__send-button button questions__button" type="button" disabled>
             Записаться
           </button>
 
-          <div class="modal__loader loader" style="display: none;">
+          <div class="message-form__loader loader" style="display: none;">
             <span class="loader__dot"></span>
             <span class="loader__dot"></span>
             <span class="loader__dot"></span>
@@ -478,16 +485,17 @@
           </div>
 
         </form>
+
       </div>
     </div>
 
-    <div class="modal-overlay" id="testingModal">
+    <div class="modal-overlay message-form" id="testingModal">
       <div class="modal">
-        <button class="modal__close" id="testingClose">&times;</button>
-        <h2 class="modal__title">***</h2>
-        <p class="modal__sub-title" id="modalCourse">ххх</p>
+        <button class="modal__close message-form__close">&times;</button>
+        <h2 class="modal__title message-form__title">***</h2>
+        <p class="modal__sub-title message-form__sub-title" id="modalCourse">ххх</p>
 
-        <div id="modal-success" class="modal__success" style="display: none;">
+        <div class="modal__success message-form__success" style="display: none;">
           <p>Мы получили вашу заявку. Вы сделали важный шаг к уверенному будущему! </p>
           <p>Мы свяжемся с вами в течение одного рабочего дня для согласования всех деталей, ответов на вопросы и
             назначения даты предварительного тестирования.
@@ -495,39 +503,38 @@
           <p>С нетерпением ждем встречи!</p>
         </div>
 
-        <div id="modal-error" class="modal__error" style="display: none;">
+        <div class="modal__error message-form__error" style="display: none;">
           <p><strong>Ошибка!</strong> Произошла ошибка при отправке запроса.</p>
           <p>Пожалуйста, попробуйте ещё раз или свяжитесь с нами напрямую.</p>
         </div>
 
-        <form id="modal-form" class="testing-modal__form modal__form">
+        <form class="modal__form message-form__form" id="modal-form">
           <div class="questions__field">
-            <label class="questions__label" for="testing-name">Name</label>
-            <input required class="questions__input modal__form-data" type="text" id="testing-name" name="name"
+            <label class="questions__label" for="modal-name">Имя</label>
+            <input required class="questions__input message-form__data-field" type="text" id="modal-name" name="name"
               placeholder="Your name">
           </div>
 
           <div class="questions__field">
-            <label class="questions__label" for="testing-email">Email</label>
-            <input required class="questions__input modal__form-data" type="email" id="testing-email" name="email"
+            <label class="questions__label" for="modal-email">Email</label>
+            <input required class="questions__input message-form__data-field" type="email" id="modal-email" name="email"
               placeholder="Your email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
           </div>
 
           <div class="questions__field">
-            <label class="questions__label" for="testing-phone">Phone</label>
-            <input required class="questions__input modal__form-data" type="tel" id="testing-phone" name="phone"
+            <label class="questions__label" for="modal-phone">Телефон</label>
+            <input required class="questions__input message-form__data-field" type="tel" id="modal-phone" name="phone"
               placeholder="Your phone" pattern="[0-9]+">
           </div>
 
           <div class="questions__field">
-            <label class="questions__label" for="testing-message">Message</label>
-            <textarea required class="questions__textarea modal__form-data" id="testing-message" name="message"
+            <label class="questions__label" for="modal-message">Сообщение</label>
+            <textarea required class="questions__textarea message-form__data-field" id="modal-message" name="message"
               placeholder="Your message" rows="4"></textarea>
           </div>
 
           <label class="questions__checkbox">
-            <input required id="testing-agree" type="checkbox"
-              class="questions__checkbox-input modal__form-technical-data">
+            <input required id="modal-agree" type="checkbox" class="questions__checkbox-input message-form__tech-field">
             <span class="questions__checkbox-box"></span>
             <span class="questions__checkbox-text" aria-required="true">
               Я принимаю условия <a href="/documents/document1-pdfjs.html">Публичной оферты</a> и даю согласие на
@@ -536,11 +543,11 @@
             </span>
           </label>
 
-          <button class="modal__send-button button questions__button" type="button" disabled>
+          <button class="message-form__send-button button questions__button" type="button" disabled>
             Записаться
           </button>
 
-          <div class="modal__loader loader" style="display: none;">
+          <div class="message-form__loader loader" style="display: none;">
             <span class="loader__dot"></span>
             <span class="loader__dot"></span>
             <span class="loader__dot"></span>
@@ -548,44 +555,63 @@
           </div>
 
         </form>
+
       </div>
     </div>
 
 
 
     <footer class="footer">
-      <section class="footer_section questions">
+
+      <section id="footerMessage" class="footer_section questions message-form">
+
         <h2 class="questions__title">
           Все еще остались вопросы? <br>
           Мы будем рады помочь!
         </h2>
 
-        <form class="questions__form">
+        <div class="modal__success message-form__success" style="display: none;">
+          <p>Мы получили вашу заявку. Вы сделали важный шаг к уверенному будущему! </p>
+          <p>Мы свяжемся с вами в течение одного рабочего дня для согласования всех деталей, ответов на вопросы и
+            назначения даты предварительного тестирования.
+          </p>
+          <p>С нетерпением ждем встречи!</p>
+          <button class="message-form__reset-button button questions__button">Отправить еще</button>
+        </div>
+
+        <div class="modal__error message-form__error" style="display: none;">
+          <p><strong>Ошибка!</strong> Произошла ошибка при отправке запроса.</p>
+          <p>Пожалуйста, попробуйте ещё раз или свяжитесь с нами напрямую.</p>
+          <button class="message-form__reset-button button questions__button">Попробовать еще</button>
+        </div>
+
+        <form class="questions__form message-form__form">
           <div class="questions__field">
             <label class="questions__label" for="name">Имя</label>
-            <input required class="questions__input" type="text" id="name" name="name" placeholder="Your name">
+            <input required class="questions__input message-form__data-field" type="text" id="name" name="name"
+              placeholder="Your name">
           </div>
 
           <div class="questions__field">
             <label class="questions__label" for="email">E-mail</label>
-            <input required class="questions__input" type="email" id="email" name="email" placeholder="Your email"
-              pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+            <input required class="questions__input message-form__data-field" type="email" id="email" name="email"
+              placeholder="Your email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
           </div>
 
           <div class="questions__field">
             <label class="questions__label" for="phone">Телефон</label>
-            <input required class="questions__input" type="input" id="phone" name="phone" placeholder="Your phone"
-              pattern="[0-9]+">
+            <input required class="questions__input message-form__data-field" type="input" id="phone" name="phone"
+              placeholder="Your phone" pattern="[0-9]+">
           </div>
 
           <div class="questions__field">
             <label class="questions__label" for="message">Ваше сообщение</label>
-            <textarea required class="questions__textarea" id="message" name="message" placeholder="Your message"
-              rows="4"></textarea>
+            <textarea required class="questions__textarea message-form__data-field" id="message" name="message"
+              placeholder="Your message" rows="4"></textarea>
           </div>
 
           <label class="questions__checkbox">
-            <input id="agree" type="checkbox" class="questions__checkbox-input">
+            <input required id="agree" type="checkbox" class="questions__checkbox-input message-form__tech-field">
             <span class="questions__checkbox-box"></span>
             <span class="questions__checkbox-text" aria-required="true">
               Я даю согласие на обработку своих персональных данных
@@ -600,69 +626,16 @@
             </span>
           </label>
 
-          <button id="mailSendButton" class="button questions__button" type="button" disabled>
+          <button class="message-form__send-button button questions__button" type="button" disabled>
             Отправить
           </button>
 
-          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-          </script>
-
-          <script type="text/javascript">
-            const phone = document.getElementById('phone');
-            const email = document.getElementById('email');
-            const name = document.getElementById('name');
-            const message = document.getElementById('message');
-            const agree = document.getElementById('agree');
-            const agreePromo = document.getElementById('agree-promo');
-            const mailSendButton = document.getElementById('mailSendButton');
-
-            const enabled = () => {
-              if (phone.value && email.value && name.value && message.value && agree.checked) {
-                mailSendButton.disabled = false;
-              } else {
-                mailSendButton.disabled = true;
-              }
-            };
-
-            const touched = (element) => {
-              element.classList.add('touched');
-            };
-
-            (function () {
-              emailjs.init({
-                publicKey: "wmpPPI0KdGExknR4e",
-              });
-            })();
-
-            mailSendButton.addEventListener('click', (event) => {
-              emailjs.send("service_rg5i1no", "template_yf89nxc", {
-                email: email.value,
-                name: name.value,
-                message: message.value,
-                agree: agree.value,
-                agreePromo: agreePromo.value
-              });
-
-              email.value = null;
-              name.value = null;
-              message.value = null;
-              agree.checked = false;
-              agreePromo.checked = false;
-              enabled();
-            });
-
-            phone.addEventListener('input', (event) => { enabled(); });
-            email.addEventListener('input', (event) => { enabled(); });
-            name.addEventListener('input', (event) => { enabled(); });
-            message.addEventListener('input', (event) => { enabled(); });
-            agree.addEventListener('input', (event) => { enabled(); });
-
-            phone.addEventListener('focus', (event) => { touched(event.target); });
-            email.addEventListener('focus', (event) => { touched(event.target); });
-            name.addEventListener('focus', (event) => { touched(event.target); });
-            message.addEventListener('focus', (event) => { touched(event.target); });
-            agree.addEventListener('focus', (event) => { touched(event.target); });
-          </script>
+          <div class="message-form__loader loader" style="display: none;">
+            <span class="loader__dot"></span>
+            <span class="loader__dot"></span>
+            <span class="loader__dot"></span>
+            <span class="loader__dot"></span>
+          </div>
 
         </form>
       </section>
@@ -728,6 +701,9 @@
 
     </script>
     <script src="course-modal.js"></script>
+    <script src="./src/js/message-form.js"></script>
+
+    <script src="./src/js/pages/courses-teens.js"></script>
 
 </body>
 

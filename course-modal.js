@@ -1,15 +1,15 @@
 function initModal(config) {
   var modal = document.getElementById(config.modalId);
 
-  var modalForm = modal.getElementsByClassName('modal__form')[0];
-  var modalSuccess = modal.getElementsByClassName('modal__success')[0];
-  var modalError = modal.getElementsByClassName('modal__error')[0];
-  var modalLoader = modal.getElementsByClassName('modal__loader')[0];
+  var modalForm = modal.getElementsByClassName('message-form__form')[0];
+  var modalSuccess = modal.getElementsByClassName('message-form__success')[0];
+  var modalError = modal.getElementsByClassName('message-form__error')[0];
+  var modalLoader = modal.getElementsByClassName('message-form__loader')[0];
 
-  var modalClose = modal.getElementsByClassName('modal__close')[0];
+  var modalClose = modal.getElementsByClassName('message-form__close')[0];
 
-  var modalTitle = modal.getElementsByClassName('modal__title')[0];
-  var modalSubTitle = modal.getElementsByClassName('modal__sub-title')[0];
+  var modalTitle = modal.getElementsByClassName('message-form__title')[0];
+  var modalSubTitle = modal.getElementsByClassName('message-form__sub-title')[0];
 
 
   var modalName = document.getElementById(config.nameId);
@@ -19,7 +19,7 @@ function initModal(config) {
   var modalAgree = document.getElementById(config.agreeId);
 
 
-  var modalSendButton = modal.getElementsByClassName('modal__send-button')[0];
+  var modalSendButton = modal.getElementsByClassName('message-form__send-button')[0];
 
   let title = '';
   let subTitle = '';
@@ -28,11 +28,11 @@ function initModal(config) {
   config.openButtons.forEach(function (btn) {
     btn.addEventListener('click', function () {
       if (config.getModalTitle) {
-        title = config.getModalTitle(btn);
+        title = config.getModalTitle(btn, modal);
         modalTitle.textContent = title;
       }
       if (config.getModalSubTitle) {
-        subTitle = config.getModalSubTitle(btn);
+        subTitle = config.getModalSubTitle(btn , modal);
         modalSubTitle.textContent = subTitle;
       }
       modal.classList.add('active');
@@ -50,8 +50,8 @@ function initModal(config) {
     }
   });
 
-  let dataElements = Array.from(modal.getElementsByClassName('modal__form-data'));
-  let technicalElements = Array.from(modal.getElementsByClassName('modal__form-technical-data'));
+  let dataElements = Array.from(modal.getElementsByClassName('message-form__data-field'));
+  let technicalElements = Array.from(modal.getElementsByClassName('message-form__tech-field'));
 
   let allElements = [...dataElements, ...technicalElements];
 
@@ -102,7 +102,7 @@ function initModal(config) {
       },
       body: JSON.stringify({
         headers: {
-          title: title + (subTitle ? `: ${subTitle}` : ''),
+          title: title           ,
         },
         content: {
           ...(() => {
@@ -130,62 +130,6 @@ function initModal(config) {
   });
 }
 
-var courseButtons = [];
-document.querySelectorAll('.courses__button').forEach(function (btn) {
-  if (btn.textContent.trim() === 'Записаться на курс') {
-    courseButtons.push(btn);
-  }
-});
-
-initModal({
-  modalId: 'courseModal',
-  openButtons: courseButtons,
-  getModalTitle: function (btn) {
-    var card = btn.closest('.steps-card__content');
-    return 'Записаться на курс';
-  },
-  getModalSubTitle: function (btn) {
-    var card = btn.closest('.steps-card__content');
-    return card ? card.querySelector('.steps-card__title').textContent : '';
-  }
-});
-
-var testingButtons = [];
-document.querySelectorAll('#testing-signe-button').forEach(function (btn) {
-  // if (btn.textContent.trim() === 'Записаться на тестирование') {
-  testingButtons.push(btn);
-  // }
-});
-
-initModal({
-  modalId: 'testingModal',
-  openButtons: testingButtons,
-  getModalTitle: function (btn) {
-    var card = btn.closest('.steps-card__content');
-    return 'Записаться на тестирование';
-  },
-  getModalSubTitle: function () {
-    return '';
-  }
-});
 
 
 
-var commonCourseModalButtons = [];
-document.querySelectorAll('#commonCourseModal-signe-button').forEach(function (btn) {
-  // if (btn.textContent.trim() === 'Записаться на тестирование') {
-  commonCourseModalButtons.push(btn);
-  // }
-});
-
-initModal({
-  modalId: 'commonCourseModal',
-  openButtons: commonCourseModalButtons,
-  getModalTitle: function (btn) {
-    var card = btn.closest('.steps-card__content');
-    return 'Записаться на курс';
-  },
-  getModalSubTitle: function () {
-    return '';
-  }
-});
