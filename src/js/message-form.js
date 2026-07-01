@@ -88,7 +88,7 @@ function initMessageForm(config) {
     messageFormSendButton.style.display = 'none';
     messageFormLoader.style.display = 'flex';
 
-    fetch(url, {
+    fetch(`${url}/sendMail`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
