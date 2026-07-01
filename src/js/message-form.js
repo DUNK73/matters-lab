@@ -88,7 +88,7 @@ function initMessageForm(config) {
     messageFormSendButton.style.display = 'none';
     messageFormLoader.style.display = 'flex';
 
-    fetch('http://127.0.0.1:3002/sendMail', {
+    fetch(url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
