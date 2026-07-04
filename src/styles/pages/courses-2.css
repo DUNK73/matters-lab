@@ -1,6 +1,4 @@
-.testing-courses {
-
-}
+.testing-courses {}
 
 .testing-courses .courses__button {
   margin: 0;
@@ -8,25 +6,24 @@
 }
 
 .testing-courses__content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
 
-.testing-courses__content-info {
-
-}
+.testing-courses__content-info {}
 
 @media (min-width: 768px) {
   .testing-courses__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
+    flex-direction: row;
+  }
 
-.testing-courses__content-info {
-  width: 50%;
-}
+  .testing-courses__content-info {
+    width: 50%;
+  }
 }
