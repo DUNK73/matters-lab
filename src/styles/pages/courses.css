@@ -540,7 +540,20 @@
   }
 }
 
+
+
+
+
+
+
 .steps-card--media {
   background-image: url('./../../assets//images/teacher.jpg');
   background-size: 120%;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .steps-card--media {
+    display: block;
+  }
 }

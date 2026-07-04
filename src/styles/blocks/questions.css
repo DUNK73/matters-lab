@@ -39,13 +39,13 @@
 /* INPUTS */
 .questions__input,
 .questions__textarea {
-  padding: 10px 16px;
+  padding: 8px 16px;
   font-size: 14px;
 
   background-color: var(--white);
 
   border: 1px solid var(--white-transparent-border);
-  border-radius: 14px;
+  border-radius: 10px;
 
   font-family: inherit;
 }
@@ -96,7 +96,7 @@
 }
 
 .questions__checkbox-text {
-  font-size: 12px;
+  font-size: 10px;
   line-height: 1.4;
   color: var(--white-transparent-label);
 }

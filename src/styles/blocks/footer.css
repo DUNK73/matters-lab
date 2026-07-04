@@ -9,6 +9,14 @@
     border-top: solid 2px #fff;
     padding: 60px 20px;
   }
+
+  .footer a {
+    color: var(--white);
+  }
+
+  .footer a:visited {
+    color: var(--white-transparent-label);
+  }
   
   /* Tablet styles */
   @media (min-width: 768px) {

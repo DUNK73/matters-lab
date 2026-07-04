@@ -155,6 +155,10 @@
 
 }
 
+.menu a:visited {
+  color: #111;
+}
+
 .menu a:hover {
   background-color: var(--gray-light);
 }
