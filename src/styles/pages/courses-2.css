@@ -2,7 +2,25 @@
 
 }
 
+.testing-courses .courses__button {
+  margin: 0;
+  align-self: center;
+}
+
 .testing-courses__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testing-courses__content-info {
+
+}
+
+@media (min-width: 768px) {
+  .testing-courses__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -11,4 +29,4 @@
 .testing-courses__content-info {
   width: 50%;
 }
-
+}
