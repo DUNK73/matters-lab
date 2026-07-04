@@ -26,6 +26,8 @@
     position: relative;
     max-height: 95vh;
     overflow-y: auto;
+
+    box-shadow:  1px 2px rgb(255 255 255), 0 4px 12px rgb(255 255 255);
 }
 
 .modal__close {
