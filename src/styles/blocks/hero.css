@@ -51,6 +51,7 @@
 
 /* VERTICAL LINE */
 .hero__line {
+  display: none;
   width: 2px;
   background-color: var(--white);
   align-self: stretch;
@@ -84,6 +85,8 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 1.25;
+
+  text-align: right;
 }
 
 .hero__body {
@@ -141,7 +144,9 @@
     gap: 16px;
   }
 
-  .hero__line {}
+  .hero__line {
+    display: block;
+  }
 
   .hero__tag {
     max-width: 100px;

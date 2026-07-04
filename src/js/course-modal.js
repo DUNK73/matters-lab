@@ -32,21 +32,19 @@ function initModal(config) {
         modalTitle.textContent = title;
       }
       if (config.getModalSubTitle) {
-        subTitle = config.getModalSubTitle(btn , modal);
+        subTitle = config.getModalSubTitle(btn, modal);
         modalSubTitle.textContent = subTitle;
       }
       modal.classList.add('active');
     });
   });
 
-  modalClose.addEventListener('click', function () {
-    modal.classList.remove('active');
-  });
 
 
   modal.addEventListener('click', function (e) {
     if (e.target === modal) {
       modal.classList.remove('active');
+       resetForm();
     }
   });
 
@@ -81,8 +79,6 @@ function initModal(config) {
   };
 
 
-
-
   allElements.forEach((element) => {
 
     element.addEventListener('input', modalEnabled);
@@ -102,7 +98,7 @@ function initModal(config) {
       },
       body: JSON.stringify({
         headers: {
-          title: title           ,
+          title: title,
         },
         content: {
           ...(() => {
@@ -128,6 +124,35 @@ function initModal(config) {
       });
 
   });
+
+  modalClose.addEventListener('click', function () {
+    modal.classList.remove('active');
+    resetForm();
+  });
+
+
+  function resetForm() {
+    modalForm.style.display = 'flex';
+
+    modalSuccess.style.display = 'none';
+    modalError.style.display = 'none';
+
+    modalSendButton.style.display = 'block';
+    modalSendButton.disabled = true;
+
+    modalLoader.style.display = 'none';
+
+    allElements.forEach((element) => {
+      if (element.type === 'checkbox') {
+        element.checked = false;
+      }
+      else {
+        element.value = '';
+      }
+
+      element.classList.remove('touched');
+    });
+  }
 }
 
 

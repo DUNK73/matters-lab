@@ -80,11 +80,13 @@
 }
 
 .accordion__answer {
-  margin: 0;
   font-size: 14px;
   line-height: 1.6;
   color: var(--gray-text);
 }
+
+
+
 
 /* Tablet */
 @media (min-width: 768px) {
@@ -106,7 +108,7 @@
 }
 
 /* Desktop */
-@media (min-width: 1280px) {
+@media (min-width: 768px) {
   .accordion__header {
     padding: 24px 28px;
   }
@@ -121,5 +123,14 @@
 
   .accordion__answer {
     font-size: 16px;
+  }
+
+  .contacts-page__buttons {
+    display: flex;
+    flex-direction: row !important;
+  }
+
+  .contacts-page__messenger-btn {
+    width: unset !important;
   }
 }

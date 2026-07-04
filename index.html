@@ -46,7 +46,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="src/styles/main.css" />
-  <link rel="stylesheet" href="src/styles/pages/courses.css" />
+  <link rel="stylesheet" href="src/styles/pages/index.css" />
+    <link rel="stylesheet" href="src/styles/pages/courses.css" />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
@@ -132,7 +133,7 @@
           </h1>
           <div class="hero__body">
             <span class="hero__tag">
-              Your voice shapes your identity.
+              Empower your future
             </span>
             <span class="hero__line-horizontal">
             </span>
@@ -250,11 +251,11 @@
     <section class="content_section content_section--gray teens-courses">
 
       <div class="grid-container">
-        <div class="left-top courses__link-button steps-card">
-          <a href="/courses-young.html">Cambridge English: Young Learners</a>
+        <div class="left-top courses__link-button">
+          <a class="link-arrow" href="/courses-young.html">Cambridge English: Young Learners</a>
         </div>
-        <div class="left-bottom courses__link-button steps-card">
-          <a href="/courses-teens.html">Cambridge English: Teens and Adults</a>
+        <div class="left-bottom courses__link-button">
+          <a class="link-arrow" href="/courses-teens.html">Cambridge English: Teens and Adults</a>
         </div>
         <div class="right">
 
@@ -268,23 +269,70 @@
       <h2 class="content_section__title faq-courses__title">FAQ</h2>
 
       <div class="accordion">
-        <details class="accordion__item">
+        <details class="accordion__item accordion__item--teacher">
           <summary class="accordion__header">
             <span class="accordion__question">Кто преподает?</span>
             <span class="accordion__icon"></span>
           </summary>
           <div class="accordion__body">
-            <div class="accordion__answer">
-              <p><strong>Савельева Юлия</strong></p>
-              <ul class="list">
-                <li class="list__item">20 лет в профессиональной практике английского</li>
-                <li class="list__item">международная квалификация CELTA</li>
-                <li class="list__item">тренер по голосу и британскому произношению</li>
-                <li class="list__item">автор программ повышения квалификации для учителей</li>
-                <li class="list__item">спикер международных конференций</li>
-                <li class="list__item">основатель Matters</li>
-              </ul>
-              <p><a href="https://vk.com/yuliazakharova" target="_blank" rel="noopener noreferrer">ВКонтакте</a></p>
+            <div class="accordion__answer accordion__answer--teacher">
+              <div class="accordion__answer-teacher-block">
+                <div class="accordion__answer-teacher-photo"></div>
+                <p class="accordion__answer-teacher-info">
+                  <strong>Савельева Юлия</strong><br>
+                  основатель Matters
+                </p>
+              </div>
+              <div>
+
+                <ul class="list">
+                  <li class="list__item">20 лет в профессиональной практике английского</li>
+                  <li class="list__item">международная квалификация CELTA</li>
+                  <li class="list__item">тренер по голосу и британскому произношению</li>
+                  <li class="list__item">автор программ повышения квалификации для учителей</li>
+                  <li class="list__item">спикер международных конференций</li>
+                  <li class="list__item">автор научных статей, опубликованных в международных академических журналах
+                    (Ирландия)
+                  </li>
+                </ul>
+
+                <p>
+
+                <div class="contacts-page__buttons">
+                  <a href="https://vk.com/yuliazakharova" class="button contacts-page__messenger-btn" target="_blank">
+                    <span class="contacts-page__messenger-icon">
+                      <?xml version="1.0" encoding="utf-8"?><!-- Скачано с сайта svg4.ru / Downloaded from svg4.ru -->
+                      <svg width="128" height="128" fill="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M21.579 6.855c.14-.465 0-.806-.662-.806h-2.193c-.558 0-.813.295-.953.619 0 0-1.115 2.719-2.695 4.482-.51.513-.743.675-1.021.675-.139 0-.341-.162-.341-.627V6.855c0-.558-.161-.806-.626-.806H9.642c-.348 0-.558.258-.558.504 0 .528.79.65.871 2.138v3.228c0 .707-.127.836-.407.836-.743 0-2.551-2.729-3.624-5.853-.209-.607-.42-.852-.98-.852H2.752c-.627 0-.752.295-.752.619 0 .582.743 3.462 3.461 7.271 1.812 2.601 4.363 4.011 6.687 4.011 1.393 0 1.565-.313 1.565-.853v-1.966c0-.626.133-.752.574-.752.324 0 .882.164 2.183 1.417 1.486 1.486 1.732 2.153 2.567 2.153h2.192c.626 0 .939-.313.759-.931-.197-.615-.907-1.51-1.849-2.569-.512-.604-1.277-1.254-1.51-1.579-.325-.419-.231-.604 0-.976.001.001 2.672-3.761 2.95-5.04z" />
+                      </svg>
+                    </span>
+                    <span class="contacts-page__messenger-text">Вконтакте</span>
+                  </a>
+                  <a href="https://t.me/" class="button contacts-page__messenger-btn" target="_blank">
+                    <span class="contacts-page__messenger-icon">
+                      <svg fill="#fff" width="800px" height="800px" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="m20.665 3.717-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z" />
+                      </svg>
+                    </span>
+                    <span class="contacts-page__messenger-text">Telegram</span>
+                  </a>
+                  <a href="https://web.max.ru/23822609" class="button contacts-page__messenger-btn" target="_blank">
+                    <span class="contacts-page__messenger-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720">
+                        <path fill="#fff"
+                          d="M350.4,9.6C141.8,20.5,4.1,184.1,12.8,390.4c3.8,90.3,40.1,168,48.7,253.7,2.2,22.2-4.2,49.6,21.4,59.3,31.5,11.9,79.8-8.1,106.2-26.4,9-6.1,17.6-13.2,24.2-22,27.3,18.1,53.2,35.6,85.7,43.4,143.1,34.3,299.9-44.2,369.6-170.3C799.6,291.2,622.5-4.6,350.4,9.6h0ZM269.4,504c-11.3,8.8-22.2,20.8-34.7,27.7-18.1,9.7-23.7-.4-30.5-16.4-21.4-50.9-24-137.6-11.5-190.9,16.8-72.5,72.9-136.3,150-143.1,78-6.9,150.4,32.7,183.1,104.2,72.4,159.1-112.9,316.2-256.4,218.6h0Z" />
+                      </svg>
+
+                    </span>
+                    <span class="contacts-page__messenger-text">Max</span>
+                  </a>
+                </div>
+
+                </p>
+              </div>
             </div>
           </div>
         </details>
@@ -596,7 +644,7 @@
 
     </section>
 
-    <section class="content_section content_section--gray pricing-courses">
+    <!-- <section class="content_section content_section--gray pricing-courses">
       <h2 class="content_section__title pricing-courses__title">Стоимость обучения</h2>
 
       <div class="pricing-courses__grid" id="pricing-grid"></div>
@@ -640,7 +688,7 @@
         });
       </script>
 
-    </section>
+    </section> -->
 
 
     <section class="content_section courses review-slider">
@@ -659,6 +707,7 @@
                 <source src="./src/assets/images/reviews/16804605921944.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
+              <p>user 1</p>
             </div>
 
             <div>
@@ -666,6 +715,7 @@
                 <source src="./src/assets/images/reviews/16804605921944.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
+              <p>user 2</p>
             </div>
 
             <div>
@@ -673,6 +723,7 @@
                 <source src="./src/assets/images/reviews/16804605921944.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
+              <p>user 3</p>
             </div>
 
             <div>
@@ -680,6 +731,7 @@
                 <source src="./src/assets/images/reviews/16804605921944.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
+              <p>user 4</p>
             </div>
 
             <div>
@@ -687,6 +739,7 @@
                 <source src="./src/assets/images/reviews/16804605921944.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
+              <p>user 5</p>
             </div>
 
             <div>
@@ -694,6 +747,7 @@
                 <source src="./src/assets/images/reviews/16804605921944.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
+              <p>user 6</p>
             </div>
 
           </div>
@@ -767,6 +821,161 @@
 
             var slider = tns({
               container: '#slider-photo',
+              items: 1,
+              slideBy: 'page',
+              autoplay: true,
+              autoplayButtonOutput: false,
+              controlsText: ['', ''],
+              gutter: 10,
+              responsive: {
+                768: { // Screen width 640px and below
+                  items: 2
+                },
+                1024: { // Screen width 640px and below
+                  items: 3
+                },
+              }
+            });
+          </script>
+
+        </div>
+
+        <div class="review-slider__slider">
+
+          <div id="slider-photo-2" class="my-slider">
+
+            <div>
+              <div class="bubble bubble--out">
+                <p>Юля, добрый день! Отзыв от меня</p>
+
+                <p>Хочу выразить огромную благодарность Юлии Савельевой! Моя дочь занималась с ней английским языком на
+                  протяжении целого года. У нас была четкая и амбициозная цель — подготовиться и сдать Кембриджский
+                  экзамен на уровень Flyers. Мне как родителю невероятно нравился подход Юлии к обучению. Мы очень
+                  довольны результатом: дочь начала больше говорить на Английском, появилась мотивация двигаться дальше
+                  и самостоятельный интерес к изучению языка.</p>
+
+                <p>Отдельно хочется отметить умение Юлии найти подход к ребенку: дочка шла на занятия с огромным
+                  удовольствием, у нее полностью пропал страх перед языковым барьером и экзаменационным форматом. Юлия
+                  смогла искренне увлечь ее предметом, поддержать в нужный момент и вселить уверенность в своих силах.
+                </p>
+
+                <p>Результатом мы более чем довольны. Юлия — настоящий профессионал, который работает на результат.
+                  Очень рекомендуем её как чуткого педагога и сильного специалиста!</p>
+
+              </div>
+              <div class="user">
+                <img src="./src//assets//images/user_icon_149334.svg">
+              </div>
+            </div>
+
+            <div>
+              <div class="bubble bubble--out">
+                <p>Юля, добрый день! Отзыв от меня</p>
+
+                <p>Хочу выразить огромную благодарность Юлии Савельевой! Моя дочь занималась с ней английским языком на
+                  протяжении целого года. У нас была четкая и амбициозная цель — подготовиться и сдать Кембриджский
+                  экзамен на уровень Flyers. Мне как родителю невероятно нравился подход Юлии к обучению. Мы очень
+                  довольны результатом: дочь начала больше говорить на Английском, появилась мотивация двигаться дальше
+                  и самостоятельный интерес к изучению языка.</p>
+
+                <p>Отдельно хочется отметить умение Юлии найти подход к ребенку: дочка шла на занятия с огромным
+                  удовольствием, у нее полностью пропал страх перед языковым барьером и экзаменационным форматом. Юлия
+                  смогла искренне увлечь ее предметом, поддержать в нужный момент и вселить уверенность в своих силах.
+                </p>
+
+                <p>Результатом мы более чем довольны. Юлия — настоящий профессионал, который работает на результат.
+                  Очень рекомендуем её как чуткого педагога и сильного специалиста!</p>
+
+
+              </div>
+              <div class="user">
+                <img src="./src//assets//images/user_icon_149328.svg">
+              </div>
+            </div>
+
+            <div>
+              <div class="bubble bubble--out">
+                <p>Юля, добрый день! Отзыв от меня</p>
+
+                <p>Хочу выразить огромную благодарность Юлии Савельевой! Моя дочь занималась с ней английским языком на
+                  протяжении целого года. У нас была четкая и амбициозная цель — подготовиться и сдать Кембриджский
+                  экзамен на уровень Flyers. Мне как родителю невероятно нравился подход Юлии к обучению. Мы очень
+                  довольны результатом: дочь начала больше говорить на Английском, появилась мотивация двигаться дальше
+                  и самостоятельный интерес к изучению языка.</p>
+
+                <p>Отдельно хочется отметить умение Юлии найти подход к ребенку: дочка шла на занятия с огромным
+                  удовольствием, у нее полностью пропал страх перед языковым барьером и экзаменационным форматом. Юлия
+                  смогла искренне увлечь ее предметом, поддержать в нужный момент и вселить уверенность в своих силах.
+                </p>
+
+                <p>Результатом мы более чем довольны. Юлия — настоящий профессионал, который работает на результат.
+                  Очень рекомендуем её как чуткого педагога и сильного специалиста!</p>
+
+
+              </div>
+              <div class="user">
+                <img src="./src//assets//images/user_icon_149334.svg">
+              </div>
+            </div>
+
+            <div>
+              <div class="bubble bubble--out">
+                <p>Юля, добрый день! Отзыв от меня</p>
+
+                <p>Хочу выразить огромную благодарность Юлии Савельевой! Моя дочь занималась с ней английским языком на
+                  протяжении целого года. У нас была четкая и амбициозная цель — подготовиться и сдать Кембриджский
+                  экзамен на уровень Flyers. Мне как родителю невероятно нравился подход Юлии к обучению. Мы очень
+                  довольны результатом: дочь начала больше говорить на Английском, появилась мотивация двигаться дальше
+                  и самостоятельный интерес к изучению языка.</p>
+
+                <p>Отдельно хочется отметить умение Юлии найти подход к ребенку: дочка шла на занятия с огромным
+                  удовольствием, у нее полностью пропал страх перед языковым барьером и экзаменационным форматом. Юлия
+                  смогла искренне увлечь ее предметом, поддержать в нужный момент и вселить уверенность в своих силах.
+                </p>
+
+                <p>Результатом мы более чем довольны. Юлия — настоящий профессионал, который работает на результат.
+                  Очень рекомендуем её как чуткого педагога и сильного специалиста!</p>
+
+
+              </div>
+              <div class="user">
+                <img src="./src//assets//images/user_icon_149334.svg">
+              </div>
+            </div>
+
+            <div>
+              <div class="bubble bubble--out">
+                <p>Юля, добрый день! Отзыв от меня</p>
+
+                <p>Хочу выразить огромную благодарность Юлии Савельевой! Моя дочь занималась с ней английским языком на
+                  протяжении целого года. У нас была четкая и амбициозная цель — подготовиться и сдать Кембриджский
+                  экзамен на уровень Flyers. Мне как родителю невероятно нравился подход Юлии к обучению. Мы очень
+                  довольны результатом: дочь начала больше говорить на Английском, появилась мотивация двигаться дальше
+                  и самостоятельный интерес к изучению языка.</p>
+
+                <p>Отдельно хочется отметить умение Юлии найти подход к ребенку: дочка шла на занятия с огромным
+                  удовольствием, у нее полностью пропал страх перед языковым барьером и экзаменационным форматом. Юлия
+                  смогла искренне увлечь ее предметом, поддержать в нужный момент и вселить уверенность в своих силах.
+                </p>
+
+                <p>Результатом мы более чем довольны. Юлия — настоящий профессионал, который работает на результат.
+                  Очень рекомендуем её как чуткого педагога и сильного специалиста!</p>
+
+
+              </div>
+              <div class="user">
+                <img src="./src//assets//images/user_icon_149334.svg">
+              </div>
+            </div>
+
+
+
+          </div>
+
+          <script type="module">
+
+            var slider = tns({
+              container: '#slider-photo-2',
               items: 1,
               slideBy: 'page',
               autoplay: true,

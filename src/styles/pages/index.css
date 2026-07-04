@@ -1,0 +1,34 @@
+.accordion__item--teacher .accordion__answer {
+    display: flex;
+    gap: 30px;
+}
+
+.accordion__answer--teacher {
+    display: block !important;
+}
+
+.accordion__answer-teacher-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.accordion__answer-teacher-photo {
+    width: 200px;
+    height: 300px;
+    background: url('/src/assets/images/photo.jpg');
+    background-size: 341%;
+    background-position: 42% 29%;
+}
+
+.accordion__answer-teacher-info {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .accordion__answer--teacher {
+        display: flex !important;
+    }
+    .
+}

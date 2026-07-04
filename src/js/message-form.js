@@ -44,7 +44,7 @@ function initMessageForm(config) {
         }
 
         element.classList.remove('touched');
-      })
+      });
 
     });
   })

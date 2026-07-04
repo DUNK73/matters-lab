@@ -1,0 +1,86 @@
+  .chat {
+      max-width: 500px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #f5f5f5;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+  }
+
+  /* Базовые стили для всех пузырьков */
+  .bubble {
+      position: relative;
+      max-width: calc(100% - 20px);
+      padding: 10px 14px;
+      border-radius: 18px;
+      font-size: 12px;
+      line-height: 1.4;
+      word-wrap: break-word;
+  }
+
+  /* ===== Исходящее сообщение (справа) ===== */
+  .bubble--out {
+      align-self: flex-end;
+      background: #2FC5B6;
+      color: #fff;
+      border-bottom-right-radius: 4px;
+      /* срез для хвостика */
+  }
+
+  /* Хвостик исходящего */
+  .bubble--out::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: -8px;
+      width: 0;
+      height: 0;
+      border: 8px solid transparent;
+      border-left-color: #2FC5B6;
+      border-bottom-color: #2FC5B6;
+  }
+
+  /* ===== Входящее сообщение (слева) ===== */
+  .bubble--in {
+      align-self: flex-start;
+      background: #fff;
+      color: #1f2937;
+      border-bottom-left-radius: 4px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Хвостик входящего */
+  .bubble--in::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -8px;
+      width: 0;
+      height: 0;
+      border: 8px solid transparent;
+      border-right-color: #fff;
+      border-bottom-color: #fff;
+  }
+
+  /* Время отправки */
+  .bubble__time {
+      display: block;
+      margin-top: 4px;
+      font-size: 11px;
+      opacity: 0.7;
+      text-align: right;
+  }
+
+  .user {
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 10px;
+      align-items: flex-end;
+
+  }
+
+  .user img {
+      width: 30px !important;
+  }

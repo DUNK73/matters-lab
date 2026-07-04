@@ -1,0 +1,42 @@
+
+a:visited {
+  color: var(--green);
+}
+a:hover {
+  color: #2A7A6E;
+}
+/* Посещенная ссылка */
+a:visited {
+  color: #3D8C80;
+}
+
+
+.link-arrow {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.link-arrow:hover {
+    color: var(--green);
+}
+
+/* Стрелка из двух линий под 90° */
+.link-arrow::after {
+    content: "";
+    display: inline-block;
+    min-width: 8px;
+    min-height: 8px;
+    margin-left: 6px;
+    border-top: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(45deg);
+    transition: transform 0.3s;
+}
+
+/* Лёгкая анимация при наведении */
+.link-arrow:hover::after {
+    transform: rotate(45deg) translate(3px, -3px);
+}
