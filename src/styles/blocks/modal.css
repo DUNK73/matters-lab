@@ -31,8 +31,7 @@
 }
 
 @media (min-width: 425px) {
-    .modal-overlay {
-
+    /* .modal-overlay {
         padding: 20px;
     }
 
@@ -51,7 +50,7 @@
         overflow-y: auto;
 
         box-shadow: 1px 2px rgb(255 255 255), 0 4px 12px rgb(255 255 255);
-    }
+    } */
 }
 
 .modal__close {
@@ -100,6 +99,26 @@
 @media (min-width: 768px) {
     .modal {
         padding: 48px 32px;
+    }
+    .modal-overlay {
+        padding: 20px;
+    }
+
+    .modal {
+        background-color: var(--dark-alt);
+        border-radius: 16px;
+        padding: 48px 32px;
+
+        max-width: 500px;
+        width: 100%;
+
+        max-height: 95dvh;
+        height: unset;
+
+        position: relative;
+        overflow-y: auto;
+
+        box-shadow: 1px 2px rgb(255 255 255), 0 4px 12px rgb(255 255 255);
     }
 
     .modal__title {

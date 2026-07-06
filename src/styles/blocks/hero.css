@@ -18,6 +18,20 @@
   background-position: 22% 37%;
 }
 
+.hero__media--children {
+  background: url(../../assets/images/clild-2.png);
+
+  background-size: 307%;
+  background-position: 12% 33%;
+}
+
+.hero__media--teens {
+  background: url(../../assets/images/teens-2.png);
+
+  background-size: 251%;
+  background-position: 8% 33%;
+}
+
 /* DARK OVERLAY */
 .hero__media::after {
   content: "";
@@ -121,6 +135,16 @@
     background-position: 25% 36%;
   }
 
+  .hero__media--children {
+    background-size: 184%;
+    background-position: 1% 33%;
+  }
+
+  .hero__media--teens {
+    background-size: 186%;
+    background-position: 8% 33%;
+  }
+
   .hero__content {
     gap: 60px;
   }
@@ -138,6 +162,16 @@
     padding-right: 32px;
     padding-top: 120px;
     gap: 30px;
+  }
+
+  .hero__media--children {
+    background-size: 160%;
+    background-position: 15% 33%;
+  }
+
+  .hero__media--teens {
+    background-size: 151%;
+    background-position: 8% 33%;
   }
 
   .hero__side {
@@ -183,6 +217,16 @@
     padding-top: 150px;
     gap: 40px;
     align-items: center;
+  }
+
+  .hero__media--children {
+    background-size: 114%;
+    background-position: 15% 33%;
+  }
+
+  .hero__media--teens {
+    background-size: 116%;
+    background-position: 8% 33%;
   }
 
   .hero__content {
