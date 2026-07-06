@@ -4,7 +4,8 @@
 }
 
 .accordion__answer--teacher {
-    display: block !important;
+    display: flex;
+    flex-direction: column;
 }
 
 .accordion__answer-teacher-block {
@@ -15,20 +16,30 @@
 }
 
 .accordion__answer-teacher-photo {
-    width: 200px;
-    height: 300px;
-    background: url('/src/assets/images/photo.jpg');
+    width: 220px;
+    height: 220px;
+    background: url(/src/assets/images/photo.jpg);
     background-size: 341%;
-    background-position: 42% 29%;
+    background-position: 43% 25%;
+    border-radius: 150px;
 }
 
 .accordion__answer-teacher-info {
     text-align: center;
+    line-height: 1;
+}
+
+.accordion__answer-teacher-info-founder {
+    font-size: 10px;
 }
 
 @media (min-width: 768px) {
     .accordion__answer--teacher {
-        display: flex !important;
+        display: flex;
+        flex-direction: row;
     }
-    .
+
+
+
+
 }
