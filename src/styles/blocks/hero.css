@@ -105,7 +105,7 @@
 
 .hero__body {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   gap: 10px
 }
@@ -251,7 +251,6 @@
   }
 
   .hero__overlay {
-    padding-right: 280px;
   }
 
   .hero__title {
