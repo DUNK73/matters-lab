@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Document 1 | Matters</title>
-  <meta name="description" content="Document 1 - Matters Lab.">
+  <title>Document 2 | Matters</title>
+  <meta name="description" content="Document 2 - Matters Lab.">
   <!-- Favicon and app icons -->
   <link rel="icon" type="image/x-icon" href="../src/assets/favicon/matters-favicon/favicon.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="../src/assets/favicon/matters-favicon/favicon-16x16.png">
@@ -99,7 +99,7 @@
 
   <main>
     <section class="document-viewer">
-      <!-- <h1 class="document-viewer__title">Документ публичной аферты</h1> -->
+      <!-- <h1 class="document-viewer__title">Согласие на получение информационной и рекламной рассылки</h1> -->
       <div id="pdf-container" class="document-viewer__container"></div>
     </section>
   </main>
@@ -126,7 +126,8 @@
   <script>
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
-    const pdfUrl = '../src/assets/documents/Публичная оферта Matters.pdf';
+    // Замените URL ниже на ссылку к вашему PDF документу
+    const pdfUrl = '../src/assets/documents/SOGLASIE_na_poluchenie_informatsionnoi_774_i_reklamnoi_774_rassylki.pdf';
     const container = document.getElementById('pdf-container');
 
     pdfjsLib.getDocument(pdfUrl).promise.then(function(pdfDoc) {
