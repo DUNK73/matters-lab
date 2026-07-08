@@ -23,6 +23,10 @@
   gap: 18px;
 }
 
+.questions__form-text {
+  text-align: left;
+}
+
 /* FIELD */
 .questions__field {
   display: flex;

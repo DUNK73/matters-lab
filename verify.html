@@ -69,7 +69,7 @@
             <a href="courses-teens.html">Подростки и&nbsp;взрослые</a>
             <a href="index.html#faq">FAQ</a>
             <a href="pricing.html">Стоимость</a>
-            <a href="contacts.html">Контакты</a>
+            <a href="contacts.html">Контакты</a><a href="verify.html">Верификация сертификата</a>
           </nav>
         </details>
 
@@ -99,7 +99,7 @@
 
   <main>
 
-    <section class="content_section content_section--gray verify">
+    <!-- <section class="content_section content_section--gray verify">
 
       <div class="verify__container">
         <p>
@@ -115,13 +115,14 @@
         </p>
       </div>
 
-    </section>
+    </section> -->
 
     <section id="verifyMessage" class="footer_section content_section--dark questions">
 
       <h2 class="questions__title">
         Форма верификации
       </h2>
+
 
       <div class="modal__success message-form__success" style="display: none;">
         <p>Мы получили вашу заявку. Вы сделали важный шаг к уверенному будущему! </p>
@@ -138,7 +139,19 @@
         <button class="message-form__reset-button button questions__button">Попробовать еще</button>
       </div>
 
-      <form class="questions__form message-form__form">
+      <form class="questions__form modal__form message-form__form">
+        <p class="questions__form-text">
+          Рады приветствовать вас в системе верификации сертификатов Matters. В целях безопасности и защиты от
+          фальсификаций мы не используем автоматические базы данных общего доступа. Каждый выданный нами сертификат
+          проходит индивидуальную модерацию.
+        </p>
+
+        <p  class="questions__form-text">
+          Чтобы подтвердить подлинность сертификата нашего выпускника, пожалуйста, заполните форму ниже. Мы сверим
+          данные
+          с нашим внутренним реестром и направим официальное подтверждение на указанный вами e-mail в течение 24 часов.
+        </p>
+
         <div class="questions__field">
           <label class="questions__label" for="name">Имя и фамилия как на сертификате</label>
           <input required class="questions__input message-form__data-field" type="text" id="name" name="cert-name"
@@ -209,7 +222,7 @@
     </section>
 
     <section class="copyright">
-      <span>© Matters - 2025</span>
+      <span>© Matters - 2026</span>
     </section>
   </footer>
 

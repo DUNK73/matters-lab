@@ -15,6 +15,10 @@
     text-align: left;
 }
 
+.contacts-page__details {
+    text-align: center;
+}
+
 .contacts-page__subtitle {
     margin: 0 0 16px;
     font-size: 20px;
@@ -36,6 +40,8 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+    justify-content: center;
+    align-items: center;
 }
 
 .contacts-page__item {
@@ -175,7 +181,7 @@
     margin-top: 2px;
 }
 
-.contacts-form__checkbox-input:checked + .contacts-form__checkbox-box {
+.contacts-form__checkbox-input:checked+.contacts-form__checkbox-box {
     background-color: var(--green);
     border-color: var(--green);
 }
@@ -199,13 +205,17 @@
     }
 
     .contacts-page__info {
-        flex-direction: row;
+        flex-direction: column;
         gap: 60px;
+        width: 400px;
+        margin: auto;
     }
 
-    .contacts-page__details,
     .contacts-page__messengers {
-        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
     }
 
     .contacts-page__subtitle {

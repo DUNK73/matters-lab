@@ -329,7 +329,7 @@
     </section>
 
     <section class="copyright">
-      <span>© Matters - 2025</span>
+      <span>© Matters - 2026</span>
     </section>
   </footer>
 
