@@ -22,9 +22,13 @@
 
 .pricing__table th,
 .pricing__table td {
-    padding: 12px 16px;
+    padding: 12px 12px;
     text-align: left;
     border-bottom: 1px solid var(--gray-medium);
+}
+
+.pricing__table-level {
+    /* display: none; */
 }
 
 .pricing__table th {
@@ -51,6 +55,15 @@
 .pricing__price-cell {
     font-weight: 600;
     color: var(--green);
+}
+
+.pricing__table--big {
+    font-size: 10px;
+}
+
+.pricing__table--big td:first-child,
+.pricing__table--big th:first-child {
+    display: none;
 }
 
 .pricing__table--small {
@@ -155,6 +168,19 @@
     .pricing__table th,
     .pricing__table td {
         padding: 14px 20px;
+    }
+
+    .pricing__table-level {
+        display: none;
+    }
+
+    .pricing__table--big {
+        font-size: 14px;
+    }
+
+    .pricing__table--big td:first-child,
+    .pricing__table--big th:first-child {
+        display: table-cell;
     }
 
     .pricing__individual-list {

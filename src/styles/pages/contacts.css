@@ -207,7 +207,7 @@
     .contacts-page__info {
         flex-direction: column;
         gap: 60px;
-        width: 400px;
+        /* width: 400px; */
         margin: auto;
     }
 

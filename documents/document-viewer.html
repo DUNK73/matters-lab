@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Document 2 | Matters</title>
-  <meta name="description" content="Document 2 - Matters Lab.">
+  <title>Document 1 | Matters</title>
+  <meta name="description" content="Document 1 - Matters Lab.">
   <!-- Favicon and app icons -->
   <link rel="icon" type="image/x-icon" href="../src/assets/favicon/matters-favicon/favicon.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="../src/assets/favicon/matters-favicon/favicon-16x16.png">
@@ -52,8 +52,8 @@
 
   <header class="header">
     <div class="header__container">
-      <div class="header__logo"><a href="../index.html"><img src="../src/assets/logo/matters-logo-1.png" alt="Matters Logo"
-            class="header__logo-img"></a></div>
+      <div class="header__logo"><a href="../index.html"><img src="../src/assets/logo/matters-logo-1.png"
+            alt="Matters Logo" class="header__logo-img"></a></div>
 
       <div class="header__menu">
         <details id="main-menu" class="nav" open>
@@ -99,7 +99,7 @@
 
   <main>
     <section class="document-viewer">
-      <!-- <h1 class="document-viewer__title">Согласие на получение информационной и рекламной рассылки</h1> -->
+      <!-- <h1 class="document-viewer__title">Документ публичной аферты</h1> -->
       <div id="pdf-container" class="document-viewer__container"></div>
     </section>
   </main>
@@ -124,17 +124,36 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
   <script>
+
+    // 1. Получаем строку запроса (часть URL после знака '?', включая сам '?')
+    const queryString = window.location.search;
+    // Результат: "?id=123&name=ivan"
+
+    // 2. Создаем объект URLSearchParams
+    const urlParams = new URLSearchParams(queryString);
+    let documentId = urlParams.get('documentId');
+
+    let pdfDocuments = [
+      { id: '1', name: '1_Publichnaya_oferta.pdf' },
+      { id: '2', name: '2_Polzovatelskoe_soglashenie_sluzhb_i_servisov_sai_774_ta.pdf' },
+      { id: '3', name: '3_Politika_konfedentsialnosti_obrabotki_personalnykh_dannykh.pdf' },
+      { id: '4', name: '4_Soglasie_na_obrabotku_personalnykh_dannykh.pdf' },
+      { id: '5', name: '5_Soglasie_na_poluchenie_informatsionnoi_774_i_reklamnoi_774_rassylki.pdf' },
+    ];
+
+    let pdfDocument = pdfDocuments.find((element)=> element.id === documentId );
+
+
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
-    // Замените URL ниже на ссылку к вашему PDF документу
-    const pdfUrl = '../src/assets/documents/5_Soglasie_na_poluchenie_informatsionnoi_774_i_reklamnoi_774_rassylki.pdf';
+    const pdfUrl = `../src/assets/documents/${pdfDocument.name}`;
     const container = document.getElementById('pdf-container');
 
-    pdfjsLib.getDocument(pdfUrl).promise.then(function(pdfDoc) {
+    pdfjsLib.getDocument(pdfUrl).promise.then(function (pdfDoc) {
       const containerWidth = container.clientWidth;
 
       for (let pageNum = 1; pageNum <= pdfDoc.numPages; pageNum++) {
-        pdfDoc.getPage(pageNum).then(function(page) {
+        pdfDoc.getPage(pageNum).then(function (page) {
           const viewport = page.getViewport({ scale: 1 });
           const scale = containerWidth / viewport.width;
           const scaledViewport = page.getViewport({ scale: scale });

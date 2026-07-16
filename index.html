@@ -251,14 +251,14 @@
     <section class="content_section content_section--gray teens-courses">
 
       <div class="grid-container">
-        <div class="left-top courses__link-button">
+        <div class="left">
+          <img class="left__image" src="./src/assets/images/webp/in_courses-1.webp">
+        </div>
+        <div class="right-top courses__link-button">
           <a class="link-arrow" href="/courses-young.html">Cambridge English: Young Learners</a>
         </div>
-        <div class="left-bottom courses__link-button">
+        <div class="right-bottom courses__link-button">
           <a class="link-arrow" href="/courses-teens.html">Cambridge English: Teens and Adults</a>
-        </div>
-        <div class="right">
-
         </div>
       </div>
 
@@ -672,54 +672,7 @@
 
       </div>
 
-
     </section>
-
-    <!-- <section class="content_section content_section--gray pricing-courses">
-      <h2 class="content_section__title pricing-courses__title">Стоимость обучения</h2>
-
-      <div class="pricing-courses__grid" id="pricing-grid"></div>
-
-      <p class="pricing-courses__note">Доступна оплата в рассрочку.</p>
-
-
-      <script>
-        const pricingPlans = [
-          {
-            title: "Занятия 1 раз в неделю",
-            lessons: "35 занятий за учебный год",
-            priceRUB: "36 400 ₽",
-            priceEUR: "450 €"
-          },
-          {
-            title: "Занятия 2 раза в неделю",
-            lessons: "70 занятий за учебный год",
-            priceRUB: "72 800 ₽",
-            priceEUR: "900 €"
-          }
-        ];
-
-        const pricingGrid = document.getElementById("pricing-grid");
-
-        pricingPlans.forEach(function (plan) {
-          const card = document.createElement("article");
-          card.className = "pricing-courses__card";
-          card.innerHTML = `
-          <h3 class="pricing-courses__card-title">${plan.title}</h3>
-          <ul class="pricing-courses__list">
-            <li class="pricing-courses__item">${plan.lessons}</li>
-          </ul>
-          <div class="pricing-courses__price">
-            <span class="pricing-courses__value">${plan.priceRUB}</span>
-            <span class="pricing-courses__separator">/</span>
-            <span class="pricing-courses__value">${plan.priceEUR}</span>
-          </div>
-        `;
-          pricingGrid.appendChild(card);
-        });
-      </script>
-
-    </section> -->
 
 
     <section class="content_section courses review-slider">
@@ -1099,9 +1052,9 @@
             <input required id="modal-agree" type="checkbox" class="questions__checkbox-input message-form__tech-field">
             <span class="questions__checkbox-box"></span>
             <span class="questions__checkbox-text" aria-required="true">
-              Я принимаю условия <a href="/documents/document1-pdfjs.html">Публичной оферты</a> и даю согласие на
+              Я принимаю условия <a href="/documents/document-viewer.html?documentId=1">Публичной оферты</a> и даю согласие на
               обработку персональных данных в соответствии с
-              <a href="documents/document2-pdfjs.html">Политикой конфиденциальности и обработки персональных данных</a>.
+              <a href="/documents/document-viewer.html?documentId=3">Политикой конфиденциальности и обработки персональных данных</a>.
             </span>
           </label>
 
@@ -1184,7 +1137,7 @@
             <input id="agree-promo" type="checkbox" class="questions__checkbox-input">
             <span class="questions__checkbox-box"></span>
             <span class="questions__checkbox-text" aria-required="true">
-              Я даю <a href="documents/document3-pdfjs.html">согласие на получение информационных и рекламных писем</a>
+              Я даю <a href="/documents/document-viewer.html?documentId=5">согласие на получение информационных и рекламных писем</a>
               Matters
             </span>
           </label>
@@ -1206,22 +1159,19 @@
       <section class="footer_section legal">
         <ul class="legal__list">
           <li class="legal__item">
-            <!-- <a href="/documents/document1.html" class="legal__link">Публичная оферта</a> -->
-            <a href="/documents/document1-pdfjs.html" class="legal__link">Публичная оферта</a>
+            <a href="/documents/document-viewer.html?documentId=1" class="legal__link">Публичная оферта</a>
           </li>
           <li class="legal__item">
-            <!-- <a href="documents/document2.html" class="legal__link">Пользовательское соглашение</a> -->
-            <a href="documents/document2-pdfjs.html" class="legal__link">Пользовательское соглашение</a>
-          </li>
-          <!-- <li class="legal__item">
-            <a href="#" class="legal__link">Политика обработки персональных данных</a>
+            <a href="/documents/document-viewer.html?documentId=2" class="legal__link">Пользовательское соглашение</a>
           </li>
           <li class="legal__item">
-            <a href="#" class="legal__link">
-              Согласие на информационную и рекламную рассылку
-            </a>
-          </li> -->
+            <a href="/documents/document-viewer.html?documentId=3" class="legal__link">Политикой конфиденциальности и обработки персональных данных</a>
+          </li>
+          <li class="legal__item">
+            <a href="/documents/document-viewer.html?documentId=5" class="legal__link">Согласие на рассылку</a>
+          </li>
         </ul>
+        <p class="legal__info">Савельева Юлия Александровна. ИНН 402710463255. Плательщик налога на профессиональный доход (самозанятая).</p>
       </section>
 
       <section class="copyright">

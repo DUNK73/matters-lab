@@ -11,7 +11,7 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  background: url(../../assets/images/hero.jpg);
+  background: url(../../assets/images/webp/hero.webp);
 
 
   background-size: 307%;
@@ -19,14 +19,14 @@
 }
 
 .hero__media--children {
-  background: url(../../assets/images/child-3.png);
+  background: url(../../assets/images/webp/child-3.webp);
 
   background-size: 307%;
   background-position: 12% 33%;
 }
 
 .hero__media--teens {
-  background: url(../../assets/images/teens-3.png);
+  background: url(../../assets/images/webp/teens-3.webp);
 
   background-size: 251%;
   background-position: 8% 33%;

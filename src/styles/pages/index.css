@@ -18,7 +18,7 @@
 .accordion__answer-teacher-photo {
     width: 220px;
     height: 220px;
-    background: url(/src/assets/images/photo.jpg);
+    background: url(/src/assets/images/webp/photo.webp);
     background-size: 341%;
     background-position: 43% 25%;
     border-radius: 150px;
