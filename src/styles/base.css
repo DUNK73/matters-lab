@@ -10,6 +10,11 @@ body {
   margin: 0;
   font-family: var(--font);
   color: var(--dark);
+
+  flex-direction: column;
+  display: flex;
+
+  min-height: 100dvh;
 }
 
 button {
@@ -23,6 +28,7 @@ button {
 
 /* Tablet styles */
 @media (min-width: 768px) {
+
   /* Tablet: var(--breakpoint-tablet) */
   button {
     padding: 16px;
@@ -31,6 +37,7 @@ button {
 
 /* Desktop styles */
 @media (min-width: 1280px) {
+
   /* Desktop: var(--breakpoint-desktop) */
   button {
     padding: 18px;

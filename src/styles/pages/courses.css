@@ -280,7 +280,7 @@
 
 .left__image {
   width: 100%;
- }
+}
 
 @media (min-width: 768px) {
   .left {
@@ -549,7 +549,7 @@
 
 
 .steps-card--media {
-  background-image: url('./../../assets//images/teacher.jpg');
+  background-image: url('./../../assets//images/ChatGPT\ Image\ 18\ июл.\ 2026\ г._\ 01_26_28.png');
   background-size: 120%;
   display: none;
 }
@@ -557,5 +557,26 @@
 @media (min-width: 768px) {
   .steps-card--media {
     display: block;
+
+    background-size: 240%;
+    background-position: -53px 0px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .steps-card--media {
+    display: block;
+
+    background-size: 150%;
+    background-position: -53px 0px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .steps-card--media {
+    display: block;
+
+    background-size: 110%;
+    background-position: -30px 0px;
   }
 }
