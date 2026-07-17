@@ -310,23 +310,29 @@
     </section>
 
     <section class="footer_section legal">
-      <ul class="legal__list">
-        <li class="legal__item">
-          <a href="#" class="legal__link">Публичная оферта</a>
-        </li>
-        <li class="legal__item">
-          <a href="#" class="legal__link">Пользовательское соглашение</a>
-        </li>
-        <li class="legal__item">
-          <a href="#" class="legal__link">Политика обработки персональных данных</a>
-        </li>
-        <li class="legal__item">
-          <a href="#" class="legal__link">
-            Согласие на информационную и рекламную рассылку
-          </a>
-        </li>
-      </ul>
-    </section>
+        <ul class="legal__list">
+          <li class="legal__item">
+            <a href="/documents/document-viewer.html?documentId=1" class="legal__link">Публичная оферта</a>
+          </li>
+          <li class="legal__item">
+            <a href="/documents/document-viewer.html?documentId=2" class="legal__link">Пользовательское соглашение</a>
+          </li>
+          <li class="legal__item">
+            <a href="/documents/document-viewer.html?documentId=3" class="legal__link">Политикой конфиденциальности и
+              обработки персональных данных</a>
+          </li>
+          <li class="legal__item">
+            <a href="/documents/document-viewer.html?documentId=4" class="legal__link">Согласие на обработку
+              персональных данных</a>
+          </li>
+          <li class="legal__item">
+            <a href="/documents/document-viewer.html?documentId=5" class="legal__link">Согласие на информационную и
+              рекламную рассылку</a>
+          </li>
+        </ul>
+        <p class="legal__info">Савельева Юлия Александровна. ИНН 402710463255. Плательщик налога на профессиональный
+          доход (самозанятая).</p>
+      </section>
 
     <section class="copyright">
       <span>© Matters - 2026</span>
