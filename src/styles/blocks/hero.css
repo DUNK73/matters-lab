@@ -250,6 +250,11 @@
     background-position: 22% 37%;
   }
 
+  .hero__media--teens {
+    background-size: 116%;
+    background-position: 8% 33%;
+  }
+
   .hero__overlay {
   }
 
@@ -261,4 +266,13 @@
     font-size: 20px;
     max-width: 180px;
   }
+}
+
+@media (min-width: 2560px) {
+
+  .hero__media {
+    background-size: 110%;
+    background-position: 22% 20%;
+  }
+
 }

@@ -21,7 +21,7 @@
   width: 100%;
   height: auto;
   border-radius: var(--radius);
-  background-color: var(--dark);
+  /* background-color: var(--dark); */
 }
 
 /* Kids Courses Section */
@@ -559,7 +559,7 @@
     display: block;
 
     background-size: 240%;
-    background-position: -53px 0px;
+    background-position: -246px 0px;
   }
 }
 
@@ -578,5 +578,14 @@
 
     background-size: 110%;
     background-position: -30px 0px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .steps-card--media {
+    display: block;
+
+    background-size: 110%;
+    background-position: -30px -140px;
   }
 }
