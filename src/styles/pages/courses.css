@@ -1,27 +1,12 @@
-/* Reviews Slider */
-.review-slider {
-  width: 100%;
-}
-
-.review-slider__sliders {
-  display: flex;
-  flex-direction: column;
-  gap: 30px
-}
-
-.review-slider .my-slider img,
-.review-slider .my-slider video {
-  width: 100%;
-  height: auto;
-  border-radius: var(--radius);
-  object-fit: cover;
-}
 
 .review-video {
+  --radius: 50%;
   width: 100%;
   height: auto;
   border-radius: var(--radius);
-  /* background-color: var(--dark); */
+  background-color: #fff;
+
+  cursor: pointer;
 }
 
 /* Kids Courses Section */

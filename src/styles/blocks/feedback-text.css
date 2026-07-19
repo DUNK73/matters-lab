@@ -1,0 +1,48 @@
+.feedback-text {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    height: 570px;
+    border-radius: 20px;
+    background-color: white;
+    padding: 20px;
+}
+
+.feedback-text__avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: cadetblue;
+    flex-shrink: 0;
+}
+
+.feedback-text__content {
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+.feedback-text__content--video {
+    flex-grow: 1;
+    overflow-y: hidden;
+    display: flex;
+}
+
+.feedback-text__content--video .video {
+    height: unset;
+}
+
+.feedback-text__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.feedback-text__user {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.feedback-text__target {
+    margin: 0;
+}

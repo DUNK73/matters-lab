@@ -28,6 +28,8 @@
 @import 'blocks/courses-header.css';
 @import 'blocks/modal.css';
 @import 'blocks/loader.css';
+@import 'blocks/feedback-text.css';
+
 
 
 @import 'pages/contacts.css';
