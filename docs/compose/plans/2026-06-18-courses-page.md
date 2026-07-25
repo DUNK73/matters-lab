@@ -29,8 +29,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Online English Pronunciation Courses for Kids & Teens | Matters</title>
-  <meta name="description" content="Online English pronunciation courses for kids and teenagers. Cambridge exam preparation, accent training, and speaking practice at Matters Lab.">
+  <title>Английский для детей и взрослых A1-C2 | Matters</title>
+  <meta name="description" content="Онлайн-подготовка к международным экзаменам по линейке Cambridge (A1–C2). Пройдите пробное собеседование и проверьте свой уровень в Matters!">
   <!-- Favicon and app icons -->
   <link rel="icon" type="image/x-icon" href="./src/assets/favicon/matters-favicon/favicon.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="./src/assets/favicon/matters-favicon/favicon-16x16.png">
