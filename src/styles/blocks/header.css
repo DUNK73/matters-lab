@@ -175,6 +175,8 @@
   /* Tablet: var(--breakpoint-tablet) */
   .header__container {
     padding: 26px 32px;
+
+    gap: 20px;
   }
 
 
@@ -197,7 +199,7 @@
 
   /* Desktop: var(--breakpoint-desktop) */
   .header__container {
-    padding: 34px 120px;
+    padding: 34px 120px 34px 120px;
   }
 
   .header__logo {
@@ -215,8 +217,16 @@
   .menu {
     position: static;
     display: flex;
-    gap: 30px;
+    /* gap: 20px; */
     font-size: 16px;
+  }
+
+}
+
+@media (min-width: 1440px) {
+
+  .menu {
+    gap: 30px;
   }
 
 }
