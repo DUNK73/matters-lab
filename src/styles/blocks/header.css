@@ -25,6 +25,11 @@
   display: block;
 }
 
+.header__logo-img--for-link {
+  width: 0;
+  height: 0;
+}
+
 /* Tablet styles */
 @media (min-width: 768px) {
   .header__logo-img {

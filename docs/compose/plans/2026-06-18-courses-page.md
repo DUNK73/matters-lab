@@ -75,8 +75,12 @@
 
   <header class="header">
     <div class="header__container">
-      <div class="header__logo"><a href="index.html"><img src="src/assets/logo/matters-logo-1.png" alt="Matters Logo"
-          class="header__logo-img"></a></div>
+      <div class="header__logo">
+        <a href="index.html">
+          <img src="src/assets/logo/matters-logo-1.png" alt="Matters Logo" class="header__logo-img">
+          <img src="src/assets/logo/matters-logo-2.jpg" alt="Matters Logo" class="header__logo-img--for-link">
+        </a>
+      </div>
 
       <div class="header__menu">
         <span class="header__menu-text">en/ru</span>
