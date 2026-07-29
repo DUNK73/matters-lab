@@ -6,8 +6,6 @@ div.tns-outer {
 .tns-controls {
     z-index: 1;
     position: absolute;
-    position: absolute;
-    z-index: 1;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -65,13 +63,14 @@ div.tns-outer {
     z-index: 2;
     position: absolute;
     bottom: 0;
-    width: 100%;
+
     display: flex;
     justify-content: center;
     height: 20px;
     align-items: center;
     gap: 6px;
-
+    left: 50%;
+    transform: translatex(-50%);
 }
 
 .tns-nav button {
@@ -190,8 +189,8 @@ div.tns-outer {
 .video-wrapper.muted:hover::after {
     content: '';
     display: block;
-    width: 128px;
-    height: 128px;
+    width: 60px;
+    height: 60px;
     /* background: red; */
     z-index: 111;
     position: absolute;
@@ -210,7 +209,7 @@ div.tns-outer {
 
     transform: translate(-50%, -50%);
 
-    background-image: url(../../assets/images/icons/speaker-1-1_128x128.svg);
+    background-image: url(../../assets/images/icons/speaker-1.svg);
     background-position: center center;
 
 }

@@ -50,7 +50,7 @@
   <link rel="stylesheet" href="src/styles/pages/courses.css" />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
 </head>
 
 <body class="page">
@@ -310,7 +310,7 @@
                   <li class="list__item">автор программ повышения квалификации для учителей</li>
                   <li class="list__item">спикер международных конференций</li>
                   <li class="list__item">автор научных статей, опубликованных в международных академических журналах
-                    (Ирландия)
+                    (Великобритания, Ирландия)
                   </li>
                 </ul>
                 <!-- <div class="contacts-page__buttons">
@@ -483,7 +483,7 @@
               <ul class="list">
                 <li class="list__item">Objective Proficiency</li>
                 <li class="list__item">Proficiency Masterclass</li>
-                <li class="list__item">C2 Proficiency Authentic Examination Paper</li>s
+                <li class="list__item">C2 Proficiency Authentic Examination Papers</li>
                 <li class="list__item">Proficiency Expert</li>
                 <li class="list__item">Destination C1 & C2 (Grammar & Vocabulary)</li>
                 <li class="list__item">English Vocabulary in Use (Advanced)</li>
@@ -1068,102 +1068,6 @@
 
     <div>
 
-      <!-- <div class="content_section">
-        <h2 class="content_section__title courses__title">
-          Истории успеха учеников
-        </h2>
-
-        <div class="light-slider">
-
-          <div id="slider-video">
-
-            <div>
-              <video class="review-video" autoplay muted loop playsinline preload="metadata">
-                <source src="./src/assets/images/reviews/feedback1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-              <p>user 1</p>
-            </div>
-
-            <div>
-              <video class="review-video" autoplay muted loop playsinline preload="metadata">
-                <source src="./src/assets/images/reviews/feedback2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-              <p>user 2</p>
-            </div>
-
-            <div>
-              <video class="review-video" autoplay muted loop playsinline preload="metadata">
-                <source src="./src/assets/images/reviews/feedback3.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-              <p>user 3</p>
-            </div>
-
-            <div>
-              <video class="review-video" autoplay muted loop playsinline preload="metadata">
-                <source src="./src/assets/images/reviews/feedback3.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-              <p>user 3</p>
-            </div>
-
-            <div>
-              <video class="review-video" autoplay muted loop playsinline preload="metadata">
-                <source src="./src/assets/images/reviews/feedback3.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-              <p>user 3</p>
-            </div>
-
-
-          </div>
-
-          <script type="module">
-
-            var slider = tns({
-              container: '#slider-video',
-              items: 1,
-              slideBy: 'page',
-              autoplay: true,
-              autoplayButtonOutput: false,
-              autoplayHoverPause: true,
-              controlsText: ['', ''],
-              gutter: 20,
-              responsive: {
-                768: { // Screen width 640px and below
-                  items: 3
-                },
-                1024: { // Screen width 640px and below
-                  items: 4
-                },
-              }
-            });
-          </script>
-
-          <script type="module">
-
-            const videos = document.querySelectorAll('#slider-video video');
-
-            videos.forEach(video => {
-              video.addEventListener('mouseenter', () => {
-                video.play();
-                video.muted = false;
-              });
-
-              video.addEventListener('mouseleave', () => {
-                video.pause();
-                video.currentTime = 0; // Сброс в начало
-              });
-            });
-
-          </script>
-
-        </div>
-
-      </div> -->
-
       <div class="content_section">
         <h2 class="content_section__title courses__title">
           Истории успеха учеников
@@ -1262,22 +1166,48 @@
 
                 <!-- <button class="video-wraper__speaker"><img
                     src="src/assets/images/icons/speaker-1-1_128x128.svg"></button> -->
-                    
+
               </div>
               <p>Иван, сдавал Flyers A2</p>
             </div>
 
+            <div>
+              <div class="video-wrapper">
+
+                <video class="video" autoplay muted loop playsinline preload="metadata">
+                  <source src="./src/assets/images/reviews/feedback5.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+
+                <!-- SVG для прогресс-бара -->
+                <svg class="progress-ring" viewBox="0 0 200 200">
+                  <!-- Фоновая окружность (серая полоска) -->
+                  <circle class="progress-ring__track" cx="100" cy="100" r="96" />
+                  <!-- Активная окружность (прогресс) -->
+                  <circle class="progress-ring__circle" cx="100" cy="100" r="96" />
+                </svg>
+
+                <!-- <button class="video-wraper__speaker"><img
+                    src="src/assets/images/icons/speaker-1-1_128x128.svg"></button> -->
+
+              </div>
+              <p>Аля, сдавала Flyers A2</p>
+            </div>
+
           </div>
+
+          <!-- <button id="play">play</button>
+          <button id="pause">pause</button> -->
 
           <script type="module">
 
-            var slider = tns({
+            var sliderForVideo = tns({
               container: '#slider-video-2',
               items: 1,
               slideBy: 'page',
-              autoplay: true,
-              autoplayButtonOutput: false,
-              autoplayHoverPause: true,
+              // autoplay: true,
+              autoplayButtonOutput: true,
+              // autoplayHoverPause: true,
               controlsText: ['', ''],
               gutter: 20,
               responsive: {
@@ -1289,10 +1219,27 @@
                 },
               },
               onInit: () => {
-                const videoWrapperList = document.getElementsByClassName('video-wrapper');
-                setupVideoWrapperList(videoWrapperList);
+                setTimeout(
+                  () => {
+                    const videoWrapperList = sliderForVideo.getInfo().container.querySelectorAll('.video-wrapper');
+                    setupVideoWrapperList(videoWrapperList, sliderForVideo);
+                  });
               },
             });
+
+           
+            // let flag = 'start';
+
+            // document.getElementById('play')
+            //   .addEventListener('click', () => {
+            //     sliderForVideo.play();
+            //   })
+
+            // document.getElementById('pause')
+            //   .addEventListener('click', () => {
+            //     sliderForVideo.pause();
+            //   })
+
           </script>
 
 
@@ -1308,7 +1255,7 @@
 
             <div>
               <div class="feedback-text">
-                <div class="feedback-text__avatar"></div>
+                <!--<div class="feedback-text__avatar"></div>-->
                 <div class="feedback-text__content">
                   <p>Юля, привет. Хочу поблагодарить тебя за прекрасные занятия. Английский с тобой дал значительный
                     скачок в знаниях Максима. Экзамены — отдельное интересное и увлекательное приключение для Макса. Он
@@ -1325,7 +1272,7 @@
 
             <div>
               <div class="feedback-text">
-                <div class="feedback-text__avatar"></div>
+                <!--<div class="feedback-text__avatar"></div>-->
                 <div class="feedback-text__content">
                   <p>
                     Юля, добрый день! Отзыв от меня 
@@ -1351,7 +1298,7 @@
 
             <div>
               <div class="feedback-text">
-                <div class="feedback-text__avatar"></div>
+                <!--<div class="feedback-text__avatar"></div>-->
                 <div class="feedback-text__content">
                   <p>
                     Спасибо большое за то что вы весь этот год обучали нас английскому, я в начале года почти ничего не
@@ -1372,7 +1319,7 @@
 
             <div>
               <div class="feedback-text">
-                <div class="feedback-text__avatar"></div>
+                <!--<div class="feedback-text__avatar"></div>-->
                 <div class="feedback-text__content">
                   <p>
                     Юля доброе утро! Хочу выразить свою благодарность за этот учебный год! Спасибо Вам большое за
@@ -1394,7 +1341,7 @@
 
             <div>
               <div class="feedback-text">
-                <div class="feedback-text__avatar"></div>
+                <!--<div class="feedback-text__avatar"></div>-->
                 <div class="feedback-text__content">
                   <p>
                     Miss Юлия, здравствуйте!
@@ -1409,35 +1356,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- <div>
-              <div class="feedback-text">
-                <div class="feedback-text__avatar"></div>
-                <div class="feedback-text__content feedback-text__content--video">
-                  <div class="video-wrapper">
-
-                    <video class="video" autoplay muted loop playsinline preload="metadata">
-                      <source src="./src/assets/images/reviews/feedback3.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                    </video>
-
-                    <!-- SVG для прогресс-бара -->
-                    <svg class="progress-ring" viewBox="0 0 200 200">
-                      <!-- Фоновая окружность (серая полоска) -->
-                      <circle class="progress-ring__track" cx="100" cy="100" r="96" />
-                      <!-- Активная окружность (прогресс) -->
-                      <circle class="progress-ring__circle" cx="100" cy="100" r="96" />
-                    </svg>
-
-                  </div>
-                </div>
-                <div class="feedback-text__info">
-                  <p class="feedback-text__user">Евангелина (ученица)</p>
-                  <p class="feedback-text__target">Подготовка к A1 (Movers)</p>
-                </div>
-              </div>
-            </div> -->
-
 
           </div>
 
@@ -1461,14 +1379,16 @@
                 },
               },
               onInit: () => {
-                const videoWrapperList = document.getElementsByClassName('video-wrapper');
+                setTimeout(
+                  () => {
+                    // const videoWrapperList = document.getElementsByClassName('video-wrapper');
 
-                setupVideoWrapperList(videoWrapperList);
+                    // setupVideoWrapperList(videoWrapperList, slider);
+                  });
               },
             });
           </script>
 
-        
 
         </div>
 
@@ -1722,6 +1642,7 @@
 
     <script src="./src/js/pages/index.js"></script>
 
+ 
 
 </body>
 
